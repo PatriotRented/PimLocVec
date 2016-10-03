@@ -14,3 +14,4 @@ Bibliagrafia
 - https://devluciano.wordpress.com/category/patterns/
 - https://devluciano.wordpress.com/tag/padroes-de-nomenclaturas-c/
 - https://msdn.microsoft.com/en-us/library/ms229002.aspx?tduid=(256d9184c5806a157d6bbb27b2a21493)(256380)(2459594)(TnL5HPStwNw-PnnGqYhbDQds1mQSl6RRvQ)()
+- https://msdn.microsoft.com/pt-br/library/jj218324.aspx
