@@ -17,3 +17,4 @@ Bibliagrafia
 - https://msdn.microsoft.com/pt-br/library/jj218324.aspx
 - https://msdn.microsoft.com/pt-br/library/gg145028(v=vs.110).aspx
 - https://msdn.microsoft.com/pt-br/library/system.data.common.dbproviderfactory(v=vs.110).aspx
+- https://msdn.microsoft.com/pt-br/library/jj218324.aspx
