@@ -11,6 +11,7 @@ namespace Pim.Patriot.DataAccess
     {
        public static DbConnection getConnection(string _providerName, string _connectionString)
         {
+            //a
             //Assume failure
             DbConnection connection = null;
 
