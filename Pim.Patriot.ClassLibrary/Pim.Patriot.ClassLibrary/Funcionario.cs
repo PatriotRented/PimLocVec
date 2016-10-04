@@ -10,7 +10,7 @@ public class Funcionario : Pessoa
 
 	public bool validaFuncio()
 	{
-		return null;
+		return true;
 	}
 
 	public void cadastrar()

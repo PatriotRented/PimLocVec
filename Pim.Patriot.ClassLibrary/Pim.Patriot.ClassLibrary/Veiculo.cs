@@ -18,14 +18,16 @@ public class Veiculo
 
 	private List<Acessorio> aces;
 
-	public void cadVec()
+	public void cadVec(string _cor, string _placa, string _categoria)
 	{
-
+        aces = new List<Acessorio>();
+        this.status = 'D';
+        
 	}
 
-	public void delVec()
+	public void delVec(long _id)
 	{
-
+        
 	}
 
 }

@@ -13,9 +13,9 @@ public class ClientePF : Cliente
 
 	}
 
-	public override bool cadastrar()
+	public override bool cadastrar(string _rg, string _cpf, DateTime _dt_nasc)
 	{
-
+        
 	}
 
 }
