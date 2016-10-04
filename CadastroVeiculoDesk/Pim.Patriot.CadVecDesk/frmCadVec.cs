@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pim.Patriot.CadVecDesk
 {
-    public partial class Form1 : Form
+    public partial class frmCadVec : Form
     {
-        public Form1()
+        public frmCadVec()
         {
             InitializeComponent();
         }
