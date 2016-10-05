@@ -28,39 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lblPlaca = new System.Windows.Forms.Label();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.lblCor = new System.Windows.Forms.Label();
+            this.cmbCor = new System.Windows.Forms.ComboBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.gbxAtributosCar = new System.Windows.Forms.GroupBox();
+            this.gbxAcessorio = new System.Windows.Forms.GroupBox();
+            this.gbxAtributosCar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // lblPlaca
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.lblPlaca.AutoSize = true;
+            this.lblPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaca.Location = new System.Drawing.Point(23, 37);
+            this.lblPlaca.Name = "lblPlaca";
+            this.lblPlaca.Size = new System.Drawing.Size(63, 20);
+            this.lblPlaca.TabIndex = 0;
+            this.lblPlaca.Text = "Placa :";
             // 
-            // richTextBox1
+            // txtPlaca
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(112, 93);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 96);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.txtPlaca.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtPlaca.Location = new System.Drawing.Point(106, 34);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(176, 26);
+            this.txtPlaca.TabIndex = 1;
+            // 
+            // lblModelo
+            // 
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.Location = new System.Drawing.Point(23, 84);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(77, 20);
+            this.lblModelo.TabIndex = 2;
+            this.lblModelo.Text = "Modelo :";
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.Location = new System.Drawing.Point(106, 81);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(176, 26);
+            this.txtModelo.TabIndex = 3;
+            // 
+            // lblMarca
+            // 
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(23, 133);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(68, 20);
+            this.lblMarca.TabIndex = 4;
+            this.lblMarca.Text = "Marca :";
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtMarca.Location = new System.Drawing.Point(106, 130);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(176, 26);
+            this.txtMarca.TabIndex = 5;
+            // 
+            // lblCor
+            // 
+            this.lblCor.AutoSize = true;
+            this.lblCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCor.Location = new System.Drawing.Point(360, 37);
+            this.lblCor.Name = "lblCor";
+            this.lblCor.Size = new System.Drawing.Size(47, 20);
+            this.lblCor.TabIndex = 6;
+            this.lblCor.Text = "Cor :";
+            // 
+            // cmbCor
+            // 
+            this.cmbCor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCor.FormattingEnabled = true;
+            this.cmbCor.Items.AddRange(new object[] {
+            "Azul",
+            "Branco",
+            "Prata",
+            "Preto",
+            "Verde",
+            "Vermelho"});
+            this.cmbCor.Location = new System.Drawing.Point(441, 34);
+            this.cmbCor.Name = "cmbCor";
+            this.cmbCor.Size = new System.Drawing.Size(176, 26);
+            this.cmbCor.TabIndex = 7;
+            this.cmbCor.Text = "Escolha uma cor";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(338, 84);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(97, 20);
+            this.lblCategoria.TabIndex = 8;
+            this.lblCategoria.Text = "Categoria :";
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(441, 81);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(207, 26);
+            this.cmbCategoria.TabIndex = 9;
+            this.cmbCategoria.Text = "Selecione uma categoria";
+            // 
+            // gbxAtributosCar
+            // 
+            this.gbxAtributosCar.Controls.Add(this.cmbCategoria);
+            this.gbxAtributosCar.Controls.Add(this.lblModelo);
+            this.gbxAtributosCar.Controls.Add(this.lblCategoria);
+            this.gbxAtributosCar.Controls.Add(this.lblPlaca);
+            this.gbxAtributosCar.Controls.Add(this.cmbCor);
+            this.gbxAtributosCar.Controls.Add(this.txtPlaca);
+            this.gbxAtributosCar.Controls.Add(this.lblCor);
+            this.gbxAtributosCar.Controls.Add(this.txtModelo);
+            this.gbxAtributosCar.Controls.Add(this.txtMarca);
+            this.gbxAtributosCar.Controls.Add(this.lblMarca);
+            this.gbxAtributosCar.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxAtributosCar.Location = new System.Drawing.Point(41, 31);
+            this.gbxAtributosCar.Name = "gbxAtributosCar";
+            this.gbxAtributosCar.Size = new System.Drawing.Size(696, 198);
+            this.gbxAtributosCar.TabIndex = 10;
+            this.gbxAtributosCar.TabStop = false;
+            this.gbxAtributosCar.Text = "Veículo";
+            // 
+            // gbxAcessorio
+            // 
+            this.gbxAcessorio.Location = new System.Drawing.Point(41, 269);
+            this.gbxAcessorio.Name = "gbxAcessorio";
+            this.gbxAcessorio.Size = new System.Drawing.Size(696, 132);
+            this.gbxAcessorio.TabIndex = 11;
+            this.gbxAcessorio.TabStop = false;
+            this.gbxAcessorio.Text = "groupBox1";
             // 
             // frmCadVec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.gbxAcessorio);
+            this.Controls.Add(this.gbxAtributosCar);
             this.Name = "frmCadVec";
             this.Text = "Cadastro de veiculos";
+            this.gbxAtributosCar.ResumeLayout(false);
+            this.gbxAtributosCar.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label lblPlaca;
+        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Label lblCor;
+        private System.Windows.Forms.ComboBox cmbCor;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.GroupBox gbxAtributosCar;
+        private System.Windows.Forms.GroupBox gbxAcessorio;
     }
 }
