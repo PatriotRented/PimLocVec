@@ -9,7 +9,7 @@ public class ClientePJ : Cliente
 
 	}
 
-	public void cadastrar()
+	public override bool cadastrar()
 	{
 
 	}

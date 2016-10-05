@@ -13,9 +13,9 @@ public class ClientePF : Cliente
 
 	}
 
-	public void cadastrar()
+    public override bool cadastrar()
 	{
-
+        return false;
 	}
 
 }

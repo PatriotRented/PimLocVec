@@ -45,7 +45,6 @@
     <Compile Include="ClientePF.cs" />
     <Compile Include="ClientePJ.cs" />
     <Compile Include="Endereco.cs" />
-    <Compile Include="Fornecedor.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Locacao.cs" />
     <Compile Include="Manutenção.cs" />
