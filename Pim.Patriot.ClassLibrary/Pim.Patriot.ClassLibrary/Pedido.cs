@@ -10,7 +10,13 @@ public abstract class Pedido
 
 	protected Double desc;
 
+	protected long id_vec;
+
+	protected long id_cli;
+
 	public abstract void registraPedido();
+
+	public abstract void cancelaPedido();
 
 }
 

@@ -20,10 +20,5 @@ public class Endereco
 
 	}
 
-	public void excluiEnd()
-	{
-
-	}
-
 }
 

@@ -1,4 +1,6 @@
-public abstract class Pessoa
+using System.Collections.Generic;
+
+protected abstract class Pessoa
 {
 	protected long id;
 
@@ -8,9 +10,11 @@ public abstract class Pessoa
 
 	protected Endereco end;
 
-	public abstract bool cadastrar();
+	protected char status;
 
-	public abstract void deletar();
+	protected List<Telefone> telefone;
+
+	public abstract bool cadastrar();
 
 }
 

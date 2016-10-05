@@ -1,9 +1,6 @@
 public abstract class Cliente : Pessoa
 {
-	public virtual void alugarVec()
-    {
-
-    }
+	public abstract void alugarVec();
 
 }
 
