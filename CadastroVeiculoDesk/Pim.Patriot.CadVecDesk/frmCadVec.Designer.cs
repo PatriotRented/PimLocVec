@@ -40,7 +40,15 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.gbxAtributosCar = new System.Windows.Forms.GroupBox();
             this.gbxAcessorio = new System.Windows.Forms.GroupBox();
+            this.cmbAcessorio1 = new System.Windows.Forms.ComboBox();
+            this.cmdAcessorio2 = new System.Windows.Forms.ComboBox();
+            this.cmbAcessorio3 = new System.Windows.Forms.ComboBox();
+            this.chkNtem = new System.Windows.Forms.CheckBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCancela = new System.Windows.Forms.Button();
             this.gbxAtributosCar.SuspendLayout();
+            this.gbxAcessorio.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPlaca
@@ -166,24 +174,108 @@
             // 
             // gbxAcessorio
             // 
-            this.gbxAcessorio.Location = new System.Drawing.Point(41, 269);
+            this.gbxAcessorio.Controls.Add(this.chkNtem);
+            this.gbxAcessorio.Controls.Add(this.cmbAcessorio3);
+            this.gbxAcessorio.Controls.Add(this.cmdAcessorio2);
+            this.gbxAcessorio.Controls.Add(this.cmbAcessorio1);
+            this.gbxAcessorio.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Italic);
+            this.gbxAcessorio.Location = new System.Drawing.Point(41, 253);
             this.gbxAcessorio.Name = "gbxAcessorio";
-            this.gbxAcessorio.Size = new System.Drawing.Size(696, 132);
+            this.gbxAcessorio.Size = new System.Drawing.Size(696, 148);
             this.gbxAcessorio.TabIndex = 11;
             this.gbxAcessorio.TabStop = false;
-            this.gbxAcessorio.Text = "groupBox1";
+            this.gbxAcessorio.Text = "Acessórios";
+            // 
+            // cmbAcessorio1
+            // 
+            this.cmbAcessorio1.FormattingEnabled = true;
+            this.cmbAcessorio1.Items.AddRange(new object[] {
+            "DVD",
+            "GPS",
+            "Caderinha"});
+            this.cmbAcessorio1.Location = new System.Drawing.Point(40, 52);
+            this.cmbAcessorio1.Name = "cmbAcessorio1";
+            this.cmbAcessorio1.Size = new System.Drawing.Size(173, 26);
+            this.cmbAcessorio1.TabIndex = 10;
+            // 
+            // cmdAcessorio2
+            // 
+            this.cmdAcessorio2.FormattingEnabled = true;
+            this.cmdAcessorio2.Items.AddRange(new object[] {
+            "DVD",
+            "GPS",
+            "Caderinha"});
+            this.cmdAcessorio2.Location = new System.Drawing.Point(247, 52);
+            this.cmdAcessorio2.Name = "cmdAcessorio2";
+            this.cmdAcessorio2.Size = new System.Drawing.Size(173, 26);
+            this.cmdAcessorio2.TabIndex = 11;
+            // 
+            // cmbAcessorio3
+            // 
+            this.cmbAcessorio3.FormattingEnabled = true;
+            this.cmbAcessorio3.Items.AddRange(new object[] {
+            "DVD",
+            "GPS",
+            "Caderinha"});
+            this.cmbAcessorio3.Location = new System.Drawing.Point(459, 52);
+            this.cmbAcessorio3.Name = "cmbAcessorio3";
+            this.cmbAcessorio3.Size = new System.Drawing.Size(173, 26);
+            this.cmbAcessorio3.TabIndex = 12;
+            // 
+            // chkNtem
+            // 
+            this.chkNtem.AutoSize = true;
+            this.chkNtem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.chkNtem.Location = new System.Drawing.Point(242, 107);
+            this.chkNtem.Name = "chkNtem";
+            this.chkNtem.Size = new System.Drawing.Size(178, 24);
+            this.chkNtem.TabIndex = 13;
+            this.chkNtem.Text = "Nenhum Acessório";
+            this.chkNtem.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(100, 471);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(154, 57);
+            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(294, 471);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(154, 57);
+            this.btnLimpar.TabIndex = 13;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancela
+            // 
+            this.btnCancela.Location = new System.Drawing.Point(482, 471);
+            this.btnCancela.Name = "btnCancela";
+            this.btnCancela.Size = new System.Drawing.Size(154, 57);
+            this.btnCancela.TabIndex = 14;
+            this.btnCancela.Text = "Cancela";
+            this.btnCancela.UseVisualStyleBackColor = true;
             // 
             // frmCadVec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnCancela);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gbxAcessorio);
             this.Controls.Add(this.gbxAtributosCar);
             this.Name = "frmCadVec";
             this.Text = "Cadastro de veiculos";
             this.gbxAtributosCar.ResumeLayout(false);
             this.gbxAtributosCar.PerformLayout();
+            this.gbxAcessorio.ResumeLayout(false);
+            this.gbxAcessorio.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -202,5 +294,12 @@
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.GroupBox gbxAtributosCar;
         private System.Windows.Forms.GroupBox gbxAcessorio;
+        private System.Windows.Forms.CheckBox chkNtem;
+        private System.Windows.Forms.ComboBox cmbAcessorio3;
+        private System.Windows.Forms.ComboBox cmdAcessorio2;
+        private System.Windows.Forms.ComboBox cmbAcessorio1;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnCancela;
     }
 }
