@@ -45,14 +45,19 @@
     <Compile Include="ClientePF.cs" />
     <Compile Include="ClientePJ.cs" />
     <Compile Include="Endereco.cs" />
+    <Compile Include="Fornecedor.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Locacao.cs" />
+    <Compile Include="Manutenção.cs" />
+    <Compile Include="MetodoPagamento.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Plano.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reserva.cs" />
+    <Compile Include="Telefone.cs" />
     <Compile Include="Veiculo.cs" />
+    <Compile Include="Vistoria.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
