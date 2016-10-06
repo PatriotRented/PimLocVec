@@ -16,5 +16,6 @@ namespace Pim.Patriot.CadVecDesk
         {
             InitializeComponent();
         }
+        Veiculo vec = new Veiculo();
     }
 }
