@@ -10,16 +10,7 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
 {
     public class VeiculoDAO
     {
-        #region Atributos e Propriedades
-        private string connectionString;
-        #endregion
-
         SqlConnection conexao = new SqlConnection();
-        conexao.ConectionString = conectionString;
-        
-        
-
-
         
 
     }
