@@ -8,15 +8,15 @@ public class ClientePF : Cliente
 
 	private DateTime dt_nasc;
 
-	public void alugarVec(int vecID)
-	{
-
-	}
 
     public override bool cadastrar()
 	{
-        return false;
-	}
+        throw new NotImplementedException();
+    }
 
+    public override void alugarVec()
+    {
+        throw new NotImplementedException();
+    }
 }
 

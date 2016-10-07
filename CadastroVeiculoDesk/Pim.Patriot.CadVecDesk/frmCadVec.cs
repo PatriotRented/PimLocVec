@@ -12,10 +12,16 @@ namespace Pim.Patriot.CadVecDesk
 {
     public partial class frmCadVec : Form
     {
+
+        /// <summary>
+        /// Cronstrutor do windowns form de cadastro de veículos
+        /// </summary>
         public frmCadVec()
         {
             InitializeComponent();
         }
+
         Veiculo vec = new Veiculo();
+        
     }
 }

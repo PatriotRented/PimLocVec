@@ -1,3 +1,5 @@
+using System;
+
 public class Funcionario : Pessoa
 {
 	private string rg;
@@ -10,13 +12,13 @@ public class Funcionario : Pessoa
 
 	public bool validaFuncio()
 	{
-		return null;
-	}
+        throw new NotImplementedException();
+    }
 
-	public void cadastrar()
-	{
 
-	}
-
+    public override bool cadastrar()
+    {
+        throw new NotImplementedException();
+    }
 }
 

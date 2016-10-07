@@ -10,7 +10,7 @@ public class Vistoria
 
 	public bool MudaStatus()
 	{
-		return null;
+		return true;
 	}
 
 }

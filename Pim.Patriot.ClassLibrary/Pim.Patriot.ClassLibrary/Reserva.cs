@@ -1,11 +1,21 @@
+using System;
+
 public class Reserva : Pedido
 {
-	private long cod_res;
+    #region Atributos
+    private long cod_res;
+    #endregion
 
-	public void registraPedido()
-	{
+    public override void cancelaPedido()
+    {
+        throw new NotImplementedException();
+    }
 
-	}
+    public override void registraPedido()
+    {
+        throw new NotImplementedException();
+    }
 
+   
 }
 
