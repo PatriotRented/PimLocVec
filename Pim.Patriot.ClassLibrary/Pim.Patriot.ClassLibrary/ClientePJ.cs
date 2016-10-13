@@ -12,8 +12,8 @@ public class ClientePJ : Cliente
 
     public void alugarVec(List<Veiculo> vec)
 	{
-
-	}
+        throw new NotImplementedException();
+    }
 
 	public override bool cadastrar()
 	{
