@@ -1,8 +1,10 @@
+using Pim.Patriot.DataAccess.ClassesDAO;
+using System;
 using System.Collections.Generic;
 
 public class Veiculo
 {
-	private long id_vec;
+	private long codVec;
 
 	private string modelo;
 
@@ -16,21 +18,26 @@ public class Veiculo
 
 	private char status;
 
-	private List<Acessorio> aces;
-
-	public void cadVec()
+	public void cadVec(string _modelo, string _marca, string _cor, string _placa, string _categoria = "Sem categoria")
 	{
+        this.modelo = _modelo;
+        this.marca = _marca;
+        this.cor = _cor;
+        this.placa = _placa;
+        this.categoria = _categoria;
 
+        VeiculoDAO vecDAO = new VeiculoDAO();
+        vecDAO.insertVeiculo();
 	}
 
 	public void delVec()
 	{
-
+        throw new NotImplementedException();
 	}
 
 	public void alteraStVec()
 	{
-
+        throw new NotImplementedException();
 	}
 
 }

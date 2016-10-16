@@ -2,21 +2,26 @@ using System;
 
 public abstract class Pedido
 {
-	protected Plano plano;
+    #region  Atributos
+
+    protected Plano plano;
 
 	protected DateTime dt_ret;
 
 	protected DateTime dt_dev;
 
-	protected Double desc;
+	protected Double desco;
 
-	protected long id_vec;
+	protected long codVec;
 
-	protected long id_cli;
+	protected long copCli;
 
-	public abstract void registraPedido();
+    #endregion
+
+    #region Métodos
+    public abstract void registraPedido();
 
 	public abstract void cancelaPedido();
-
+    #endregion
 }
 

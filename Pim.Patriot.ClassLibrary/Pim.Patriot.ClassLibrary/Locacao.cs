@@ -2,18 +2,17 @@ using System;
 
 public class Locacao : Pedido
 {
-	private long cod_loc;
+	private long codLoc;
 
 	private MetodoPagamento forma_pag;
 
-
-	public double calAcrescimo(int  op)
+	public override void registraPedido()
 	{
         throw new NotImplementedException();
     }
 
-    public override void registraPedido()
-    {
+	public double calAcrescimo(double  op)
+	{
         throw new NotImplementedException();
     }
 

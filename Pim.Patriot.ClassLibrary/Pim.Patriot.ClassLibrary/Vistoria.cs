@@ -1,5 +1,3 @@
-using System;
-
 public class Vistoria
 {
 	private long cod_vis;
@@ -12,8 +10,8 @@ public class Vistoria
 
 	public bool MudaStatus()
 	{
-        throw new NotImplementedException();
-    }
+		return true;
+	}
 
 }
 

@@ -10,11 +10,6 @@ public class ClientePJ : Cliente
         throw new NotImplementedException();
     }
 
-    public void alugarVec(List<Veiculo> vec)
-	{
-
-	}
-
 	public override bool cadastrar()
 	{
         throw new NotImplementedException();

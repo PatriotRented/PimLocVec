@@ -1,5 +1,9 @@
+using System;
+
 public class Endereco
 {
+    private long codEnd;
+
 	private string rua;
 
 	private string bairro;
@@ -12,13 +16,13 @@ public class Endereco
 
 	public void salvaEnd()
 	{
-
+        throw new NotImplementedException();
 	}
 
 	public void atualizaEnd()
 	{
-
-	}
+        throw new NotImplementedException();
+    }
 
 }
 

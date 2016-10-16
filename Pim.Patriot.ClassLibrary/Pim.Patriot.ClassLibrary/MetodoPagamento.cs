@@ -1,20 +1,27 @@
+using System;
+
 public class MetodoPagamento
 {
-	private string bandeira;
+    #region Atributos
+    private long codMet;
+
+    private string bandeira;
 
 	private long numero;
 
-	private long id_cli;
+	private long codCli;
+    #endregion
 
-	public void cadastraPag()
+    #region
+    public void cadastraPag()
 	{
-
+        throw new NotImplementedException();
 	}
 
 	public void delPag()
 	{
-
-	}
-
+        throw new NotImplementedException();
+    }
+    #endregion
 }
 

@@ -1,14 +1,14 @@
 public abstract class Pessoa
 {
-	protected long id;
-
-	protected string nome;
+    #region Atributos
+    protected string nome;
 
 	protected string email;
 
 	protected Endereco end;
+    #endregion
 
-	public abstract bool cadastrar();
+    public abstract bool cadastrar();
 
 }
 

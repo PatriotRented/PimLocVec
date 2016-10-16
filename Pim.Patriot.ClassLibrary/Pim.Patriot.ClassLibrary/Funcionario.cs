@@ -15,7 +15,7 @@ public class Funcionario : Pessoa
         throw new NotImplementedException();
     }
 
-	
+
     public override bool cadastrar()
     {
         throw new NotImplementedException();

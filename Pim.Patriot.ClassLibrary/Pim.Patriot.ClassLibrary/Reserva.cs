@@ -2,7 +2,9 @@ using System;
 
 public class Reserva : Pedido
 {
-	private long cod_res;
+    #region Atributos
+    private long cod_res;
+    #endregion
 
     public override void cancelaPedido()
     {
@@ -13,5 +15,7 @@ public class Reserva : Pedido
     {
         throw new NotImplementedException();
     }
+
+   
 }
 

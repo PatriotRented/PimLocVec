@@ -1,18 +1,25 @@
+using System;
+
 public class Plano
 {
-	private string tipo;
+    #region Atributos
+    private long codPlano;
+
+    private string tipo;
 
 	private double valor;
+    #endregion
 
-	public void adicionaPlano()
+    #region
+    public void adicionaPlano()
 	{
-
-	}
+        throw new NotImplementedException();
+    }
 
 	public void excluiPlano()
 	{
-
-	}
-
+        throw new NotImplementedException();
+    }
+    #endregion
 }
 

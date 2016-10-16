@@ -58,6 +58,12 @@
     <Compile Include="Veiculo.cs" />
     <Compile Include="Vistoria.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
+      <Project>{0FB2651A-8AA9-4D6A-B79B-C78ABB62C549}</Project>
+      <Name>Pim.Patriot.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
