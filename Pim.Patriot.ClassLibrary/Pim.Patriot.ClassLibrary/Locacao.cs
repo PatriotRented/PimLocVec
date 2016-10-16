@@ -2,7 +2,7 @@ using System;
 
 public class Locacao : Pedido
 {
-	private long cod_loc;
+	private long codLoc;
 
 	private MetodoPagamento forma_pag;
 

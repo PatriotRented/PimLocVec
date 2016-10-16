@@ -1,12 +1,14 @@
+using System;
 public class Telefone
 {
-	private int cod_tel;
+    #region Atributos
+    private long codTel;
 
 	private string ddd;
 
 	private string prefixo;
 
 	private string numero;
-
+    #endregion
 }
 

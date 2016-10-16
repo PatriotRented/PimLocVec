@@ -1,6 +1,11 @@
 public abstract class Cliente : Pessoa
 {
-	public abstract void alugarVec();
+    #region atributos
+    protected long codCli;
+    #endregion
 
+    #region Métodos
+    public abstract void alugarVec();
+    #endregion
 }
 

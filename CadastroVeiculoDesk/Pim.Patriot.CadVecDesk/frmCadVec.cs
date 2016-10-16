@@ -21,7 +21,26 @@ namespace Pim.Patriot.CadVecDesk
             InitializeComponent();
         }
 
-        Veiculo vec = new Veiculo();
         
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Veiculo vec = new Veiculo();
+            vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text, cmbCategoria.Text);
+            if(!chkNtem.Checked)
+            {
+                
+            } 
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancela_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

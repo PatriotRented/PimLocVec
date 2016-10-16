@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Pim.Patriot.DataAccess.ClassesDAO
 {
+    /// <summary>
+    /// Classe de acesso ao banco de dados dos objetos veículos
+    /// </summary>
     public class VeiculoDAO
     {
         SqlConnection conexao = new SqlConnection();
@@ -15,11 +18,13 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
         #region Metodos
 
         /// <summary>
-        /// Insere um registro na tabela veiculo do banco de dados 
+        /// Insere um registro a partir do objeto veículo na tabela veiculo do banco de dados 
         /// </summary>
         /// <returns></returns>
         public object insertVeiculo()
         {
+            /*SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "insert into Veiculo (modelo, marca, cor, placa, )";*/
             throw new NotImplementedException();
         }
         

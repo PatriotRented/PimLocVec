@@ -40,10 +40,10 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.gbxAtributosCar = new System.Windows.Forms.GroupBox();
             this.gbxAcessorio = new System.Windows.Forms.GroupBox();
-            this.cmbAcessorio1 = new System.Windows.Forms.ComboBox();
-            this.cmdAcessorio2 = new System.Windows.Forms.ComboBox();
-            this.cmbAcessorio3 = new System.Windows.Forms.ComboBox();
             this.chkNtem = new System.Windows.Forms.CheckBox();
+            this.cmbAcessorio3 = new System.Windows.Forms.ComboBox();
+            this.cmdAcessorio2 = new System.Windows.Forms.ComboBox();
+            this.cmbAcessorio1 = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCancela = new System.Windows.Forms.Button();
@@ -186,29 +186,16 @@
             this.gbxAcessorio.TabStop = false;
             this.gbxAcessorio.Text = "Acessórios";
             // 
-            // cmbAcessorio1
+            // chkNtem
             // 
-            this.cmbAcessorio1.FormattingEnabled = true;
-            this.cmbAcessorio1.Items.AddRange(new object[] {
-            "DVD",
-            "GPS",
-            "Caderinha"});
-            this.cmbAcessorio1.Location = new System.Drawing.Point(40, 52);
-            this.cmbAcessorio1.Name = "cmbAcessorio1";
-            this.cmbAcessorio1.Size = new System.Drawing.Size(173, 26);
-            this.cmbAcessorio1.TabIndex = 10;
-            // 
-            // cmdAcessorio2
-            // 
-            this.cmdAcessorio2.FormattingEnabled = true;
-            this.cmdAcessorio2.Items.AddRange(new object[] {
-            "DVD",
-            "GPS",
-            "Caderinha"});
-            this.cmdAcessorio2.Location = new System.Drawing.Point(247, 52);
-            this.cmdAcessorio2.Name = "cmdAcessorio2";
-            this.cmdAcessorio2.Size = new System.Drawing.Size(173, 26);
-            this.cmdAcessorio2.TabIndex = 11;
+            this.chkNtem.AutoSize = true;
+            this.chkNtem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.chkNtem.Location = new System.Drawing.Point(242, 107);
+            this.chkNtem.Name = "chkNtem";
+            this.chkNtem.Size = new System.Drawing.Size(178, 24);
+            this.chkNtem.TabIndex = 13;
+            this.chkNtem.Text = "Nenhum Acessório";
+            this.chkNtem.UseVisualStyleBackColor = true;
             // 
             // cmbAcessorio3
             // 
@@ -222,16 +209,29 @@
             this.cmbAcessorio3.Size = new System.Drawing.Size(173, 26);
             this.cmbAcessorio3.TabIndex = 12;
             // 
-            // chkNtem
+            // cmdAcessorio2
             // 
-            this.chkNtem.AutoSize = true;
-            this.chkNtem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.chkNtem.Location = new System.Drawing.Point(242, 107);
-            this.chkNtem.Name = "chkNtem";
-            this.chkNtem.Size = new System.Drawing.Size(178, 24);
-            this.chkNtem.TabIndex = 13;
-            this.chkNtem.Text = "Nenhum Acessório";
-            this.chkNtem.UseVisualStyleBackColor = true;
+            this.cmdAcessorio2.FormattingEnabled = true;
+            this.cmdAcessorio2.Items.AddRange(new object[] {
+            "DVD",
+            "GPS",
+            "Caderinha"});
+            this.cmdAcessorio2.Location = new System.Drawing.Point(247, 52);
+            this.cmdAcessorio2.Name = "cmdAcessorio2";
+            this.cmdAcessorio2.Size = new System.Drawing.Size(173, 26);
+            this.cmdAcessorio2.TabIndex = 11;
+            // 
+            // cmbAcessorio1
+            // 
+            this.cmbAcessorio1.FormattingEnabled = true;
+            this.cmbAcessorio1.Items.AddRange(new object[] {
+            "DVD",
+            "GPS",
+            "Caderinha"});
+            this.cmbAcessorio1.Location = new System.Drawing.Point(40, 52);
+            this.cmbAcessorio1.Name = "cmbAcessorio1";
+            this.cmbAcessorio1.Size = new System.Drawing.Size(173, 26);
+            this.cmbAcessorio1.TabIndex = 10;
             // 
             // btnSalvar
             // 
@@ -241,6 +241,7 @@
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -250,6 +251,7 @@
             this.btnLimpar.TabIndex = 13;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCancela
             // 
@@ -259,6 +261,7 @@
             this.btnCancela.TabIndex = 14;
             this.btnCancela.Text = "Cancela";
             this.btnCancela.UseVisualStyleBackColor = true;
+            this.btnCancela.Click += new System.EventHandler(this.btnCancela_Click);
             // 
             // frmCadVec
             // 
@@ -271,7 +274,7 @@
             this.Controls.Add(this.gbxAcessorio);
             this.Controls.Add(this.gbxAtributosCar);
             this.Name = "frmCadVec";
-            this.Text = "Cadastro de veiculos";
+            this.Text = "  ";
             this.gbxAtributosCar.ResumeLayout(false);
             this.gbxAtributosCar.PerformLayout();
             this.gbxAcessorio.ResumeLayout(false);
