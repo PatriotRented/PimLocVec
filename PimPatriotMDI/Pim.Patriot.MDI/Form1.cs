@@ -16,5 +16,28 @@ namespace Pim.Patriot.MDI
         {
             InitializeComponent();
         }
+
+        private void mstripHorizontal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void calcularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mstripVertical_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            tssthora.Text = DateTime.Now.ToLongDateString() + "  "+ DateTime.Now.ToLongTimeString();
+              
+
+        }
     }
 }
