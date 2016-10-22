@@ -26,8 +26,11 @@ namespace Pim.Patriot.CadVecDesk
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Veiculo vec = new Veiculo();
+            //Alimenta os dados no objeto veículo
             vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text, cmbCategoria.Text);
-            if(!chkNtem.Checked)
+            
+            //testa se o campo nenhum acessório foi marcado
+            if (!chkNtem.Checked)
             {
                 
             } 
