@@ -103,6 +103,16 @@ namespace Pim.Patriot.MDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cadastroOrange80x91semtxtok {
+            get {
+                object obj = ResourceManager.GetObject("cadastroOrange80x91semtxtok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendarioComUmRelogioOrange85x85 {
             get {
                 object obj = ResourceManager.GetObject("calendarioComUmRelogioOrange85x85", resourceCulture);
@@ -116,6 +126,76 @@ namespace Pim.Patriot.MDI.Properties {
         internal static System.Drawing.Bitmap carroComRelogioEmCimaComTexto85x85 {
             get {
                 object obj = ResourceManager.GetObject("carroComRelogioEmCimaComTexto85x85", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dinheiro80x91okok {
+            get {
+                object obj = ResourceManager.GetObject("dinheiro80x91okok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dinheiro80x91semTXT {
+            get {
+                object obj = ResourceManager.GetObject("dinheiro80x91semTXT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duvida80x91 {
+            get {
+                object obj = ResourceManager.GetObject("duvida80x91", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duvida80x91certo {
+            get {
+                object obj = ResourceManager.GetObject("duvida80x91certo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duvida80x91ok {
+            get {
+                object obj = ResourceManager.GetObject("duvida80x91ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit80x91semtxt {
+            get {
+                object obj = ResourceManager.GetObject("exit80x91semtxt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap livrosCons80x91 {
+            get {
+                object obj = ResourceManager.GetObject("livrosCons80x91", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +243,49 @@ namespace Pim.Patriot.MDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoutSemTxt80x91 {
+            get {
+                object obj = ResourceManager.GetObject("logoutSemTxt80x91", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maoMoeda130x85 {
             get {
                 object obj = ResourceManager.GetObject("maoMoeda130x85", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap papelcomvistos80x91 {
+            get {
+                object obj = ResourceManager.GetObject("papelcomvistos80x91", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap papelcomvistos80x91ok {
+            get {
+                object obj = ResourceManager.GetObject("papelcomvistos80x91ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap papelcomvistos80x92 {
+            get {
+                object obj = ResourceManager.GetObject("papelcomvistos80x92", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

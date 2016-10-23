@@ -113,6 +113,42 @@
   <ItemGroup>
     <None Include="Resources\livrosCons80x91ok.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinheiro80x91okok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papelcomvistos80x92.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duvida80x91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duvida80x91ok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutSemTxt80x91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papelcomvistos80x91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papelcomvistos80x91ok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duvida80x91certo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastroOrange80x91semtxtok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livrosCons80x91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit80x91semtxt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinheiro80x91semTXT.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

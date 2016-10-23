@@ -50,7 +50,7 @@
             this.menuItemConsCli = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemConsFun = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemConsVec = new System.Windows.Forms.ToolStripMenuItem();
-            this.pagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemFinan = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemEfetuarPag = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemdescontos = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,7 +128,6 @@
             this.mstripVertical.Size = new System.Drawing.Size(158, 587);
             this.mstripVertical.TabIndex = 1;
             this.mstripVertical.Text = "mstripVertical";
-            this.mstripVertical.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mstripVertical_ItemClicked);
             // 
             // menuItemLogo
             // 
@@ -174,7 +173,7 @@
             this.mstripHorizontal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemCadCli,
             this.consultaToolStripMenuItem,
-            this.pagamentosToolStripMenuItem,
+            this.menuItemFinan,
             this.relatorioToolStripMenuItem,
             this.sobreToolStripMenuItem,
             this.desconectarToolStripMenuItem,
@@ -182,105 +181,108 @@
             this.mstripHorizontal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.mstripHorizontal.Location = new System.Drawing.Point(158, 0);
             this.mstripHorizontal.Name = "mstripHorizontal";
-            this.mstripHorizontal.Size = new System.Drawing.Size(1003, 99);
+            this.mstripHorizontal.Size = new System.Drawing.Size(1003, 124);
             this.mstripHorizontal.TabIndex = 3;
             this.mstripHorizontal.Text = "mstripHorizontal";
-            this.mstripHorizontal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mstripHorizontal_ItemClicked);
             // 
             // menuItemCadCli
             // 
-            this.menuItemCadCli.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.menuItemCadCli.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemCadAce,
             this.menuItemCadClien,
             this.menuItemCadFun,
             this.menuItemCadVec});
-            this.menuItemCadCli.Image = global::Pim.Patriot.MDI.Properties.Resources.cadastro80x91;
+            this.menuItemCadCli.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuItemCadCli.Image = global::Pim.Patriot.MDI.Properties.Resources.cadastroOrange80x91semtxtok;
             this.menuItemCadCli.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuItemCadCli.Name = "menuItemCadCli";
-            this.menuItemCadCli.Size = new System.Drawing.Size(92, 95);
+            this.menuItemCadCli.Size = new System.Drawing.Size(109, 120);
             this.menuItemCadCli.Text = "Cadastro";
+            this.menuItemCadCli.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menuItemCadAce
             // 
             this.menuItemCadAce.BackColor = System.Drawing.SystemColors.Control;
             this.menuItemCadAce.Name = "menuItemCadAce";
-            this.menuItemCadAce.Size = new System.Drawing.Size(171, 24);
+            this.menuItemCadAce.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadAce.Text = "Acessorios";
             // 
             // menuItemCadClien
             // 
             this.menuItemCadClien.Name = "menuItemCadClien";
-            this.menuItemCadClien.Size = new System.Drawing.Size(171, 24);
+            this.menuItemCadClien.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadClien.Text = "Cliente";
             // 
             // menuItemCadFun
             // 
             this.menuItemCadFun.Name = "menuItemCadFun";
-            this.menuItemCadFun.Size = new System.Drawing.Size(171, 24);
+            this.menuItemCadFun.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadFun.Text = "Funcionario";
             // 
             // menuItemCadVec
             // 
             this.menuItemCadVec.Name = "menuItemCadVec";
-            this.menuItemCadVec.Size = new System.Drawing.Size(171, 24);
+            this.menuItemCadVec.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadVec.Text = "Veiculos";
             // 
             // consultaToolStripMenuItem
             // 
-            this.consultaToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemConsAce,
             this.menuItemConsCli,
             this.menuItemConsFun,
             this.menuItemConsVec});
-            this.consultaToolStripMenuItem.Image = global::Pim.Patriot.MDI.Properties.Resources.livrosCons80x91ok;
-            this.consultaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.consultaToolStripMenuItem.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultaToolStripMenuItem.Image = global::Pim.Patriot.MDI.Properties.Resources.livrosCons80x91;
             this.consultaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(92, 95);
-            this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(121, 120);
+            this.consultaToolStripMenuItem.Text = "Consultas";
+            this.consultaToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menuItemConsAce
             // 
             this.menuItemConsAce.Name = "menuItemConsAce";
-            this.menuItemConsAce.Size = new System.Drawing.Size(171, 24);
+            this.menuItemConsAce.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsAce.Text = "Acessorios";
             // 
             // menuItemConsCli
             // 
             this.menuItemConsCli.Name = "menuItemConsCli";
-            this.menuItemConsCli.Size = new System.Drawing.Size(171, 24);
+            this.menuItemConsCli.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsCli.Text = "Cliente";
             // 
             // menuItemConsFun
             // 
             this.menuItemConsFun.Name = "menuItemConsFun";
-            this.menuItemConsFun.Size = new System.Drawing.Size(171, 24);
+            this.menuItemConsFun.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsFun.Text = "Funcionario";
             // 
             // menuItemConsVec
             // 
             this.menuItemConsVec.Name = "menuItemConsVec";
-            this.menuItemConsVec.Size = new System.Drawing.Size(171, 24);
+            this.menuItemConsVec.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsVec.Text = "Veiculos";
             // 
-            // pagamentosToolStripMenuItem
+            // menuItemFinan
             // 
-            this.pagamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemFinan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemEfetuarPag,
             this.menuItemdescontos,
             this.taxasToolStripMenuItem});
-            this.pagamentosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.pagamentosToolStripMenuItem.Name = "pagamentosToolStripMenuItem";
-            this.pagamentosToolStripMenuItem.Size = new System.Drawing.Size(117, 95);
-            this.pagamentosToolStripMenuItem.Text = "Pagamentos";
-            this.pagamentosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.menuItemFinan.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuItemFinan.Image = global::Pim.Patriot.MDI.Properties.Resources.dinheiro80x91semTXT;
+            this.menuItemFinan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.menuItemFinan.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuItemFinan.Name = "menuItemFinan";
+            this.menuItemFinan.Size = new System.Drawing.Size(135, 120);
+            this.menuItemFinan.Text = "Formas pag";
+            this.menuItemFinan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MenuItemEfetuarPag
             // 
             this.MenuItemEfetuarPag.Name = "MenuItemEfetuarPag";
-            this.MenuItemEfetuarPag.Size = new System.Drawing.Size(160, 24);
+            this.MenuItemEfetuarPag.Size = new System.Drawing.Size(184, 30);
             this.MenuItemEfetuarPag.Text = "Concluir";
             // 
             // menuItemdescontos
@@ -289,19 +291,19 @@
             this.consultaToolStripMenuItem1,
             this.cadastroToolStripMenuItem2});
             this.menuItemdescontos.Name = "menuItemdescontos";
-            this.menuItemdescontos.Size = new System.Drawing.Size(160, 24);
+            this.menuItemdescontos.Size = new System.Drawing.Size(184, 30);
             this.menuItemdescontos.Text = "Descontos";
             // 
             // consultaToolStripMenuItem1
             // 
             this.consultaToolStripMenuItem1.Name = "consultaToolStripMenuItem1";
-            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(148, 24);
+            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(172, 30);
             this.consultaToolStripMenuItem1.Text = "Consulta";
             // 
             // cadastroToolStripMenuItem2
             // 
             this.cadastroToolStripMenuItem2.Name = "cadastroToolStripMenuItem2";
-            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(148, 24);
+            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(172, 30);
             this.cadastroToolStripMenuItem2.Text = "Cadastro";
             // 
             // taxasToolStripMenuItem
@@ -310,60 +312,75 @@
             this.calcularToolStripMenuItem,
             this.cadastroToolStripMenuItem1});
             this.taxasToolStripMenuItem.Name = "taxasToolStripMenuItem";
-            this.taxasToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.taxasToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
             this.taxasToolStripMenuItem.Text = "Taxas";
             // 
             // calcularToolStripMenuItem
             // 
             this.calcularToolStripMenuItem.Name = "calcularToolStripMenuItem";
-            this.calcularToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.calcularToolStripMenuItem.Size = new System.Drawing.Size(172, 30);
             this.calcularToolStripMenuItem.Text = "Consulta";
-            this.calcularToolStripMenuItem.Click += new System.EventHandler(this.calcularToolStripMenuItem_Click);
             // 
             // cadastroToolStripMenuItem1
             // 
             this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
-            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(148, 24);
+            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(172, 30);
             this.cadastroToolStripMenuItem1.Text = "Cadastro";
             // 
             // relatorioToolStripMenuItem
             // 
+            this.relatorioToolStripMenuItem.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relatorioToolStripMenuItem.Image = global::Pim.Patriot.MDI.Properties.Resources.papelcomvistos80x91ok;
+            this.relatorioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
-            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(93, 95);
+            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(113, 120);
             this.relatorioToolStripMenuItem.Text = "Relatorio";
+            this.relatorioToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sobreToolStripMenuItem1,
             this.manualToolStripMenuItem});
+            this.sobreToolStripMenuItem.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sobreToolStripMenuItem.Image = global::Pim.Patriot.MDI.Properties.Resources.duvida80x91certo;
+            this.sobreToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(66, 95);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(92, 120);
             this.sobreToolStripMenuItem.Text = "Ajuda";
+            this.sobreToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // sobreToolStripMenuItem1
             // 
             this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
-            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(135, 24);
+            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(159, 30);
             this.sobreToolStripMenuItem1.Text = "Sobre";
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
             this.manualToolStripMenuItem.Text = "Manual";
             // 
             // desconectarToolStripMenuItem
             // 
+            this.desconectarToolStripMenuItem.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desconectarToolStripMenuItem.Image = global::Pim.Patriot.MDI.Properties.Resources.logoutSemTxt80x91;
+            this.desconectarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(119, 95);
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(142, 120);
             this.desconectarToolStripMenuItem.Text = "Desconectar";
+            this.desconectarToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // sairToolStripMenuItem
             // 
+            this.sairToolStripMenuItem.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sairToolStripMenuItem.Image = global::Pim.Patriot.MDI.Properties.Resources.exit80x91semtxt;
+            this.sairToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(51, 95);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(92, 120);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // frmMDI
             // 
@@ -399,7 +416,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemCadAce;
         private System.Windows.Forms.ToolStripMenuItem menuItemCadFun;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pagamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItemFinan;
         private System.Windows.Forms.ToolStripMenuItem MenuItemEfetuarPag;
         private System.Windows.Forms.ToolStripMenuItem taxasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calcularToolStripMenuItem;
