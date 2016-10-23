@@ -34,10 +34,9 @@ namespace Pim.Patriot.MDI
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             tssthora.Text = DateTime.Now.ToLongDateString() + "  "+ DateTime.Now.ToLongTimeString();
               
-
         }
+    
     }
 }

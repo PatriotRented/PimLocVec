@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo370x320.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo185x160.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPretoBranco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPretoBranco1920x1086.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPretoBranco1040x588.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo140x121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carroComRelogioEmCimaComTexto85x85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarioComUmRelogioOrange85x85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maoMoeda130x85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastro80x91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livrosCons80x91ok.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
