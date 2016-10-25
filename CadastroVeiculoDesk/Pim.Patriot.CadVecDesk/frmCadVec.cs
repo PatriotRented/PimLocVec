@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pim.Patriot.DataAccess.ClassesDAO;
 
 namespace Pim.Patriot.CadVecDesk
 {
@@ -14,11 +15,20 @@ namespace Pim.Patriot.CadVecDesk
     {
 
         /// <summary>
-        /// Cronstrutor do windowns form de cadastro de veículos
+        /// Construtor do windows form de cadastro de veículos
         /// </summary>
         public frmCadVec()
         {
+            AcessorioDAO a = new AcessorioDAO();
             InitializeComponent();
+            DataTable dtAce = a.listaAce();
+            cmbAcessorio1.DisplayMember = "nomeAce";
+            cmbAcessorio2.DisplayMember = "nomeAce";
+            cmbAcessorio3.DisplayMember = "nomeAce";
+
+            cmbAcessorio1.DataSource = dtAce;
+            cmbAcessorio2.DataSource = dtAce;
+            cmbAcessorio3.DataSource = dtAce;
         }
 
         
@@ -32,7 +42,7 @@ namespace Pim.Patriot.CadVecDesk
             //testa se o campo nenhum acessório foi marcado
             if (!chkNtem.Checked)
             {
-                
+                //fazer uma funcao que pegue o id dos acesorios e linque com o id do veiculo recem criado
             } 
         }
 

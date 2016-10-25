@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Pim.Patriot.DataAccess.ClassesDAO.VeiculoDAO.datasource" />
     <None Include="Properties\Settings.settings">
@@ -78,7 +79,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary.csproj">
@@ -89,6 +92,21 @@
       <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
       <Name>Pim.Patriot.DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPretoBranco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPretoBranco1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disquete50x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faxineira40x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross49x51.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

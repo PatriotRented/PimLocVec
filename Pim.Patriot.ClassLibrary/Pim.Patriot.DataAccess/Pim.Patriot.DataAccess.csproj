@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassesDAO\acessorioVeiculoDAO.cs" />
+    <Compile Include="ClassesDAO\AcessorioDAO.cs" />
     <Compile Include="ClassesDAO\VeiculoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -40,10 +40,12 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
         /// <summary>
         /// Faz o select de todos os dados da tabela
         /// </summary>
-        public void selectAllVec()
+        public DataTable selectAllVec()
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "select * from veiculos";
+            throw new NotImplementedException();
+            
         }
         #endregion
     }

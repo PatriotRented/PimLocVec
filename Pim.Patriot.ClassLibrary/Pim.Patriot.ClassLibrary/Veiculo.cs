@@ -16,6 +16,8 @@ public class Veiculo
 
 	private string categoria;
 
+    private List<Acessorio> acessorios;
+
 	private char status;
 
 	public void cadVec(string _modelo, string _marca, string _cor, string _placa, string _categoria = "Sem categoria")
@@ -39,6 +41,15 @@ public class Veiculo
 	{
         throw new NotImplementedException();
 	}
+
+    /// <summary>
+    /// Incluiu os acessorios no veiculo
+    /// </summary>
+    public void incluiAce(List<Acessorio> _aces)
+    {
+        acessorios = new List<Acessorio>();
+        acessorios = _aces;
+    }
 
 }
 
