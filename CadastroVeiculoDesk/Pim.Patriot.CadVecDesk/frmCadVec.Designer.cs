@@ -221,6 +221,8 @@
             // chkNtem
             // 
             this.chkNtem.AutoSize = true;
+            this.chkNtem.Checked = true;
+            this.chkNtem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkNtem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.chkNtem.Location = new System.Drawing.Point(242, 107);
             this.chkNtem.Name = "chkNtem";

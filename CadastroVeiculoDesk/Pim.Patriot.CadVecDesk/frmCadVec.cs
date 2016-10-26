@@ -19,12 +19,12 @@ namespace Pim.Patriot.CadVecDesk
         /// </summary>
         public frmCadVec()
         {
-            AcessorioDAO a = new AcessorioDAO();
             InitializeComponent();
-            DataTable dtAce = a.listaAce();
-            cmbAcessorio1.DisplayMember = "nomeAce";
-            cmbAcessorio2.DisplayMember = "nomeAce";
-            cmbAcessorio3.DisplayMember = "nomeAce";
+            AcessorioDAO a = new AcessorioDAO();
+            DataTable dtAce = a.listaAce(@"Data Source=LUC-VAIO\SQLEXPRESS;Initial Catalog=BDlocadora;Integrated Security=True");
+            cmbAcessorio1.DisplayMember = "mostraAce";
+            cmbAcessorio2.DisplayMember = "mostraAce";
+            cmbAcessorio3.DisplayMember = "mostraAce";
 
             cmbAcessorio1.DataSource = dtAce;
             cmbAcessorio2.DataSource = dtAce;
@@ -48,12 +48,27 @@ namespace Pim.Patriot.CadVecDesk
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
+            txtModelo.Text = "";
+            txtMarca.Text = "";
+            txtPlaca.Text = "";
+            cmbAcessorio1.Text = "";
+            cmbAcessorio2.Text = "";
+            cmbAcessorio3.Text = "";
+            cmbCategoria.Text = "";
+            cmbCor.Text = "";
+            
+            
         }
 
         private void btnCancela_Click(object sender, EventArgs e)
         {
+            /*DialogResult result1 = MessageBox.Show("Is Dot Net Perls awesome?",
+            "Important Question",
+                MessageBoxButtons.YesNo);*/
+            DialogResult result = MessageBox.Show("Deseja cancelar?", "Cancel?", MessageBoxButtons.YesNo);
 
+            if (result == DialogResult.Yes)
+                this.Close();
         }
     }
 }
