@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acessorio.cs" />
+    <Compile Include="Categoria.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClientePF.cs" />
     <Compile Include="ClientePJ.cs" />

@@ -21,11 +21,9 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
         /// Insere um registro a partir do objeto veículo na tabela veiculo do banco de dados 
         /// </summary>
         /// <returns></returns>
-        public object insertVeiculo()
+        public void insertVeiculo(string _conn)
         {
-            /*SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "insert into Veiculo (modelo, marca, cor, placa, )";*/
-            throw new NotImplementedException();
+            SqlConnection conexao =  new SqlConnection(_conn);
         }
         
         /// <summary>

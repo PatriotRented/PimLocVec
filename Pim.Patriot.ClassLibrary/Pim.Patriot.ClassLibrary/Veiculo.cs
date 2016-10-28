@@ -14,13 +14,13 @@ public class Veiculo
 
 	private string placa;
 
-	private string categoria;
+	private int categoria;
 
     private List<Acessorio> acessorios;
 
 	private char status;
 
-	public void cadVec(string _modelo, string _marca, string _cor, string _placa, string _categoria = "Sem categoria")
+	public void cadVec(string _modelo, string _marca, string _cor, string _placa, int _categoria )
 	{
         this.modelo = _modelo;
         this.marca = _marca;
@@ -29,7 +29,7 @@ public class Veiculo
         this.categoria = _categoria;
 
         VeiculoDAO vecDAO = new VeiculoDAO();
-        vecDAO.insertVeiculo();
+        vecDAO.insertVeiculo(@"Data Source=LUC-VAIO\SQLEXPRESS;Initial Catalog=BDlocadora;Integrated Security=True");
 	}
 
 	public void delVec()
@@ -43,13 +43,13 @@ public class Veiculo
 	}
 
     /// <summary>
-    /// Incluiu os acessorios no veiculo
+    /// Incluiu os acessorios no veiculo 
     /// </summary>
-    public void incluiAce(List<Acessorio> _aces)
+  /*  public void incluiAce(List<Acessorio> _aces) provavelmente vai para outro lugar
     {
         acessorios = new List<Acessorio>();
         acessorios = _aces;
     }
-
+    */
 }
 

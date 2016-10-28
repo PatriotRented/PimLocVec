@@ -230,6 +230,7 @@
             this.chkNtem.TabIndex = 13;
             this.chkNtem.Text = "Nenhum Acessório";
             this.chkNtem.UseVisualStyleBackColor = true;
+            this.chkNtem.CheckedChanged += new System.EventHandler(this.chkNtem_CheckedChanged);
             // 
             // cmbAcessorio3
             // 
