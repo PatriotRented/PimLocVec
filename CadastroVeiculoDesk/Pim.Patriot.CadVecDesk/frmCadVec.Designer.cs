@@ -97,6 +97,7 @@
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Arial", 12F);
             this.txtPlaca.Location = new System.Drawing.Point(106, 34);
+            this.txtPlaca.MaxLength = 7;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(176, 26);
             this.txtPlaca.TabIndex = 1;
@@ -115,6 +116,7 @@
             // 
             this.txtModelo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(106, 81);
+            this.txtModelo.MaxLength = 30;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(176, 26);
             this.txtModelo.TabIndex = 3;
@@ -133,6 +135,7 @@
             // 
             this.txtMarca.Font = new System.Drawing.Font("Arial", 12F);
             this.txtMarca.Location = new System.Drawing.Point(106, 130);
+            this.txtMarca.MaxLength = 20;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(176, 26);
             this.txtMarca.TabIndex = 5;
@@ -151,6 +154,7 @@
             // 
             this.cmbCor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCor.FormattingEnabled = true;
+            this.cmbCor.ItemHeight = 18;
             this.cmbCor.Items.AddRange(new object[] {
             "Azul",
             "Branco",

@@ -113,7 +113,28 @@ namespace Pim.Patriot.CadVecDesk
 
             }else
             {
-                MessageBox.Show("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
+                MessageBox.Show
+                    ("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
+            }
+
+            DialogResult resultCon = MessageBox.Show
+                ( "Deseja continuar a incluir veículos?","Veículo Incluido com sucesso!", MessageBoxButtons.YesNo);
+
+            if (resultCon == DialogResult.Yes)
+            {
+                txtModelo.Text = "";
+                txtMarca.Text = "";
+                txtPlaca.Text = "";
+                cmbAcessorio1.Text = "";
+                cmbAcessorio2.Text = "";
+                cmbAcessorio3.Text = "";
+                chkNtem.Checked = true;
+                cmbCategoria.Text = "";
+                cmbCor.Text = "";
+            }
+            else
+            {
+                this.Close();
             }
 
         }
