@@ -13,7 +13,7 @@ namespace Pim.Patriot.ClassLibrary
 	    string nomeCat;
         double precoCat;
 
-        public void insereAce()
+        public void insereCat()
         {
             throw new NotImplementedException();
         }

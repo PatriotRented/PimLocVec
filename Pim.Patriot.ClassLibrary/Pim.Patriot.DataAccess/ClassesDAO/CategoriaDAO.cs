@@ -24,7 +24,7 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
                 conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
                 SqlCommand cmd = conexao.CreateCommand();
-                cmd.CommandText = @"select CONCAT(codCat,' |  ',nomeCat) as mostraCat from Categoria;";
+                cmd.CommandText = @"select CONCAT(codCat,' -  ',nomeCat) as mostraCat from Categoria;";
                 DataTable dt = new DataTable();
                 conexao.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -41,5 +41,7 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
             
 
         }
+
+       
     }
 }

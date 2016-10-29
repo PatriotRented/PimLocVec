@@ -6,25 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Pim.Patriot.DataAccess.ClassesDAO
 {
     /// <summary>
-    /// Classe de acesso ao banco de dados dos objetos veículos
+    /// Classe de acesso ao banco de dados dos objetos veículos apenas consultas (selects)
     /// </summary>
     public class VeiculoDAO
     {
-        SqlConnection conexao = new SqlConnection();
+       
 
+        SqlConnection conexao = new SqlConnection();
+        
         #region Metodos
 
-        /// <summary>
-        /// Insere um registro a partir do objeto veículo na tabela veiculo do banco de dados 
-        /// </summary>
-        /// <returns></returns>
-        public void insertVeiculo(string _conn)
-        {
-            SqlConnection conexao =  new SqlConnection(_conn);
-        }
+  
         
         /// <summary>
         /// Faz o update de um registro no banco de dados a partir do seu id

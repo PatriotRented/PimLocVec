@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pim.Patriot.DataAccess.ClassesDAO;
+using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Pim.Patriot.CadVecDesk
 {
@@ -49,15 +51,17 @@ namespace Pim.Patriot.CadVecDesk
             {
                 AcessorioDAO ace = new AcessorioDAO();
 
-                DataTable dtAce = ace.listaAce();
+                DataTable dtAce1 = ace.listaAce();
+                DataTable dtAce2 = ace.listaAce();
+                DataTable dtAce3 = ace.listaAce();
                 //comboboxes de Acessórios
                 cmbAcessorio1.DisplayMember = "mostraAce";
                 cmbAcessorio2.DisplayMember = "mostraAce";
                 cmbAcessorio3.DisplayMember = "mostraAce";
 
-                cmbAcessorio1.DataSource = dtAce;
-                cmbAcessorio2.DataSource = dtAce;
-                cmbAcessorio3.DataSource = dtAce;
+                cmbAcessorio1.DataSource = dtAce1;
+                cmbAcessorio2.DataSource = dtAce2;
+                cmbAcessorio3.DataSource = dtAce3;
 
                 cmbAcessorio1.Enabled = true;
                 cmbAcessorio2.Enabled = true;
@@ -78,27 +82,40 @@ namespace Pim.Patriot.CadVecDesk
         #region Botoes da tela 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+
             Veiculo vec = new Veiculo();
-            //Alimenta os dados no objeto veículo
-            MessageBox.Show("Confirmar", "Deseja confirmar a conclusão.", MessageBoxButtons.OKCancel);
-            try
+
+            DialogResult result = MessageBox.Show("Confirmar", "Deseja confirmar a conclusão.", MessageBoxButtons.OKCancel);
+           
+            if (result == DialogResult.OK && txtModelo.Text != "" && txtMarca.Text != "" &&
+            txtPlaca.Text != "" )
             {
-                vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text, Convert.ToInt32(cmbCategoria.Text));
+                int _codVec = vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text,
+                Convert.ToInt32(string.Join(null, Regex.Split(cmbCategoria.Text, "[^\\d]"))));
 
                 //testa se o campo nenhum acessório foi marcado
-                if (!chkNtem.Checked)
+                if (chkNtem.Checked == false)
                 {
-                    //fazer uma funcao que pegue o id dos acesorios e linque com o id do veiculo recem criado
+                    Acessorio ace = new Acessorio();
+
+                    int teste = Convert.ToInt32(string.Join(null, Regex.Split(cmbAcessorio1.Text, "[^\\d]")));
+                    if(teste != 0)
+                        ace.assosiaVecXace(_codVec,teste);
+
+                    teste = Convert.ToInt32(string.Join(null, Regex.Split(cmbAcessorio2.Text, "[^\\d]")));
+                    if(teste != 0)
+                        ace.assosiaVecXace(_codVec,teste);
+                    teste = Convert.ToInt32(string.Join(null, Regex.Split(cmbAcessorio3.Text, "[^\\d]")));
+                    if(teste != 0)
+                        ace.assosiaVecXace(_codVec, teste);
+                                        
                 }
 
-            }
-            catch 
+            }else
             {
-                Exception ex = new Exception();
-                MessageBox.Show("ERROR:", Convert.ToString(ex), MessageBoxButtons.OK);
+                MessageBox.Show("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
             }
-                      
-            
+
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
