@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{834AA7F0-DBA1-4281-8A85-E5E1F35AEA5E}</ProjectGuid>
+    <ProjectGuid>{7ED4F1BA-BBCC-4242-BEA6-02F4D98C23E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pim.Patriot.MDI</RootNamespace>
-    <AssemblyName>Pim.Patriot.MDI</AssemblyName>
+    <RootNamespace>Pim.Patriot.CadVecDesk</RootNamespace>
+    <AssemblyName>Pim.Patriot.CadVecDesk</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,16 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMDI.cs">
+    <Compile Include="frmCadVec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMDI.Designer.cs">
-      <DependentUpon>frmMDI.cs</DependentUpon>
+    <Compile Include="frmCadVec.Designer.cs">
+      <DependentUpon>frmCadVec.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmMDI.resx">
-      <DependentUpon>frmMDI.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadVec.pt-BR.resx">
+      <DependentUpon>frmCadVec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadVec.resx">
+      <DependentUpon>frmCadVec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +72,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Pim.Patriot.DataAccess.ClassesDAO.VeiculoDAO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,90 +84,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo370x320.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo185x160.jpg" />
+    <ProjectReference Include="..\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary.csproj">
+      <Project>{3e1a76a6-7e84-433e-aa11-24044ab2503a}</Project>
+      <Name>Pim.Patriot.ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
+      <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
+      <Name>Pim.Patriot.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backgroundPretoBranco.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\backgroundPretoBranco1920x1086.jpg" />
+    <None Include="Resources\backgroundPretoBranco1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\backgroundPretoBranco1040x588.jpg" />
+    <None Include="Resources\disquete50x51.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo140x121.jpg" />
+    <None Include="Resources\faxineira40x51.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\carroComRelogioEmCimaComTexto85x85.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calendarioComUmRelogioOrange85x85.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\maoMoeda130x85.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cadastro80x91.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\livrosCons80x91ok.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dinheiro80x91okok.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\papelcomvistos80x92.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\duvida80x91.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\duvida80x91ok.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logoutSemTxt80x91.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\papelcomvistos80x91.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\papelcomvistos80x91ok.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\duvida80x91certo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cadastroOrange80x91semtxtok.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\livrosCons80x91.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit80x91semtxt.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dinheiro80x91semTXT.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Pim.Patriot.CadVecDesk\Pim.Patriot.CadVecDesk.csproj">
-      <Project>{7ed4f1ba-bbcc-4242-bea6-02f4d98c23e0}</Project>
-      <Name>Pim.Patriot.CadVecDesk</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary.csproj">
-      <Project>{3e1a76a6-7e84-433e-aa11-24044ab2503a}</Project>
-      <Name>Pim.Patriot.ClassLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
-      <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
-      <Name>Pim.Patriot.DataAccess</Name>
-    </ProjectReference>
+    <None Include="Resources\cross49x51.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

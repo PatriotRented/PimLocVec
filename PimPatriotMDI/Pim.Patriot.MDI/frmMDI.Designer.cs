@@ -137,6 +137,7 @@
             this.menuItemLogo.Name = "menuItemLogo";
             this.menuItemLogo.Size = new System.Drawing.Size(145, 125);
             this.menuItemLogo.Text = "logo";
+            this.menuItemLogo.Click += new System.EventHandler(this.menuItemLogo_Click);
             // 
             // menuItemLoca
             // 
@@ -180,6 +181,7 @@
             this.sairToolStripMenuItem});
             this.mstripHorizontal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.mstripHorizontal.Location = new System.Drawing.Point(158, 0);
+            this.mstripHorizontal.MdiWindowListItem = this.menuItemFinan;
             this.mstripHorizontal.Name = "mstripHorizontal";
             this.mstripHorizontal.Size = new System.Drawing.Size(1003, 124);
             this.mstripHorizontal.TabIndex = 3;
@@ -224,6 +226,7 @@
             this.menuItemCadVec.Name = "menuItemCadVec";
             this.menuItemCadVec.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadVec.Text = "Veiculos";
+            this.menuItemCadVec.Click += new System.EventHandler(this.menuItemCadVec_Click);
             // 
             // consultaToolStripMenuItem
             // 
@@ -391,9 +394,12 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mstripHorizontal);
             this.Controls.Add(this.mstripVertical);
-            this.MainMenuStrip = this.mstripVertical;
+            this.IsMdiContainer = true;
             this.Name = "frmMDI";
+            this.ShowIcon = false;
             this.Text = "PATRIOT RETEND";
+            this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
