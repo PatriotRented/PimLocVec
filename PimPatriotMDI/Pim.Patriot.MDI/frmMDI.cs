@@ -14,6 +14,7 @@ namespace Pim.Patriot.MDI
     public partial class frmMDI : Form
     {
         
+
         public frmMDI()
         {
             InitializeComponent();
