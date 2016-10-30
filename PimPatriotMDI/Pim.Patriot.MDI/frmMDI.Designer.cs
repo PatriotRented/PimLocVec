@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDI));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ProgressBarJudite = new System.Windows.Forms.ToolStripProgressBar();
             this.tsstEmp = new System.Windows.Forms.ToolStripStatusLabel();
@@ -78,7 +79,7 @@
             this.tssthora});
             this.statusStrip1.Location = new System.Drawing.Point(158, 565);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1003, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1002, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -183,7 +184,7 @@
             this.mstripHorizontal.Location = new System.Drawing.Point(158, 0);
             this.mstripHorizontal.MdiWindowListItem = this.menuItemFinan;
             this.mstripHorizontal.Name = "mstripHorizontal";
-            this.mstripHorizontal.Size = new System.Drawing.Size(1003, 124);
+            this.mstripHorizontal.Size = new System.Drawing.Size(1002, 124);
             this.mstripHorizontal.TabIndex = 3;
             this.mstripHorizontal.Text = "mstripHorizontal";
             // 
@@ -208,6 +209,7 @@
             this.menuItemCadAce.Name = "menuItemCadAce";
             this.menuItemCadAce.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadAce.Text = "Acessorios";
+            this.menuItemCadAce.Click += new System.EventHandler(this.menuItemCadAce_Click);
             // 
             // menuItemCadClien
             // 
@@ -390,14 +392,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Pim.Patriot.MDI.Properties.Resources.backgroundPretoBranco1040x588;
-            this.ClientSize = new System.Drawing.Size(1161, 587);
+            this.ClientSize = new System.Drawing.Size(1160, 587);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mstripHorizontal);
             this.Controls.Add(this.mstripVertical);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmMDI";
-            this.ShowIcon = false;
-            this.Text = "PATRIOT RETEND";
+            this.Text = "PATRIOT RETEND - Locadora de Veículos desde 1500 ";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

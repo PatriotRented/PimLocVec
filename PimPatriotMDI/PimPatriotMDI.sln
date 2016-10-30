@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.DataAccess", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.CadVecDesk", "..\Pim.Patriot.CadVecDesk\Pim.Patriot.CadVecDesk.csproj", "{7ED4F1BA-BBCC-4242-BEA6-02F4D98C23E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.CadAce", "Pim.Patriot.CadAce\Pim.Patriot.CadAce.csproj", "{18E02B64-9475-41C2-840F-0737F804E19A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7ED4F1BA-BBCC-4242-BEA6-02F4D98C23E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ED4F1BA-BBCC-4242-BEA6-02F4D98C23E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ED4F1BA-BBCC-4242-BEA6-02F4D98C23E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E02B64-9475-41C2-840F-0737F804E19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E02B64-9475-41C2-840F-0737F804E19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E02B64-9475-41C2-840F-0737F804E19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E02B64-9475-41C2-840F-0737F804E19A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

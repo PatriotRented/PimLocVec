@@ -133,6 +133,16 @@ namespace Pim.Patriot.MDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cross49x51 {
+            get {
+                object obj = ResourceManager.GetObject("cross49x51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dinheiro80x91okok {
             get {
                 object obj = ResourceManager.GetObject("dinheiro80x91okok", resourceCulture);
@@ -146,6 +156,16 @@ namespace Pim.Patriot.MDI.Properties {
         internal static System.Drawing.Bitmap dinheiro80x91semTXT {
             get {
                 object obj = ResourceManager.GetObject("dinheiro80x91semTXT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disquete50x51 {
+            get {
+                object obj = ResourceManager.GetObject("disquete50x51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace Pim.Patriot.MDI.Properties {
         internal static System.Drawing.Bitmap exit80x91semtxt {
             get {
                 object obj = ResourceManager.GetObject("exit80x91semtxt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap faxineira40x51 {
+            get {
+                object obj = ResourceManager.GetObject("faxineira40x51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

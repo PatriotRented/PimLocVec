@@ -1,6 +1,9 @@
 using Pim.Patriot.DataAccess;
+using Pim.Patriot.DataAccess.ClassesDAO;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 public class Acessorio
 {
@@ -10,9 +13,43 @@ public class Acessorio
 
 	private double precoAce;
 
-	public void IncluirAce()
+	public void IncluirAce(string _nomeAce, double _precoAce)
 	{
-        throw new NotImplementedException();
+        try
+        {
+
+          //  ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(@"Data Source = LUC - VAIO\SQLEXPRESS; Initial Catalog = BDlocadora; Integrated Security = True");
+
+            SqlCommand cmd = conexao.CreateCommand();
+            cmd.CommandText =
+                @"insert into Acessorio (nomeAce, precoAce) values ('GPS',50.50)";
+            cmd.Parameters.AddWithValue("@nomeAce", _nomeAce);
+            cmd.Parameters.AddWithValue("@nomeAce", _precoAce);
+
+            conexao.Open();
+
+            cmd.ExecuteNonQuery();
+
+            conexao.Close();
+        }
+        catch(SqlException ex)
+        {
+            for (int i = 0; i < ex.Errors.Count; i++)
+            {
+                String erroMessages;
+                    erroMessages = ("Index #" + i + "\n" +
+                    "Message: " + ex.Errors[i].Message + "\n" +
+                    "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                    "Source: " + ex.Errors[i].Source + "\n" +
+                    "Procedure: " + ex.Errors[i].Procedure + "\n");
+                MessageBox.Show(erroMessages);
+            }
+            
+            
+            
+        }
+
 	}
 
 	public void excluirAce()

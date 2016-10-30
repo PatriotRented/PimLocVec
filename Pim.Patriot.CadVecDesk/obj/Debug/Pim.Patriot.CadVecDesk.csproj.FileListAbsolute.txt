@@ -1,0 +1,16 @@
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.CadVecDesk.exe.config
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.CadVecDesk.exe
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.CadVecDesk.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.ClassLibrary.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.DataAccess.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.ClassLibrary.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\Pim.Patriot.DataAccess.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.csprojResolveAssemblyReference.cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.frmCadVec.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.Properties.Resources.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.csproj.GenerateResource.Cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.exe
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.frmCadVec.pt-BR.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\pt-BR\Pim.Patriot.CadVecDesk.resources.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\pt-BR\Pim.Patriot.CadVecDesk.resources.dll

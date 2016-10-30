@@ -85,7 +85,7 @@ namespace Pim.Patriot.CadVecDesk
 
             Veiculo vec = new Veiculo();
 
-            DialogResult result = MessageBox.Show("Confirmar", "Deseja confirmar a conclusão.", MessageBoxButtons.OKCancel);
+            DialogResult result = MessageBox.Show("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
            
             if (result == DialogResult.OK && txtModelo.Text != "" && txtMarca.Text != "" &&
             txtPlaca.Text != "" )
@@ -111,31 +111,37 @@ namespace Pim.Patriot.CadVecDesk
                                         
                 }
 
-            }else
+                DialogResult resultCon = MessageBox.Show
+                    ("Deseja continuar incluindo outros veículos?", 
+                    "Veículo Incluido com sucesso!", MessageBoxButtons.YesNo);
+
+
+                if (resultCon == DialogResult.Yes)
+                {
+                    txtModelo.Text = "";
+                    txtMarca.Text = "";
+                    txtPlaca.Text = "";
+                    cmbAcessorio1.Text = "";
+                    cmbAcessorio2.Text = "";
+                    cmbAcessorio3.Text = "";
+                    chkNtem.Checked = true;
+                    cmbCategoria.Text = "";
+                    cmbCor.Text = "";
+                }
+                else
+                {
+                    this.Close();
+                }
+
+            }
+            else
             {
                 MessageBox.Show
                     ("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
             }
 
-            DialogResult resultCon = MessageBox.Show
-                ( "Deseja continuar a incluir veículos?","Veículo Incluido com sucesso!", MessageBoxButtons.YesNo);
-
-            if (resultCon == DialogResult.Yes)
-            {
-                txtModelo.Text = "";
-                txtMarca.Text = "";
-                txtPlaca.Text = "";
-                cmbAcessorio1.Text = "";
-                cmbAcessorio2.Text = "";
-                cmbAcessorio3.Text = "";
-                chkNtem.Checked = true;
-                cmbCategoria.Text = "";
-                cmbCor.Text = "";
-            }
-            else
-            {
-                this.Close();
-            }
+           
+            
 
         }
 
@@ -168,14 +174,13 @@ namespace Pim.Patriot.CadVecDesk
         #endregion
 
         #region Iniciador
-        public void criaCadVec(bool _teste)
+        public int criaCadVec(frmCadVec a)
         {
 
-            frmCadVec a = new frmCadVec();
-            a.CenterToScreen();
+            a.StartPosition = FormStartPosition.CenterScreen;
             a.Show();
             a.BringToFront();
-
+            return 1;
         }
 
         #endregion
@@ -184,5 +189,7 @@ namespace Pim.Patriot.CadVecDesk
         {
 
         }
+
+      
     }
 }

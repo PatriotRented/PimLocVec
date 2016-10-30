@@ -69,7 +69,7 @@ public class Veiculo
         catch
         {
             Exception ex = new Exception();
-            MessageBox.Show(Convert.ToString(ex),"Erro", MessageBoxButtons.OK);
+            MessageBox.Show(Convert.ToString(ex));
             throw ex;
         }
 

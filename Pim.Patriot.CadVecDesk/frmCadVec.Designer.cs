@@ -425,6 +425,7 @@
             this.Controls.Add(this.gbxAcessorio);
             this.Controls.Add(this.gbxAtributosCar);
             this.Controls.Add(this.menuStripCadVec);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
             this.Name = "frmCadVec";
             this.Load += new System.EventHandler(this.frmCadVec_Load);

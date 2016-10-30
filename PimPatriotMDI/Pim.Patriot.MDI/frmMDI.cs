@@ -1,4 +1,5 @@
-﻿using Pim.Patriot.CadVecDesk;
+﻿using Pim.Patriot.CadAce;
+using Pim.Patriot.CadVecDesk;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Pim.Patriot.MDI
 {
+       
     public partial class frmMDI : Form
     {
         
@@ -29,14 +31,22 @@ namespace Pim.Patriot.MDI
         #region Menu superior horizontal
         private void menuItemCadVec_Click(object sender, EventArgs e)
         {
-            frmCadVec a = new frmCadVec();       
+           
+            frmCadVec a = new frmCadVec();
             a.MdiParent = this;
-            this.OpenFrom(a,typeof(frmCadVec));
-          //  mstripHorizontal.Hide();
-            //a.BringToFront();
-
+            a.criaCadVec(a);
+            mstripHorizontal.Hide();
 
         }
+
+        private void menuItemCadAce_Click(object sender, EventArgs e)
+        {
+            frmCadAce a = new frmCadAce();
+            a.MdiParent = this;
+            a.Show();
+            //mstripHorizontal.Hide();
+        }
+
         #endregion
 
         #region Menu Vertical
@@ -45,38 +55,8 @@ namespace Pim.Patriot.MDI
             mstripVertical.Show();
             mstripHorizontal.Show();
             
-        }
+        }      
 
         #endregion
-
-        #region Metodo de Abrir Forms
-
-        public void OpenFrom(Form _frm,Type frmType )
-        {
-            
-            bool Ctrl = false;
-
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType().Equals(frmType))
-                {
-                    form.Show();
-                    Ctrl = true;
-                    break;
-                }
-
-                if (!Ctrl)
-                {
-                    _frm = (Form)Activator.CreateInstance(frmType);
-                    
-                    _frm.Show();
-                    
-                }
-            }
-        }
-
-
-        #endregion
-
     }
 }

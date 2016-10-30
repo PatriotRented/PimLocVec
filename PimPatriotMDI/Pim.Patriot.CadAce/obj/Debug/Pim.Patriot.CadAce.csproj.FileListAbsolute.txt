@@ -1,0 +1,13 @@
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.csprojResolveAssemblyReference.cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.Properties.Resources.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.csproj.GenerateResource.Cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.frmCadAce.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.CadAce.exe.config
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.CadAce.exe
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.CadAce.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.ClassLibrary.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.DataAccess.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.ClassLibrary.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.DataAccess.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.exe
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.pdb
