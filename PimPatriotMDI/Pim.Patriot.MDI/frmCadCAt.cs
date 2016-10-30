@@ -31,6 +31,7 @@ namespace Pim.Patriot.MDI
                 DialogResult resul = MessageBox.Show
                     ("Deseja continuar Incluindo outros categoria?", "Confirmação!", MessageBoxButtons.YesNo);
 
+
                 if (resul == DialogResult.Yes)
                 {
                     txtNome.Text = "";
