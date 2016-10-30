@@ -6,7 +6,7 @@ public class Endereco
 
 	private string uf;
 
-	private int cidade;
+	private string cidade;
 
 	private string cep;
 

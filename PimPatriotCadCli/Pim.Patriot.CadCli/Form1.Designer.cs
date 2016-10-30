@@ -29,14 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCli));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lblNome = new System.Windows.Forms.Label();
             this.txtNomeCli = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.mdtxtRG = new System.Windows.Forms.MaskedTextBox();
+            this.mdtxtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.gbxAtributosCli = new System.Windows.Forms.GroupBox();
+            this.mdtxtCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.lblCnpj = new System.Windows.Forms.Label();
+            this.mdtxtCnh = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblRG = new System.Windows.Forms.Label();
+            this.lblCnh = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblDatans = new System.Windows.Forms.Label();
+            this.mdtxtDtnsc = new System.Windows.Forms.MaskedTextBox();
+            this.lblLinha = new System.Windows.Forms.Label();
+            this.lblRua = new System.Windows.Forms.Label();
+            this.txtRua = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.mdtxtNumero = new System.Windows.Forms.MaskedTextBox();
+            this.lblComplemento = new System.Windows.Forms.Label();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.lblUf = new System.Windows.Forms.Label();
+            this.mdtxtUf = new System.Windows.Forms.MaskedTextBox();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.mdtxtCep = new System.Windows.Forms.MaskedTextBox();
+            this.gbxAtributosCli.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -44,82 +70,373 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(30, 43);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
-            this.lblNome.Click += new System.EventHandler(this.label1_Click);
-            // 
             // txtNomeCli
             // 
-            this.txtNomeCli.Location = new System.Drawing.Point(75, 35);
+            this.txtNomeCli.Location = new System.Drawing.Point(137, 42);
             this.txtNomeCli.Name = "txtNomeCli";
-            this.txtNomeCli.Size = new System.Drawing.Size(242, 20);
+            this.txtNomeCli.Size = new System.Drawing.Size(242, 25);
             this.txtNomeCli.TabIndex = 2;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(47, 9);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(21, 13);
-            this.lblId.TabIndex = 3;
-            this.lblId.Text = "ID:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "RG:";
             // 
             // mdtxtRG
             // 
-            this.mdtxtRG.Location = new System.Drawing.Point(75, 72);
+            this.mdtxtRG.Location = new System.Drawing.Point(137, 81);
             this.mdtxtRG.Mask = "00.000.000-";
             this.mdtxtRG.Name = "mdtxtRG";
-            this.mdtxtRG.Size = new System.Drawing.Size(86, 20);
+            this.mdtxtRG.Size = new System.Drawing.Size(98, 25);
             this.mdtxtRG.TabIndex = 5;
+            // 
+            // mdtxtCpf
+            // 
+            this.mdtxtCpf.Location = new System.Drawing.Point(137, 135);
+            this.mdtxtCpf.Mask = "000.000.000-00";
+            this.mdtxtCpf.Name = "mdtxtCpf";
+            this.mdtxtCpf.Size = new System.Drawing.Size(100, 25);
+            this.mdtxtCpf.TabIndex = 7;
+            // 
+            // gbxAtributosCli
+            // 
+            this.gbxAtributosCli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxAtributosCli.AutoSize = true;
+            this.gbxAtributosCli.Controls.Add(this.mdtxtCep);
+            this.gbxAtributosCli.Controls.Add(this.lblCep);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtUf);
+            this.gbxAtributosCli.Controls.Add(this.lblUf);
+            this.gbxAtributosCli.Controls.Add(this.txtComplemento);
+            this.gbxAtributosCli.Controls.Add(this.lblComplemento);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtNumero);
+            this.gbxAtributosCli.Controls.Add(this.lblNumero);
+            this.gbxAtributosCli.Controls.Add(this.txtBairro);
+            this.gbxAtributosCli.Controls.Add(this.lblBairro);
+            this.gbxAtributosCli.Controls.Add(this.txtRua);
+            this.gbxAtributosCli.Controls.Add(this.lblRua);
+            this.gbxAtributosCli.Controls.Add(this.lblLinha);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtDtnsc);
+            this.gbxAtributosCli.Controls.Add(this.lblDatans);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtCnpj);
+            this.gbxAtributosCli.Controls.Add(this.lblCnpj);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtCnh);
+            this.gbxAtributosCli.Controls.Add(this.txtEmail);
+            this.gbxAtributosCli.Controls.Add(this.lblRG);
+            this.gbxAtributosCli.Controls.Add(this.lblCnh);
+            this.gbxAtributosCli.Controls.Add(this.lblNome);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtCpf);
+            this.gbxAtributosCli.Controls.Add(this.lblEmail);
+            this.gbxAtributosCli.Controls.Add(this.mdtxtRG);
+            this.gbxAtributosCli.Controls.Add(this.lblCpf);
+            this.gbxAtributosCli.Controls.Add(this.txtNomeCli);
+            this.gbxAtributosCli.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Italic);
+            this.gbxAtributosCli.Location = new System.Drawing.Point(88, 36);
+            this.gbxAtributosCli.Name = "gbxAtributosCli";
+            this.gbxAtributosCli.Size = new System.Drawing.Size(717, 411);
+            this.gbxAtributosCli.TabIndex = 11;
+            this.gbxAtributosCli.TabStop = false;
+            this.gbxAtributosCli.Text = "Cliente/PF-PJ";
+            // 
+            // mdtxtCnpj
+            // 
+            this.mdtxtCnpj.Location = new System.Drawing.Point(498, 81);
+            this.mdtxtCnpj.Mask = "00.000.000/0000-00";
+            this.mdtxtCnpj.Name = "mdtxtCnpj";
+            this.mdtxtCnpj.Size = new System.Drawing.Size(147, 25);
+            this.mdtxtCnpj.TabIndex = 13;
+            // 
+            // lblCnpj
+            // 
+            this.lblCnpj.AutoSize = true;
+            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCnpj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblCnpj.Location = new System.Drawing.Point(417, 86);
+            this.lblCnpj.Name = "lblCnpj";
+            this.lblCnpj.Size = new System.Drawing.Size(63, 20);
+            this.lblCnpj.TabIndex = 12;
+            this.lblCnpj.Text = "CNPJ :";
+            // 
+            // mdtxtCnh
+            // 
+            this.mdtxtCnh.Location = new System.Drawing.Point(137, 179);
+            this.mdtxtCnh.Mask = "00000000000";
+            this.mdtxtCnh.Name = "mdtxtCnh";
+            this.mdtxtCnh.Size = new System.Drawing.Size(103, 25);
+            this.mdtxtCnh.TabIndex = 11;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(498, 42);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(199, 25);
+            this.txtEmail.TabIndex = 10;
+            // 
+            // lblRG
+            // 
+            this.lblRG.AutoSize = true;
+            this.lblRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblRG.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblRG.Location = new System.Drawing.Point(61, 86);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(46, 20);
+            this.lblRG.TabIndex = 2;
+            this.lblRG.Text = "RG :";
+            // 
+            // lblCnh
+            // 
+            this.lblCnh.AutoSize = true;
+            this.lblCnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCnh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblCnh.Location = new System.Drawing.Point(51, 180);
+            this.lblCnh.Name = "lblCnh";
+            this.lblCnh.Size = new System.Drawing.Size(56, 20);
+            this.lblCnh.TabIndex = 8;
+            this.lblCnh.Text = "CNH :";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblNome.Location = new System.Drawing.Point(42, 39);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(65, 20);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome :";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblEmail.Location = new System.Drawing.Point(417, 43);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(63, 20);
+            this.lblEmail.TabIndex = 6;
+            this.lblEmail.Text = "Email :";
             // 
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
-            this.lblCpf.Location = new System.Drawing.Point(38, 110);
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCpf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblCpf.Location = new System.Drawing.Point(54, 135);
             this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(30, 13);
-            this.lblCpf.TabIndex = 6;
-            this.lblCpf.Text = "CPF:";
+            this.lblCpf.Size = new System.Drawing.Size(53, 20);
+            this.lblCpf.TabIndex = 4;
+            this.lblCpf.Text = "CPF :";
             // 
-            // maskedTextBox1
+            // btnSalvar
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(75, 102);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 7;
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalvar.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.Image = global::Pim.Patriot.CadCli.Properties.Resources.disquete50x51;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSalvar.Location = new System.Drawing.Point(156, 471);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(154, 57);
+            this.btnSalvar.TabIndex = 15;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpar.AutoSize = true;
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLimpar.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnLimpar.Image = global::Pim.Patriot.CadCli.Properties.Resources.faxineira40x51;
+            this.btnLimpar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLimpar.Location = new System.Drawing.Point(357, 471);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(154, 57);
+            this.btnLimpar.TabIndex = 16;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelar.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Image = global::Pim.Patriot.CadCli.Properties.Resources.cross49x51;
+            this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancelar.Location = new System.Drawing.Point(563, 471);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(156, 57);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // lblDatans
+            // 
+            this.lblDatans.AutoSize = true;
+            this.lblDatans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDatans.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblDatans.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblDatans.Location = new System.Drawing.Point(323, 130);
+            this.lblDatans.Name = "lblDatans";
+            this.lblDatans.Size = new System.Drawing.Size(157, 20);
+            this.lblDatans.TabIndex = 14;
+            this.lblDatans.Text = "Data Nascimento :";
+            // 
+            // mdtxtDtnsc
+            // 
+            this.mdtxtDtnsc.Location = new System.Drawing.Point(498, 130);
+            this.mdtxtDtnsc.Mask = "00/00/0000";
+            this.mdtxtDtnsc.Name = "mdtxtDtnsc";
+            this.mdtxtDtnsc.Size = new System.Drawing.Size(100, 25);
+            this.mdtxtDtnsc.TabIndex = 15;
+            this.mdtxtDtnsc.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblLinha
+            // 
+            this.lblLinha.AutoSize = true;
+            this.lblLinha.Location = new System.Drawing.Point(27, 207);
+            this.lblLinha.Name = "lblLinha";
+            this.lblLinha.Size = new System.Drawing.Size(673, 18);
+            this.lblLinha.TabIndex = 16;
+            this.lblLinha.Text = "---------------------------------------------------------------------------------" +
+    "----------------------------------------------------";
+            // 
+            // lblRua
+            // 
+            this.lblRua.AutoSize = true;
+            this.lblRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblRua.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblRua.Location = new System.Drawing.Point(55, 235);
+            this.lblRua.Name = "lblRua";
+            this.lblRua.Size = new System.Drawing.Size(52, 20);
+            this.lblRua.TabIndex = 17;
+            this.lblRua.Text = "Rua :";
+            // 
+            // txtRua
+            // 
+            this.txtRua.Location = new System.Drawing.Point(137, 235);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(242, 25);
+            this.txtRua.TabIndex = 18;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBairro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblBairro.Location = new System.Drawing.Point(40, 272);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(67, 20);
+            this.lblBairro.TabIndex = 19;
+            this.lblBairro.Text = "Bairro :";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(137, 272);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(242, 25);
+            this.txtBairro.TabIndex = 20;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNumero.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblNumero.Location = new System.Drawing.Point(399, 235);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(81, 20);
+            this.lblNumero.TabIndex = 21;
+            this.lblNumero.Text = "Numero :";
+            // 
+            // mdtxtNumero
+            // 
+            this.mdtxtNumero.Location = new System.Drawing.Point(498, 235);
+            this.mdtxtNumero.Mask = "0000000";
+            this.mdtxtNumero.Name = "mdtxtNumero";
+            this.mdtxtNumero.Size = new System.Drawing.Size(66, 25);
+            this.mdtxtNumero.TabIndex = 22;
+            // 
+            // lblComplemento
+            // 
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblComplemento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblComplemento.Location = new System.Drawing.Point(6, 326);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(129, 20);
+            this.lblComplemento.TabIndex = 23;
+            this.lblComplemento.Text = "Complemento :";
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Location = new System.Drawing.Point(141, 321);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(193, 25);
+            this.txtComplemento.TabIndex = 24;
+            // 
+            // lblUf
+            // 
+            this.lblUf.AutoSize = true;
+            this.lblUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblUf.Location = new System.Drawing.Point(437, 277);
+            this.lblUf.Name = "lblUf";
+            this.lblUf.Size = new System.Drawing.Size(43, 20);
+            this.lblUf.TabIndex = 25;
+            this.lblUf.Text = "UF :";
+            // 
+            // mdtxtUf
+            // 
+            this.mdtxtUf.Location = new System.Drawing.Point(498, 276);
+            this.mdtxtUf.Mask = "00";
+            this.mdtxtUf.Name = "mdtxtUf";
+            this.mdtxtUf.Size = new System.Drawing.Size(24, 25);
+            this.mdtxtUf.TabIndex = 26;
+            // 
+            // lblCep
+            // 
+            this.lblCep.AutoSize = true;
+            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblCep.Location = new System.Drawing.Point(429, 321);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(51, 20);
+            this.lblCep.TabIndex = 27;
+            this.lblCep.Text = "Cep :";
+            // 
+            // mdtxtCep
+            // 
+            this.mdtxtCep.Location = new System.Drawing.Point(498, 320);
+            this.mdtxtCep.Mask = "00000-000";
+            this.mdtxtCep.Name = "mdtxtCep";
+            this.mdtxtCep.Size = new System.Drawing.Size(77, 25);
+            this.mdtxtCep.TabIndex = 28;
             // 
             // CadastroCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 546);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.lblCpf);
-            this.Controls.Add(this.mdtxtRG);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtNomeCli);
-            this.Controls.Add(this.lblNome);
+            this.BackgroundImage = global::Pim.Patriot.CadCli.Properties.Resources.backgroundPretoBranco1920x1086;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(885, 549);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.gbxAtributosCli);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroCli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.gbxAtributosCli.ResumeLayout(false);
+            this.gbxAtributosCli.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,13 +445,37 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNomeCli;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox mdtxtRG;
+        private System.Windows.Forms.MaskedTextBox mdtxtCpf;
+        private System.Windows.Forms.GroupBox gbxAtributosCli;
+        private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.Label lblCnh;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox mdtxtCnh;
+        private System.Windows.Forms.Label lblCnpj;
+        private System.Windows.Forms.MaskedTextBox mdtxtCnpj;
+        private System.Windows.Forms.MaskedTextBox mdtxtNumero;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.Label lblRua;
+        private System.Windows.Forms.Label lblLinha;
+        private System.Windows.Forms.MaskedTextBox mdtxtDtnsc;
+        private System.Windows.Forms.Label lblDatans;
+        private System.Windows.Forms.MaskedTextBox mdtxtCep;
+        private System.Windows.Forms.Label lblCep;
+        private System.Windows.Forms.MaskedTextBox mdtxtUf;
+        private System.Windows.Forms.Label lblUf;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label lblComplemento;
     }
 }
 
