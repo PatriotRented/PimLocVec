@@ -18,14 +18,14 @@ public class Acessorio
         try
         {
 
-          //  ConnectionFactory conn = new ConnectionFactory();
-            SqlConnection conexao = new SqlConnection(@"Data Source = LUC - VAIO\SQLEXPRESS; Initial Catalog = BDlocadora; Integrated Security = True");
+            ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
             SqlCommand cmd = conexao.CreateCommand();
             cmd.CommandText =
-                @"insert into Acessorio (nomeAce, precoAce) values ('GPS',50.50)";
+                @"insert into Acessorio (nomeAce, precoAce) values (@nomeAce,@precoAce)";
             cmd.Parameters.AddWithValue("@nomeAce", _nomeAce);
-            cmd.Parameters.AddWithValue("@nomeAce", _precoAce);
+            cmd.Parameters.AddWithValue("@precoAce", _precoAce);
 
             conexao.Open();
 
@@ -68,20 +68,37 @@ public class Acessorio
     /// </summary>
     public void assosiaVecXace(int _codVec, int _codAce)
     {
-        ConnectionFactory conn = new ConnectionFactory();
-        SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQl"));
-        SqlCommand cmdInsert = conexao.CreateCommand();
+        try
+        {
+            ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQl"));
+            SqlCommand cmdInsert = conexao.CreateCommand();
 
-        cmdInsert.CommandText = 
-            @"Insert into vecXace (codVec,codAce) values (@_codVec,@_codAce)";
-        cmdInsert.Parameters.AddWithValue("@_codVec",_codVec);
-        cmdInsert.Parameters.AddWithValue("@_codAce",_codAce);
+            cmdInsert.CommandText =
+                @"Insert into vecXace (codVec,codAce) values (@_codVec,@_codAce)";
+            cmdInsert.Parameters.AddWithValue("@_codVec", _codVec);
+            cmdInsert.Parameters.AddWithValue("@_codAce", _codAce);
 
-        conexao.Open();
+            conexao.Open();
 
-        cmdInsert.ExecuteNonQuery();
+            cmdInsert.ExecuteNonQuery();
 
-        conexao.Close();
+            conexao.Close();
+        }
+        catch (SqlException ex)
+        {
+            for (int i = 0; i < ex.Errors.Count; i++)
+            {
+                String erroMessages;
+                erroMessages = ("Index #" + i + "\n" +
+                "Message: " + ex.Errors[i].Message + "\n" +
+                "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                "Source: " + ex.Errors[i].Source + "\n" +
+                "Procedure: " + ex.Errors[i].Procedure + "\n");
+                MessageBox.Show(erroMessages);
+            }
+        }
+        
     }
 }
 

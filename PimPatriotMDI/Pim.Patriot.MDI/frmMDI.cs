@@ -29,6 +29,8 @@ namespace Pim.Patriot.MDI
         }
 
         #region Menu superior horizontal
+
+        #region Cadastro
         private void menuItemCadVec_Click(object sender, EventArgs e)
         {
            
@@ -47,6 +49,14 @@ namespace Pim.Patriot.MDI
             //mstripHorizontal.Hide();
         }
 
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadCat a = new frmCadCat();
+            a.MdiParent = this;
+            a.Show();
+        }
+        #endregion
+
         #endregion
 
         #region Menu Vertical
@@ -55,8 +65,10 @@ namespace Pim.Patriot.MDI
             mstripVertical.Show();
             mstripHorizontal.Show();
             
-        }      
+        }
 
         #endregion
+
+        
     }
 }

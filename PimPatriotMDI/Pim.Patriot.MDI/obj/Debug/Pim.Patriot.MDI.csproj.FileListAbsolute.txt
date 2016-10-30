@@ -16,3 +16,4 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\bin\Debug\pt-BR\Pim.Patriot.CadVecDesk.resources.dll
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\bin\Debug\Pim.Patriot.CadAce.exe
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\bin\Debug\Pim.Patriot.CadAce.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI.frmCadCat.resources

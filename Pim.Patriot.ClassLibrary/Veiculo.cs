@@ -85,15 +85,6 @@ public class Veiculo
         throw new NotImplementedException();
 	}
 
-    /// <summary>
-    /// Incluiu os acessorios no veiculo 
-    /// </summary>
-    /*  public void incluiAce(List<Acessorio> _aces) provavelmente vai para outro lugar
-      {
-          acessorios = new List<Acessorio>();
-          acessorios = _aces;
-      }
-      */
     #endregion
 }
 

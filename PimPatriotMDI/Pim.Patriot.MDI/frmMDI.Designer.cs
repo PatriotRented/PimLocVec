@@ -65,6 +65,7 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.mstripVertical.SuspendLayout();
             this.mstripHorizontal.SuspendLayout();
@@ -194,7 +195,8 @@
             this.menuItemCadAce,
             this.menuItemCadClien,
             this.menuItemCadFun,
-            this.menuItemCadVec});
+            this.menuItemCadVec,
+            this.categoriaToolStripMenuItem});
             this.menuItemCadCli.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItemCadCli.Image = global::Pim.Patriot.MDI.Properties.Resources.cadastroOrange80x91semtxtok;
             this.menuItemCadCli.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -387,6 +389,13 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +462,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemLoca;
         private System.Windows.Forms.ToolStripMenuItem menuItemReserva;
         private System.Windows.Forms.ToolStripMenuItem menuItemPagHoriz;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
     }
 }
 
