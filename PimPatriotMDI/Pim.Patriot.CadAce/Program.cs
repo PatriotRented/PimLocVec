@@ -17,6 +17,8 @@ namespace Pim.Patriot.CadAce
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmCadAce());
+            
+            
         }
     }
 }

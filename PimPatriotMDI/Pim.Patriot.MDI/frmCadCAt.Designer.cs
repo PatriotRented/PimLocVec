@@ -111,8 +111,10 @@
             this.txtPreco.Location = new System.Drawing.Point(105, 102);
             this.txtPreco.MaxLength = 30;
             this.txtPreco.Name = "txtPreco";
+            this.txtPreco.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPreco.Size = new System.Drawing.Size(225, 26);
             this.txtPreco.TabIndex = 6;
+            this.txtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // lblPreco
@@ -167,6 +169,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadCat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadCAt";
             this.gbxDados.ResumeLayout(false);
             this.gbxDados.PerformLayout();

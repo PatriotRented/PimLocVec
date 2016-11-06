@@ -93,6 +93,26 @@ namespace Pim.Patriot.MDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroung {
+            get {
+                object obj = ResourceManager.GetObject("backgroung", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backgroung1920x1086 {
+            get {
+                object obj = ResourceManager.GetObject("backgroung1920x1086", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cadastro80x91 {
             get {
                 object obj = ResourceManager.GetObject("cadastro80x91", resourceCulture);

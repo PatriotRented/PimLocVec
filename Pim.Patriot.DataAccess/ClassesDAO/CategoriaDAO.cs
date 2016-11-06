@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Pim.Patriot.DataAccess.ClassesDAO
 {
@@ -33,9 +34,18 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
 
                 return dt;
             }
-            catch
+            catch(SqlException ex)
             {
-                Exception ex = new Exception();
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    String erroMessages;
+                    erroMessages = ("Index #" + i + "\n" +
+                    "Message: " + ex.Errors[i].Message + "\n" +
+                    "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                    "Source: " + ex.Errors[i].Source + "\n" +
+                    "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    MessageBox.Show(erroMessages);
+                }
                 throw ex;
             }
             

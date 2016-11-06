@@ -42,6 +42,113 @@ namespace Pim.Patriot.CadVecDesk
             cmbAcessorio2.Enabled = false;
             cmbAcessorio3.Enabled = false;
         }
+        
+
+        #region Botoes da tela 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Veiculo vec = new Veiculo();
+            
+
+            if (txtModelo.Text != "" && txtMarca.Text != "" &&
+            txtPlaca.Text != "" && cmbCor.Text != "Escolha uma cor")
+            {
+                DialogResult result = MessageBox.Show
+                    ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
+
+                if (result == DialogResult.OK)
+                {
+                    
+                    //testa se o campo nenhum acessório foi marcado
+                    if (chkNtem.Checked == false)
+                    {
+                        Acessorio ace = new Acessorio();
+                        int codAce1 = 0 ,codAce2 = 0,codAce3 = 0;
+
+                        codAce1 = Convert.ToInt32
+                            (string.Join(null, Regex.Split(cmbAcessorio1.Text, "[^\\d]")));
+                      
+                        codAce2 = Convert.ToInt32
+                            (string.Join(null, Regex.Split(cmbAcessorio2.Text, "[^\\d]")));
+
+                        codAce3 = Convert.ToInt32
+                            (string.Join(null, Regex.Split(cmbAcessorio3.Text, "[^\\d]")));
+
+                        int _codVec = vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text,
+               Convert.ToInt32(string.Join(null, Regex.Split(cmbCategoria.Text, "[^\\d]"))),
+               txtAno.Text, codAce1,codAce2,codAce3);
+
+                    }
+                    else
+                    {
+                        int _codVec = vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text,
+                Convert.ToInt32(string.Join(null, Regex.Split(cmbCategoria.Text, "[^\\d]"))),
+                txtAno.Text);
+                    }
+                   
+
+                    DialogResult resultCon = MessageBox.Show
+                        ("Deseja continuar incluindo outros veículos?",
+                        "Veículo Incluido com sucesso!", MessageBoxButtons.YesNo);
+
+
+                    if (resultCon == DialogResult.Yes)
+                    {
+                        txtModelo.Text = "";
+                        txtMarca.Text = "";
+                        txtPlaca.Text = "";
+                        cmbAcessorio1.Text = "";
+                        cmbAcessorio2.Text = "";
+                        cmbAcessorio3.Text = "";
+                        chkNtem.Checked = true;
+                        cmbCategoria.Text = "";
+                        cmbCor.Text = "";
+                        txtAno.Text = "";
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+                    
+
+            }
+            else
+            {
+                MessageBox.Show
+                    ("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
+            }
+
+           
+            
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtModelo.Text = "";
+            txtMarca.Text = "";
+            txtPlaca.Text = "";
+            cmbAcessorio1.Text = "";
+            cmbAcessorio2.Text = "";
+            cmbAcessorio3.Text = "";
+            chkNtem.Checked = true;
+            cmbCategoria.Text = "";
+            cmbCor.Text = "";
+            txtAno.Text = "";
+
+        }
+
+        private void btnCancela_Click(object sender, EventArgs e)
+        {
+            
+            DialogResult result = MessageBox.Show("Deseja cancelar?", "Cancel?", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+                this.Close();
+        }
+
+        #endregion
 
         #region outros componentes da tela
 
@@ -78,118 +185,51 @@ namespace Pim.Patriot.CadVecDesk
 
         #endregion
 
+        #region Restricoes dos campos
 
-        #region Botoes da tela 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        #region txtPlaca
+        private void txtPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            Veiculo vec = new Veiculo();
-
-            DialogResult result = MessageBox.Show("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
-           
-            if (result == DialogResult.OK && txtModelo.Text != "" && txtMarca.Text != "" &&
-            txtPlaca.Text != "" )
+            //filtro fe caracteres idesejados
+            if (char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
             {
-                int _codVec = vec.cadVec(txtModelo.Text, txtMarca.Text, cmbCor.Text, txtPlaca.Text,
-                Convert.ToInt32(string.Join(null, Regex.Split(cmbCategoria.Text, "[^\\d]"))));
-
-                //testa se o campo nenhum acessório foi marcado
-                if (chkNtem.Checked == false)
-                {
-                    Acessorio ace = new Acessorio();
-
-                    int teste = Convert.ToInt32(string.Join(null, Regex.Split(cmbAcessorio1.Text, "[^\\d]")));
-                    if(teste != 0)
-                        ace.assosiaVecXace(_codVec,teste);
-
-                    teste = Convert.ToInt32(string.Join(null, Regex.Split(cmbAcessorio2.Text, "[^\\d]")));
-                    if(teste != 0)
-                        ace.assosiaVecXace(_codVec,teste);
-                    teste = Convert.ToInt32(string.Join(null, Regex.Split(cmbAcessorio3.Text, "[^\\d]")));
-                    if(teste != 0)
-                        ace.assosiaVecXace(_codVec, teste);
-                                        
-                }
-
-                DialogResult resultCon = MessageBox.Show
-                    ("Deseja continuar incluindo outros veículos?", 
-                    "Veículo Incluido com sucesso!", MessageBoxButtons.YesNo);
-
-
-                if (resultCon == DialogResult.Yes)
-                {
-                    txtModelo.Text = "";
-                    txtMarca.Text = "";
-                    txtPlaca.Text = "";
-                    cmbAcessorio1.Text = "";
-                    cmbAcessorio2.Text = "";
-                    cmbAcessorio3.Text = "";
-                    chkNtem.Checked = true;
-                    cmbCategoria.Text = "";
-                    cmbCor.Text = "";
-                }
-                else
-                {
-                    this.Close();
-                }
+                e.Handled = true;
+            }
+            //converte para maiusculo
+            if (char.IsLower(e.KeyChar) && char.IsLetter(e.KeyChar))
+            {
+                e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
 
             }
-            else
-            {
-                MessageBox.Show
-                    ("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
-            }
-
-           
-            
-
         }
+        #endregion
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        #region cmbCor
+        private void cmbCor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtModelo.Text = "";
-            txtMarca.Text = "";
-            txtPlaca.Text = "";
-            cmbAcessorio1.Text = "";
-            cmbAcessorio2.Text = "";
-            cmbAcessorio3.Text = "";
-            chkNtem.Checked = true;
-            cmbCategoria.Text = "";
-            cmbCor.Text = "";
-            
-            
-        }
-
-        private void btnCancela_Click(object sender, EventArgs e)
-        {
-            /*DialogResult result1 = MessageBox.Show("Is Dot Net Perls awesome?",
-            "Important Question",
-                MessageBoxButtons.YesNo);*/
-            DialogResult result = MessageBox.Show("Deseja cancelar?", "Cancel?", MessageBoxButtons.YesNo);
-
-            if (result == DialogResult.Yes)
-                this.Close();
+            e.Handled = true;
         }
 
         #endregion
 
-        #region Iniciador
-        public int criaCadVec(frmCadVec a)
+        #region cmdCat
+        private void cmbCategoria_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            a.StartPosition = FormStartPosition.CenterScreen;
-            a.Show();
-            a.BringToFront();
-            return 1;
+            e.Handled = true;
         }
+
+
 
         #endregion
 
-        private void frmCadVec_Load(object sender, EventArgs e)
+        #region txtAno
+        private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
         }
+        #endregion
 
-      
+        #endregion
     }
 }

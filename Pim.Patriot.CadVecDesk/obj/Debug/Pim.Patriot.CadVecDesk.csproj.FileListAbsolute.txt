@@ -14,3 +14,4 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.frmCadVec.pt-BR.resources
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\bin\Debug\pt-BR\Pim.Patriot.CadVecDesk.resources.dll
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\pt-BR\Pim.Patriot.CadVecDesk.resources.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.CadVecDesk\obj\Debug\Pim.Patriot.CadVecDesk.frmConsultaVec.resources

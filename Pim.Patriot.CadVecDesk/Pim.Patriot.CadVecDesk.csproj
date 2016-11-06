@@ -54,6 +54,12 @@
     <Compile Include="frmCadVec.Designer.cs">
       <DependentUpon>frmCadVec.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaVec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaVec.Designer.cs">
+      <DependentUpon>frmConsultaVec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadVec.pt-BR.resx">
@@ -61,6 +67,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadVec.resx">
       <DependentUpon>frmCadVec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaVec.resx">
+      <DependentUpon>frmConsultaVec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +82,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Pim.Patriot.DataAccess.ClassesDAO.VeiculoDAO.datasource" />
+    <None Include="Properties\DataSources\Veiculo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

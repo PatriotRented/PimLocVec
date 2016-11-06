@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pim.Patriot.ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,67 +18,64 @@ namespace Pim.Patriot.CadAce {
         #endregion
         public frmCadAce()
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
 
-        #region outros metodos
+        #region Retricoes de campos
         private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Se a tecla digitada não for número e nem backspace
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08  && e.KeyChar != 44)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && e.KeyChar != 44 
+                && char.IsWhiteSpace(e.KeyChar) )
             {
-                //Atribui True no Handled para cancelar o evento
-                e.Handled = true;
+                e.Handled = true;
             }
 
-            // Verifica se contém apenas uma vírgula
             if (e.KeyChar == 44)
             {
                 if ((sender as TextBox).Text.IndexOf(e.KeyChar) != -1)
                     e.Handled = true;
-               // else
 
             }
-            
         }
         #endregion
 
         #region Botoes
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Acessorio ace = new Acessorio();
-            DialogResult result = MessageBox.Show
-                ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
 
-            if (result == DialogResult.OK && txtNome.Text != "" && txtPreco.Text != "")
+            if (txtNome.Text != "" && txtPreco.Text != "")
             {
+                DialogResult result = MessageBox.Show
+                ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    Acessorio ace = new Acessorio();
+                    ace.IncluirAce(txtNome.Text, double.Parse(txtPreco.Text));
+
+                    DialogResult resul = MessageBox.Show
+                        ("Deseja continuar Incluindo outros acessórios?", "Confirmação!", MessageBoxButtons.YesNo);
+
+                    if (resul == DialogResult.Yes)
+                    {
+                        txtNome.Text = "";
+                        txtPreco.Text = "";
+
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
                 
-                ace.IncluirAce(txtNome.Text, double.Parse(txtPreco.Text));
-
-                DialogResult resul = MessageBox.Show
-                    ("Deseja continuar Incluindo outros acessórios?", "Confirmação!", MessageBoxButtons.YesNo);
-
-                if (resul == DialogResult.Yes)
-                {
-                    txtNome.Text = "";
-                    txtPreco.Text = "";
-
-                }
-                else
-                {
-                    this.Close();
-                }
             }
             else
             {
                 MessageBox.Show
                     ("Existem Campos Inválidos, por favor revise", "Campos Inválidos", MessageBoxButtons.OK);
             }
-
-            
-
             
         }
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtNome.Text = "";
@@ -97,6 +95,6 @@ namespace Pim.Patriot.CadAce {
 
         #endregion
 
-       
+      
     }
 }

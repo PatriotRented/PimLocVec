@@ -40,6 +40,8 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.gbxAtributosCar = new System.Windows.Forms.GroupBox();
+            this.txtAno = new System.Windows.Forms.TextBox();
+            this.lblAno = new System.Windows.Forms.Label();
             this.gbxAcessorio = new System.Windows.Forms.GroupBox();
             this.chkNtem = new System.Windows.Forms.CheckBox();
             this.cmbAcessorio3 = new System.Windows.Forms.ComboBox();
@@ -92,6 +94,7 @@
             // 
             resources.ApplyResources(this.txtPlaca, "txtPlaca");
             this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaca_KeyPress);
             // 
             // lblModelo
             // 
@@ -130,6 +133,7 @@
             resources.GetString("cmbCor.Items4"),
             resources.GetString("cmbCor.Items5")});
             this.cmbCor.Name = "cmbCor";
+            this.cmbCor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCor_KeyPress);
             // 
             // lblCategoria
             // 
@@ -141,10 +145,13 @@
             resources.ApplyResources(this.cmbCategoria, "cmbCategoria");
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCategoria_KeyPress);
             // 
             // gbxAtributosCar
             // 
             resources.ApplyResources(this.gbxAtributosCar, "gbxAtributosCar");
+            this.gbxAtributosCar.Controls.Add(this.txtAno);
+            this.gbxAtributosCar.Controls.Add(this.lblAno);
             this.gbxAtributosCar.Controls.Add(this.cmbCategoria);
             this.gbxAtributosCar.Controls.Add(this.lblModelo);
             this.gbxAtributosCar.Controls.Add(this.lblCategoria);
@@ -157,6 +164,17 @@
             this.gbxAtributosCar.Controls.Add(this.lblMarca);
             this.gbxAtributosCar.Name = "gbxAtributosCar";
             this.gbxAtributosCar.TabStop = false;
+            // 
+            // txtAno
+            // 
+            resources.ApplyResources(this.txtAno, "txtAno");
+            this.txtAno.Name = "txtAno";
+            this.txtAno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAno_KeyPress);
+            // 
+            // lblAno
+            // 
+            resources.ApplyResources(this.lblAno, "lblAno");
+            this.lblAno.Name = "lblAno";
             // 
             // gbxAcessorio
             // 
@@ -428,7 +446,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
             this.Name = "frmCadVec";
-            this.Load += new System.EventHandler(this.frmCadVec_Load);
             this.gbxAtributosCar.ResumeLayout(false);
             this.gbxAtributosCar.PerformLayout();
             this.gbxAcessorio.ResumeLayout(false);
@@ -491,5 +508,7 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Label lblAno;
+        private System.Windows.Forms.TextBox txtAno;
     }
 }

@@ -18,6 +18,8 @@ namespace Pim.Patriot.CadVecDesk
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmCadVec());
+            
+            
         }
     }
 }

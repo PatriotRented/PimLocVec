@@ -43,6 +43,7 @@
             this.mstripHorizontal = new System.Windows.Forms.MenuStrip();
             this.menuItemCadCli = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCadAce = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCadClien = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCadFun = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCadVec = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +66,6 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.mstripVertical.SuspendLayout();
             this.mstripHorizontal.SuspendLayout();
@@ -193,10 +193,10 @@
             // 
             this.menuItemCadCli.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemCadAce,
+            this.categoriaToolStripMenuItem,
             this.menuItemCadClien,
             this.menuItemCadFun,
-            this.menuItemCadVec,
-            this.categoriaToolStripMenuItem});
+            this.menuItemCadVec});
             this.menuItemCadCli.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItemCadCli.Image = global::Pim.Patriot.MDI.Properties.Resources.cadastroOrange80x91semtxtok;
             this.menuItemCadCli.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -212,6 +212,13 @@
             this.menuItemCadAce.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadAce.Text = "Acessorios";
             this.menuItemCadAce.Click += new System.EventHandler(this.menuItemCadAce_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // menuItemCadClien
             // 
@@ -252,6 +259,7 @@
             this.menuItemConsAce.Name = "menuItemConsAce";
             this.menuItemConsAce.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsAce.Text = "Acessorios";
+            this.menuItemConsAce.Click += new System.EventHandler(this.menuItemConsAce_Click);
             // 
             // menuItemConsCli
             // 
@@ -270,6 +278,7 @@
             this.menuItemConsVec.Name = "menuItemConsVec";
             this.menuItemConsVec.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsVec.Text = "Veiculos";
+            this.menuItemConsVec.Click += new System.EventHandler(this.menuItemConsVec_Click);
             // 
             // menuItemFinan
             // 
@@ -389,18 +398,11 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // categoriaToolStripMenuItem
-            // 
-            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
-            this.categoriaToolStripMenuItem.Text = "Categoria";
-            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
-            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Pim.Patriot.MDI.Properties.Resources.backgroundPretoBranco1040x588;
+            this.BackgroundImage = global::Pim.Patriot.MDI.Properties.Resources.backgroung;
             this.ClientSize = new System.Drawing.Size(1160, 587);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mstripHorizontal);

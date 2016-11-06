@@ -26,7 +26,9 @@ public class Veiculo
     #endregion
 
     #region Metodos
-    public int cadVec(string _modelo, string _marca, string _cor, string _placa, int _codcat )
+    public int cadVec
+        (string _modelo, string _marca, string _cor, string _placa, 
+            int _codcat, string _ano, int _codAce1 = 0 , int _codAce2 = 0, int _codAce3 = 0)
 	{
         try
         {
@@ -42,15 +44,19 @@ public class Veiculo
             SqlCommand cmdInsert = conexao.CreateCommand();
             cmdInsert.CommandText =
                 @"Insert into Veiculo 
-                    (codCat, modelo, marca,cor, placa, statusVec)
+                    (codCat, modelo, marca,cor, placa, anoVec,codAce1,codAce2,codAce3, statusVec)
                 values
-                    (@codCat,@modelo,@marca,@cor,upper(@placa),@statusVec);";
+                    (@codCat,@modelo,@marca,@cor,upper(@placa),@anoVec,@codAce1,@codAce2,@codAce3,@statusVec);";
 
             cmdInsert.Parameters.AddWithValue("@codcat", _codcat);
             cmdInsert.Parameters.AddWithValue("@modelo", _modelo);
             cmdInsert.Parameters.AddWithValue("@marca", _marca);
             cmdInsert.Parameters.AddWithValue("@cor", _cor);
             cmdInsert.Parameters.AddWithValue("@placa", _placa);
+            cmdInsert.Parameters.AddWithValue("@anoVec", _ano);
+            cmdInsert.Parameters.AddWithValue("@codAce1",_codAce1);
+            cmdInsert.Parameters.AddWithValue("@codAce2",_codAce2);
+            cmdInsert.Parameters.AddWithValue("@codAce3",_codAce3);
             cmdInsert.Parameters.AddWithValue("@statusVec", 'D');
 
             SqlCommand cmdSmax = conexao.CreateCommand();
@@ -66,9 +72,9 @@ public class Veiculo
 
             return this.codVec;
         }
-        catch
+        catch(SqlException ex)
         {
-            Exception ex = new Exception();
+            
             MessageBox.Show(Convert.ToString(ex));
             throw ex;
         }

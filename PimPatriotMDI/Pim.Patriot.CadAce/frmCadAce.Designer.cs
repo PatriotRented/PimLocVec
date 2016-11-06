@@ -61,12 +61,14 @@
             this.txtPreco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreco.Font = new System.Drawing.Font("Consolas", 12F);
-            this.txtPreco.Location = new System.Drawing.Point(105, 102);
+            this.txtPreco.Font = new System.Drawing.Font("Consolas", 14F);
+            this.txtPreco.Location = new System.Drawing.Point(105, 101);
             this.txtPreco.MaxLength = 30;
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(225, 26);
-            this.txtPreco.TabIndex = 6;
+            this.txtPreco.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPreco.Size = new System.Drawing.Size(225, 29);
+            this.txtPreco.TabIndex = 8;
+            this.txtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // lblPreco
@@ -88,12 +90,14 @@
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Font = new System.Drawing.Font("Consolas", 12F);
-            this.txtNome.Location = new System.Drawing.Point(105, 43);
+            this.txtNome.Font = new System.Drawing.Font("Consolas", 14F);
+            this.txtNome.Location = new System.Drawing.Point(105, 42);
             this.txtNome.MaxLength = 30;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(225, 26);
+            this.txtNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNome.Size = new System.Drawing.Size(225, 29);
             this.txtNome.TabIndex = 4;
+            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNome
             // 
@@ -184,9 +188,9 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblPreco;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Button btnCancela;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox txtPreco;
     }
 }

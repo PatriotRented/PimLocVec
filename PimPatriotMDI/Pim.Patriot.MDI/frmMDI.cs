@@ -33,11 +33,11 @@ namespace Pim.Patriot.MDI
         #region Cadastro
         private void menuItemCadVec_Click(object sender, EventArgs e)
         {
-           
+            mstripHorizontal.Hide();
             frmCadVec a = new frmCadVec();
             a.MdiParent = this;
-            a.criaCadVec(a);
-            mstripHorizontal.Hide();
+            a.Show();
+            
 
         }
 
@@ -55,20 +55,49 @@ namespace Pim.Patriot.MDI
             a.MdiParent = this;
             a.Show();
         }
+
+        private void menuItemConsVec_Click(object sender, EventArgs e)
+        {
+            mstripHorizontal.Hide();
+            frmConsultaVec a = new frmConsultaVec();
+            a.MdiParent = this;
+            a.Show();
+
+        }
+
+        private void menuItemConsAce_Click(object sender, EventArgs e)
+        {
+            //form de pconsulta de acessorios
+        }
+
+        
         #endregion
 
         #endregion
 
         #region Menu Vertical
+
+        #region Logo
         private void menuItemLogo_Click(object sender, EventArgs e)
         {
-            mstripVertical.Show();
-            mstripHorizontal.Show();
-            
+            if(mstripHorizontal.Visible == true)
+            {
+                mstripHorizontal.Hide();
+            }
+            else
+            {
+                mstripVertical.Show();
+                mstripHorizontal.Show();
+            }
+
         }
+
+
 
         #endregion
 
-        
+        #endregion
+
+
     }
 }

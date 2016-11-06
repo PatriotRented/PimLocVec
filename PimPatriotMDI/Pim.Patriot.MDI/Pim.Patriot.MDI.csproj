@@ -196,6 +196,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo128x128.ico" />
+    <None Include="Resources\backgroung1920x1086.jpg" />
+    <None Include="Resources\backgroung.jpg" />
     <None Include="Resources\faxineira40x51.jpg" />
     <None Include="Resources\disquete50x51.jpg" />
     <None Include="Resources\cross49x51.jpg" />

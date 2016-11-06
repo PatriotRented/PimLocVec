@@ -20,27 +20,33 @@ namespace Pim.Patriot.MDI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Categoria cat = new Categoria();
-            DialogResult result = MessageBox.Show
-                ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
+            
 
-            if (result == DialogResult.OK && txtNome.Text != "" && txtPreco.Text != "")
+            if (txtNome.Text != "" && txtPreco.Text != "")
             {
-                cat.insereCat(txtNome.Text, double.Parse(txtPreco.Text));
+                Categoria cat = new Categoria();
+                DialogResult result = MessageBox.Show
+                    ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
 
-                DialogResult resul = MessageBox.Show
-                    ("Deseja continuar Incluindo outros categoria?", "Confirmação!", MessageBoxButtons.YesNo);
+                if(result == DialogResult.OK){
+
+                    cat.insereCat(txtNome.Text, double.Parse(txtPreco.Text));
+
+                    DialogResult resul = MessageBox.Show
+                        ("Deseja continuar Incluindo outros categoria?", "Confirmação!", MessageBoxButtons.YesNo);
 
 
-                if (resul == DialogResult.Yes)
-                {
-                    txtNome.Text = "";
-                    txtPreco.Text = "";
+                    if (resul == DialogResult.Yes)
+                    {
+                        txtNome.Text = "";
+                        txtPreco.Text = "";
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
-                else
-                {
-                    this.Close();
-                }
+               
             }
         }
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -64,7 +70,8 @@ namespace Pim.Patriot.MDI
         private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Se a tecla digitada não for número e nem backspace
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && e.KeyChar != 44)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && e.KeyChar != 44
+                && char.IsWhiteSpace(e.KeyChar))
             {
                 //Atribui True no Handled para cancelar o evento
                 e.Handled = true;
