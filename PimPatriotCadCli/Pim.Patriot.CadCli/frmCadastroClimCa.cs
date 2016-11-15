@@ -70,6 +70,36 @@ namespace Pim.Patriot.CadCli
             }
 
             }
-    
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNomeCli.Text = "";
+            mdtxtRG.Text = "";
+            mdtxtNumero.Text = "";
+            txtEmail.Text = "";
+            mdtxtCnh.Text = "";
+            mdtxtTelefone.Text = "";
+            mdtxtCpf.Text = "";
+            mdtxtCnpj.Text = "";
+            txtRua.Text = "";
+            txtBairro.Text = "";
+            txtUf.Text = "";
+            txtCidade.Text = "";
+            mdtxtCep.Text = "";
+            txtComplemento.Text = "";
+            mdtxtDtnsc.Text = "";
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show
+                ("Deseja cancelar?", "Cancela?", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
