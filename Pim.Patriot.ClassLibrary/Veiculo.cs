@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+
 public class Veiculo
 {
     #region atributos
@@ -18,9 +19,9 @@ public class Veiculo
 
 	private string placa;
 
-	private int categoria;
+	private int codCat;
 
-   // private List<Acessorio> acessorios;
+    private string categoria;
 
 	private char status;
     #endregion
@@ -36,7 +37,7 @@ public class Veiculo
             this.marca = _marca;
             this.cor = _cor;
             this.placa = _placa;
-            this.categoria = _codcat;
+            this.codCat = _codcat;
 
             ConnectionFactory conn = new ConnectionFactory();
             SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
@@ -91,6 +92,17 @@ public class Veiculo
         throw new NotImplementedException();
 	}
 
+    #endregion
+
+    #region Geters e Seters
+    public int CodVec { get; set; }
+    public string Modelo { get; set; }
+    public string Marca { get; set; }
+    public string Cor { get; set; }
+    public string Placa { get; set; }
+    public int CodCat { get; set; }
+    public char Status { get; set; }
+    public string Categoria { get; set; }
     #endregion
 }
 

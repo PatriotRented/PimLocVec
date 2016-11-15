@@ -81,16 +81,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary.csproj">
-      <Project>{3e1a76a6-7e84-433e-aa11-24044ab2503a}</Project>
-      <Name>Pim.Patriot.ClassLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
-      <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
-      <Name>Pim.Patriot.DataAccess</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\backgroundPretoBranco.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +91,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\disquete50x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary.csproj">
+      <Project>{3e1a76a6-7e84-433e-aa11-24044ab2503a}</Project>
+      <Name>Pim.Patriot.ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
+      <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
+      <Name>Pim.Patriot.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
