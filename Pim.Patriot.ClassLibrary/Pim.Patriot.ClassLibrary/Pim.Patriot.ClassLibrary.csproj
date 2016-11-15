@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +43,6 @@
   <ItemGroup>
     <Compile Include="Acessorio.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="ClientePF.cs" />
-    <Compile Include="ClientePJ.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Locacao.cs" />
@@ -57,6 +56,12 @@
     <Compile Include="Telefone.cs" />
     <Compile Include="Veiculo.cs" />
     <Compile Include="Vistoria.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
+      <Project>{0FB2651A-8AA9-4D6A-B79B-C78ABB62C549}</Project>
+      <Name>Pim.Patriot.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
