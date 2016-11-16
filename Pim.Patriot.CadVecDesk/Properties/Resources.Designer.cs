@@ -103,6 +103,26 @@ namespace Pim.Patriot.CadVecDesk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap faxineira17x21 {
+            get {
+                object obj = ResourceManager.GetObject("faxineira17x21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap faxineira20x26 {
+            get {
+                object obj = ResourceManager.GetObject("faxineira20x26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap faxineira40x51 {
             get {
                 object obj = ResourceManager.GetObject("faxineira40x51", resourceCulture);

@@ -181,10 +181,11 @@
             // 
             this.btnLimpar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpar.Image = global::Pim.Patriot.CadVecDesk.Properties.Resources.faxineira17x21;
             this.btnLimpar.Location = new System.Drawing.Point(560, 108);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(128, 30);
-            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.TabIndex = 13;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -198,7 +199,7 @@
             this.btnPesAvan.Location = new System.Drawing.Point(349, 108);
             this.btnPesAvan.Name = "btnPesAvan";
             this.btnPesAvan.Size = new System.Drawing.Size(128, 30);
-            this.btnPesAvan.TabIndex = 5;
+            this.btnPesAvan.TabIndex = 12;
             this.btnPesAvan.Text = "Pesquisar";
             this.btnPesAvan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesAvan.UseVisualStyleBackColor = false;
@@ -212,9 +213,9 @@
             this.grbAno.Controls.Add(this.txtDe);
             this.grbAno.Controls.Add(this.txtAte);
             this.grbAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.grbAno.Location = new System.Drawing.Point(785, 6);
+            this.grbAno.Location = new System.Drawing.Point(812, 6);
             this.grbAno.Name = "grbAno";
-            this.grbAno.Size = new System.Drawing.Size(210, 101);
+            this.grbAno.Size = new System.Drawing.Size(184, 92);
             this.grbAno.TabIndex = 19;
             this.grbAno.TabStop = false;
             this.grbAno.Text = "Ano";
@@ -223,7 +224,7 @@
             // 
             this.lblAte.AutoSize = true;
             this.lblAte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAte.Location = new System.Drawing.Point(60, 63);
+            this.lblAte.Location = new System.Drawing.Point(49, 60);
             this.lblAte.Name = "lblAte";
             this.lblAte.Size = new System.Drawing.Size(42, 20);
             this.lblAte.TabIndex = 20;
@@ -233,7 +234,7 @@
             // 
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDe.Location = new System.Drawing.Point(60, 25);
+            this.lblDe.Location = new System.Drawing.Point(49, 22);
             this.lblDe.Name = "lblDe";
             this.lblDe.Size = new System.Drawing.Size(37, 20);
             this.lblDe.TabIndex = 13;
@@ -241,21 +242,21 @@
             // 
             // txtDe
             // 
-            this.txtDe.Location = new System.Drawing.Point(108, 23);
+            this.txtDe.Location = new System.Drawing.Point(97, 20);
             this.txtDe.MaxLength = 4;
             this.txtDe.Name = "txtDe";
             this.txtDe.Size = new System.Drawing.Size(72, 26);
-            this.txtDe.TabIndex = 12;
+            this.txtDe.TabIndex = 10;
             this.txtDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDe_KeyPress);
             // 
             // txtAte
             // 
-            this.txtAte.Location = new System.Drawing.Point(108, 60);
+            this.txtAte.Location = new System.Drawing.Point(97, 57);
             this.txtAte.MaxLength = 4;
             this.txtAte.Name = "txtAte";
             this.txtAte.Size = new System.Drawing.Size(72, 26);
-            this.txtAte.TabIndex = 10;
+            this.txtAte.TabIndex = 11;
             this.txtAte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAte_KeyPress);
             // 
@@ -265,7 +266,7 @@
             this.cmbCat.Location = new System.Drawing.Point(488, 28);
             this.cmbCat.Name = "cmbCat";
             this.cmbCat.Size = new System.Drawing.Size(236, 26);
-            this.cmbCat.TabIndex = 18;
+            this.cmbCat.TabIndex = 8;
             this.cmbCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCat_KeyPress);
             // 
             // cmbStatus
@@ -279,7 +280,7 @@
             this.cmbStatus.Location = new System.Drawing.Point(488, 65);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(236, 26);
-            this.cmbStatus.TabIndex = 17;
+            this.cmbStatus.TabIndex = 9;
             this.cmbStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbStatus_KeyPress);
             // 
             // lblStat
@@ -342,9 +343,6 @@
             // 
             this.grvVec.AllowUserToAddRows = false;
             this.grvVec.AllowUserToOrderColumns = true;
-            this.grvVec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.grvVec.AutoGenerateColumns = global::Pim.Patriot.CadVecDesk.Properties.Settings.Default.grvVecAutoGenerateColumns;
             this.grvVec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grvVec.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
