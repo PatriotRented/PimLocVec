@@ -35,6 +35,11 @@
             this.mdtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.mdtxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.gbxAtributosCli = new System.Windows.Forms.GroupBox();
+            this.txtUf = new System.Windows.Forms.TextBox();
+            this.mdtxtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.lblCidade = new System.Windows.Forms.Label();
             this.mdtxtCep = new System.Windows.Forms.MaskedTextBox();
             this.lblCep = new System.Windows.Forms.Label();
             this.lblUf = new System.Windows.Forms.Label();
@@ -47,6 +52,7 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.lblRua = new System.Windows.Forms.Label();
             this.lblLinha = new System.Windows.Forms.Label();
+            this.mdtxtDtnsc = new System.Windows.Forms.MaskedTextBox();
             this.lblDatans = new System.Windows.Forms.Label();
             this.mdtxtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.lblCnpj = new System.Windows.Forms.Label();
@@ -60,12 +66,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.lblTelefone = new System.Windows.Forms.Label();
-            this.mdtxtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtUf = new System.Windows.Forms.TextBox();
-            this.mdtxtDtnsc = new System.Windows.Forms.MaskedTextBox();
             this.gbxAtributosCli.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,6 +141,51 @@
             this.gbxAtributosCli.TabIndex = 11;
             this.gbxAtributosCli.TabStop = false;
             this.gbxAtributosCli.Text = "Cliente/PF-PJ";
+            // 
+            // txtUf
+            // 
+            this.txtUf.Location = new System.Drawing.Point(498, 276);
+            this.txtUf.Name = "txtUf";
+            this.txtUf.Size = new System.Drawing.Size(66, 25);
+            this.txtUf.TabIndex = 33;
+            // 
+            // mdtxtTelefone
+            // 
+            this.mdtxtTelefone.Location = new System.Drawing.Point(498, 180);
+            this.mdtxtTelefone.Mask = "(99) 0000-0000";
+            this.mdtxtTelefone.Name = "mdtxtTelefone";
+            this.mdtxtTelefone.Size = new System.Drawing.Size(109, 25);
+            this.mdtxtTelefone.TabIndex = 32;
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTelefone.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblTelefone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTelefone.Location = new System.Drawing.Point(391, 179);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(89, 20);
+            this.lblTelefone.TabIndex = 31;
+            this.lblTelefone.Text = "Telefone :";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(141, 362);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(242, 25);
+            this.txtCidade.TabIndex = 30;
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblCidade.Location = new System.Drawing.Point(55, 362);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(75, 20);
+            this.lblCidade.TabIndex = 29;
+            this.lblCidade.Text = "Cidade :";
             // 
             // mdtxtCep
             // 
@@ -256,6 +301,15 @@
             this.lblLinha.Text = "---------------------------------------------------------------------------------" +
     "----------------------------------------------------";
             // 
+            // mdtxtDtnsc
+            // 
+            this.mdtxtDtnsc.Location = new System.Drawing.Point(498, 130);
+            this.mdtxtDtnsc.Mask = "00/00/0000";
+            this.mdtxtDtnsc.Name = "mdtxtDtnsc";
+            this.mdtxtDtnsc.Size = new System.Drawing.Size(100, 25);
+            this.mdtxtDtnsc.TabIndex = 15;
+            this.mdtxtDtnsc.ValidatingType = typeof(System.DateTime);
+            // 
             // lblDatans
             // 
             this.lblDatans.AutoSize = true;
@@ -273,7 +327,7 @@
             this.mdtxtCnpj.Location = new System.Drawing.Point(498, 81);
             this.mdtxtCnpj.Mask = "00.000.000/0000-00";
             this.mdtxtCnpj.Name = "mdtxtCnpj";
-            this.mdtxtCnpj.Size = new System.Drawing.Size(147, 25);
+            this.mdtxtCnpj.Size = new System.Drawing.Size(199, 25);
             this.mdtxtCnpj.TabIndex = 13;
             // 
             // lblCnpj
@@ -411,59 +465,6 @@
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCidade.Location = new System.Drawing.Point(55, 362);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(75, 20);
-            this.lblCidade.TabIndex = 29;
-            this.lblCidade.Text = "Cidade :";
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Location = new System.Drawing.Point(141, 362);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(242, 25);
-            this.txtCidade.TabIndex = 30;
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTelefone.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lblTelefone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTelefone.Location = new System.Drawing.Point(391, 179);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(89, 20);
-            this.lblTelefone.TabIndex = 31;
-            this.lblTelefone.Text = "Telefone :";
-            // 
-            // mdtxtTelefone
-            // 
-            this.mdtxtTelefone.Location = new System.Drawing.Point(498, 180);
-            this.mdtxtTelefone.Mask = "(99) 000-0000";
-            this.mdtxtTelefone.Name = "mdtxtTelefone";
-            this.mdtxtTelefone.Size = new System.Drawing.Size(109, 25);
-            this.mdtxtTelefone.TabIndex = 32;
-            // 
-            // txtUf
-            // 
-            this.txtUf.Location = new System.Drawing.Point(498, 276);
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(66, 25);
-            this.txtUf.TabIndex = 33;
-            // 
-            // mdtxtDtnsc
-            // 
-            this.mdtxtDtnsc.Location = new System.Drawing.Point(498, 130);
-            this.mdtxtDtnsc.Mask = "0000/00/00";
-            this.mdtxtDtnsc.Name = "mdtxtDtnsc";
-            this.mdtxtDtnsc.Size = new System.Drawing.Size(100, 25);
-            this.mdtxtDtnsc.TabIndex = 15;
             // 
             // CadastroCli
             // 

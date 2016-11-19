@@ -18,6 +18,7 @@ namespace Pim.Patriot.CadCli
             InitializeComponent();
         }
 
+        #region lixo
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -32,44 +33,44 @@ namespace Pim.Patriot.CadCli
         {
 
         }
+        #endregion
 
+
+        #region botões
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Cliente cli = new Cliente();
             Endereco end = new Endereco();
-            DialogResult result = MessageBox.Show
-                ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
 
-            if (result == DialogResult.OK && txtNomeCli.Text != "" && mdtxtRG.Text != "" && mdtxtCnh.Text != ""
-                && txtEmail.Text != "" &&  mdtxtDtnsc.Text != "" && mdtxtTelefone.Text != ""
-                && txtRua.Text != "" && txtBairro.Text != "" && txtComplemento.Text != "" && txtCidade.Text != ""
-                && mdtxtNumero.Text != "" && txtUf.Text != "" && mdtxtCep.Text != "")
+            if (txtNomeCli.Text != "" && mdtxtRG.Text != "" && mdtxtCnh.Text != ""
+                 && txtEmail.Text != "" && mdtxtDtnsc.Text != "" && mdtxtTelefone.Text != ""
+                 && txtRua.Text != "" && txtBairro.Text != "" && txtComplemento.Text != "" && txtCidade.Text != ""
+                 && mdtxtNumero.Text != "" && txtUf.Text != "" && mdtxtCep.Text != "")
             {
-                int codEnd = end.salvaEnd(txtRua.Text, txtBairro.Text, txtUf.Text, txtCidade.Text, mdtxtCep.Text, txtComplemento.Text
-                    , mdtxtNumero.Text);
-                string data = "";
-                if (mdtxtCnpj.Text != "")
+                DialogResult result = MessageBox.Show
+               ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
                 {
-                    foreach (char c in mdtxtDtnsc.Text)
-                    {
-                        if (char.IsDigit(c))
-                            data += c;
-                    }
-                if (mdtxtCpf.Text != "" )
-                    cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCpf.Text,data );
-                else
-                    cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCnpj.Text, data);
-                }
-                else{
-                    
+                    int codEnd = end.salvaEnd(txtRua.Text, txtBairro.Text, txtUf.Text, txtCidade.Text, mdtxtCep.Text, txtComplemento.Text
+                    , mdtxtNumero.Text);
+
+                    if (mdtxtCpf.Text != "")
+                        cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCpf.Text,mdtxtDtnsc.Text, mdtxtRG.Text);
+                    else
+                        cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCnpj.Text, mdtxtDtnsc.Text, mdtxtRG.Text);
+
+                    DialogResult resul = MessageBox.Show
+                        ("Deseja continuar Incluindo outros acessórios?", "Confirmação!", MessageBoxButtons.YesNo);
                 }
 
-                DialogResult resul = MessageBox.Show
-                    ("Deseja continuar Incluindo outros acessórios?", "Confirmação!", MessageBoxButtons.YesNo);
-
+            }
+            else
+            {
+                MessageBox.Show("Existem campos inválidos, porfavor revise");
             }
 
-            }
+
+        }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -101,5 +102,6 @@ namespace Pim.Patriot.CadCli
                 this.Close();
             }
         }
+        #endregion
     }
 }

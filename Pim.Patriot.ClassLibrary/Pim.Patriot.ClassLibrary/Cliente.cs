@@ -26,7 +26,7 @@ public class Cliente : Pessoa
 
 
 
-    public void cadCli(string _nome, string _email, string _cnh, string _tel, int _codEnd, string _cpf_cnpj, string _dt_nasc)
+    public void cadCli(string _nome, string _email, string _cnh, string _tel, int _codEnd, string _cpf_cnpj, string _dt_nasc, string _rg)
 
 
     {
@@ -37,22 +37,30 @@ public class Cliente : Pessoa
 
             SqlCommand cmdInsert = conexao.CreateCommand();
             cmdInsert.CommandText =
-                @"Insert into Cliente 
-                    ( cnpj_cpf,nomeCli, emailCli, dt_nasc, cnh, tel, codEnd)
-                values
-                   (@cnpj_cpf,@nomeCli,@emailCli,@dt_nasc,@cnh,@tel,@codEnd);";
+                @"
+                 EXEC	sp_cad_cli
+	        	        @cnpj_cpf = @cnpj_cpf_p,
+	                   	@rg = @rg_p',
+		                @nomeCli = @nomeCli_p,
+		                @emailCli = @emailCli_p,
+		                @dt_nasc_string = @dt_nasc_p,
+		                @cnh = @cnh_p,
+		                @tel = @tel_p,
+		                @codEnd = @codEnd_p ;
+              ";
 
-            cmdInsert.Parameters.AddWithValue("@cnpj_cpf", _cpf_cnpj);
-            cmdInsert.Parameters.AddWithValue("@nomeCli", _nome);
-            cmdInsert.Parameters.AddWithValue("@emailCli", _email);
-            cmdInsert.Parameters.AddWithValue("@dt_nasc",_dt_nasc);
-            cmdInsert.Parameters.AddWithValue("@cnh", _cnh);
-            cmdInsert.Parameters.AddWithValue("@tel", _tel);
-            cmdInsert.Parameters.AddWithValue("@codEnd", _codEnd);
-
+            cmdInsert.Parameters.AddWithValue("@cnpj_cpf_p", _cpf_cnpj);
+            cmdInsert.Parameters.AddWithValue("@nomeCli_p", _nome);
+            cmdInsert.Parameters.AddWithValue("@emailCli_p", _email);
+            cmdInsert.Parameters.AddWithValue("@dt_nasc_p", _dt_nasc);
+            cmdInsert.Parameters.AddWithValue("@cnh_p", _cnh);
+            cmdInsert.Parameters.AddWithValue("@tel_p", _tel);
+            cmdInsert.Parameters.AddWithValue("@codEnd_p", _codEnd);
+            cmdInsert.Parameters.AddWithValue("@rg_p", _rg);
             conexao.Open();
 
             cmdInsert.ExecuteNonQuery();
+            
 
             conexao.Close();
 
@@ -61,6 +69,7 @@ public class Cliente : Pessoa
         catch (SqlException ex)
         {
             MessageBox.Show(Convert.ToString(ex));
+
             throw ex;
         }
 

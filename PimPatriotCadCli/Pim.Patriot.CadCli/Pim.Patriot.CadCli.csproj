@@ -52,10 +52,19 @@
     <Compile Include="frmCadastroClimCa.Designer.cs">
       <DependentUpon>frmCadastroClimCa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCli.Designer.cs">
+      <DependentUpon>frmConsultaCli.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastroClimCa.resx">
       <DependentUpon>frmCadastroClimCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCli.resx">
+      <DependentUpon>frmConsultaCli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +113,12 @@
       <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
       <Name>Pim.Patriot.DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa20x21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faxineira17x21.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
