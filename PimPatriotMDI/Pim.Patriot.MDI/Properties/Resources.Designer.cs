@@ -133,6 +133,16 @@ namespace Pim.Patriot.MDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CadUsu {
+            get {
+                object obj = ResourceManager.GetObject("CadUsu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendarioComUmRelogioOrange85x85 {
             get {
                 object obj = ResourceManager.GetObject("calendarioComUmRelogioOrange85x85", resourceCulture);

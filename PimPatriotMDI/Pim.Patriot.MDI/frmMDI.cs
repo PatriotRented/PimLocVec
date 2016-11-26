@@ -19,6 +19,7 @@ namespace Pim.Patriot.MDI
         public frmMDI()
         {
             InitializeComponent();
+         
         }
 
 
@@ -70,8 +71,24 @@ namespace Pim.Patriot.MDI
             //form de pconsulta de acessorios
         }
 
-        
+
         #endregion
+
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin a = new frmLogin();
+            a.MdiParent = this;
+            mstripHorizontal.Enabled = false;
+            mstripVertical.Enabled = false;
+            a.Show();
+            
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 
@@ -94,10 +111,24 @@ namespace Pim.Patriot.MDI
 
 
 
-        #endregion
 
         #endregion
 
+        #endregion
 
+        #region Metodos da tela
+        public void bloqueiaEdesbloqueia(bool _teste)
+        {
+            if(_teste == true)
+            {
+                mstripHorizontal.Enabled = true;
+                mstripVertical.Enabled = true;
+            }else
+            {
+                mstripHorizontal.Enabled = false;
+                mstripHorizontal.Enabled = false;
+            }
+        }
+        #endregion
     }
 }

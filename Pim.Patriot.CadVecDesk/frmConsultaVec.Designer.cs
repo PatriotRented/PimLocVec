@@ -113,11 +113,13 @@
             // btnLimparG
             // 
             this.btnLimparG.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLimparG.Image = global::Pim.Patriot.CadVecDesk.Properties.Resources.faxineira17x21;
             this.btnLimparG.Location = new System.Drawing.Point(580, 81);
             this.btnLimparG.Name = "btnLimparG";
             this.btnLimparG.Size = new System.Drawing.Size(128, 30);
             this.btnLimparG.TabIndex = 5;
             this.btnLimparG.Text = "Limpar";
+            this.btnLimparG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimparG.UseVisualStyleBackColor = false;
             // 
             // btnPesquisarG

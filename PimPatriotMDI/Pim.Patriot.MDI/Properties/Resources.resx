@@ -166,6 +166,9 @@
   <data name="backgroundPretoBranco1920x1086" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundPretoBranco1920x1086.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroung1920x1086" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroung1920x1086.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="faxineira40x51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\faxineira40x51.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,7 +202,7 @@
   <data name="backgroung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroung.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroung1920x1086" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroung1920x1086.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CadUsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CadUsu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

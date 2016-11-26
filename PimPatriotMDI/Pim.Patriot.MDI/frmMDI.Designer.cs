@@ -119,6 +119,7 @@
             // 
             this.mstripVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(43)))));
             this.mstripVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mstripVertical.Enabled = false;
             this.mstripVertical.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mstripVertical.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemLogo,
@@ -172,6 +173,7 @@
             // mstripHorizontal
             // 
             this.mstripHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(43)))));
+            this.mstripHorizontal.Enabled = false;
             this.mstripHorizontal.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mstripHorizontal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemCadCli,
@@ -387,6 +389,7 @@
             this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(142, 120);
             this.desconectarToolStripMenuItem.Text = "Desconectar";
             this.desconectarToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -397,6 +400,7 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(92, 120);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // frmMDI
             // 

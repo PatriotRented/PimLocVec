@@ -17,3 +17,10 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\bin
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\bin\Debug\Pim.Patriot.CadAce.exe
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\bin\Debug\Pim.Patriot.CadAce.pdb
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI.frmCadCat.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI_Content.g.cs
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI_MarkupCompile.cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\wpfLogin.g.cs
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI_MarkupCompile.lref
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\wpfLogin.baml
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI.g.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.MDI\obj\Debug\Pim.Patriot.MDI.frmLogin.resources

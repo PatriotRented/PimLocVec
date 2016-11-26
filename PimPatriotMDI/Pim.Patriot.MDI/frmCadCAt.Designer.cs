@@ -142,6 +142,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(225, 26);
             this.txtNome.TabIndex = 4;
+            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNome
             // 
@@ -170,7 +171,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadCAt";
+            this.Text = "Cadastro de Acessórios";
             this.gbxDados.ResumeLayout(false);
             this.gbxDados.PerformLayout();
             this.ResumeLayout(false);
