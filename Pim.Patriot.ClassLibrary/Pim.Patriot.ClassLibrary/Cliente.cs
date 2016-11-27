@@ -32,31 +32,43 @@ public class Cliente : Pessoa
     {
         try
         {
+            string cpf_cnpj = "";
+            foreach (char c in _cpf_cnpj)
+            {
+                if (char.IsDigit(c))
+                {
+                    cpf_cnpj += c;
+                }
+            }
+
+            string rg = "";
+            foreach (char c in _rg)
+            {
+                if (char.IsDigit(c))
+                {
+                    rg += c;
+                }
+            }
+
             ConnectionFactory conn = new ConnectionFactory();
             SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
             SqlCommand cmdInsert = conexao.CreateCommand();
             cmdInsert.CommandText =
-                @"
-                 EXEC	sp_cad_cli
-	        	        @cnpj_cpf = @cnpj_cpf_p,
-	                   	@rg = @rg_p',
-		                @nomeCli = @nomeCli_p,
-		                @emailCli = @emailCli_p,
-		                @dt_nasc_string = @dt_nasc_p,
-		                @cnh = @cnh_p,
-		                @tel = @tel_p,
-		                @codEnd = @codEnd_p ;
-              ";
+                @"Insert into Cliente
+                    (cnpj_cpf, rg, nomeCli, emailCli, dt_nasc, cnh, tel, codEnd)
+                values
+                    (@cnpj_cpf, @rg, @nomeCli, @emailCli, @dt_nasc, @cnh, @tel, @codEnd);";
 
-            cmdInsert.Parameters.AddWithValue("@cnpj_cpf_p", _cpf_cnpj);
-            cmdInsert.Parameters.AddWithValue("@nomeCli_p", _nome);
-            cmdInsert.Parameters.AddWithValue("@emailCli_p", _email);
-            cmdInsert.Parameters.AddWithValue("@dt_nasc_p", _dt_nasc);
-            cmdInsert.Parameters.AddWithValue("@cnh_p", _cnh);
-            cmdInsert.Parameters.AddWithValue("@tel_p", _tel);
-            cmdInsert.Parameters.AddWithValue("@codEnd_p", _codEnd);
-            cmdInsert.Parameters.AddWithValue("@rg_p", _rg);
+            cmdInsert.Parameters.AddWithValue("@cnpj_cpf", cpf_cnpj);
+            cmdInsert.Parameters.AddWithValue("@rg", rg);
+            cmdInsert.Parameters.AddWithValue("@nomeCli", _nome);
+            cmdInsert.Parameters.AddWithValue("@emailCli", _email);
+            cmdInsert.Parameters.AddWithValue("@dt_nasc", _dt_nasc);
+            cmdInsert.Parameters.AddWithValue("@cnh", _cnh);
+            cmdInsert.Parameters.AddWithValue("@tel", _tel);
+            cmdInsert.Parameters.AddWithValue("@codEnd", _codEnd);
+            
             conexao.Open();
 
             cmdInsert.ExecuteNonQuery();

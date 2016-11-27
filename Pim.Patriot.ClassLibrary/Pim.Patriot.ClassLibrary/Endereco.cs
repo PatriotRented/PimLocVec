@@ -33,7 +33,14 @@ public class Endereco
             this.complemento = _complemento;
             this.numero = _numero;
 
-
+            string cep = "";
+            foreach (char c in _cep)
+            {
+                if (char.IsDigit(c))
+                {
+                    cep += c;
+                }
+            }
             ConnectionFactory conn = new ConnectionFactory();
             SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 

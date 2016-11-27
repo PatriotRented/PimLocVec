@@ -16,7 +16,7 @@ namespace Pim.Patriot.CadCli
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroCli());
+            Application.Run(new frmConsultaCli());
         }
     }
 }

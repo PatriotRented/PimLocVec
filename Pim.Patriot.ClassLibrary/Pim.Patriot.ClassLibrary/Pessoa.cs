@@ -8,7 +8,7 @@ public abstract class Pessoa
 
 	protected Endereco end;
 
-    protected DateTime dt_nasc;
+    protected string dt_nasc;
 
     protected string rg;
 
