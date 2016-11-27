@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBoxSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBoxSobre.Designer.cs">
+      <DependentUpon>AboutBoxSobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastroClimCa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBoxSobre.resx">
+      <DependentUpon>AboutBoxSobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroClimCa.resx">
       <DependentUpon>frmCadastroClimCa.cs</DependentUpon>
     </EmbeddedResource>
