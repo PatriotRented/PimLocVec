@@ -228,12 +228,14 @@
             this.menuItemCadClien.Name = "menuItemCadClien";
             this.menuItemCadClien.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadClien.Text = "Cliente";
+            this.menuItemCadClien.Click += new System.EventHandler(this.menuItemCadClien_Click);
             // 
             // menuItemCadFun
             // 
             this.menuItemCadFun.Name = "menuItemCadFun";
             this.menuItemCadFun.Size = new System.Drawing.Size(203, 30);
             this.menuItemCadFun.Text = "Funcionario";
+            this.menuItemCadFun.Click += new System.EventHandler(this.menuItemCadFun_Click);
             // 
             // menuItemCadVec
             // 
@@ -269,12 +271,14 @@
             this.menuItemConsCli.Name = "menuItemConsCli";
             this.menuItemConsCli.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsCli.Text = "Cliente";
+            this.menuItemConsCli.Click += new System.EventHandler(this.menuItemConsCli_Click);
             // 
             // menuItemConsFun
             // 
             this.menuItemConsFun.Name = "menuItemConsFun";
             this.menuItemConsFun.Size = new System.Drawing.Size(203, 30);
             this.menuItemConsFun.Text = "Funcionario";
+            this.menuItemConsFun.Click += new System.EventHandler(this.menuItemConsFun_Click);
             // 
             // menuItemConsVec
             // 
@@ -374,6 +378,7 @@
             this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
             this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(159, 30);
             this.sobreToolStripMenuItem1.Text = "Sobre";
+            this.sobreToolStripMenuItem1.Click += new System.EventHandler(this.sobreToolStripMenuItem1_Click);
             // 
             // manualToolStripMenuItem
             // 

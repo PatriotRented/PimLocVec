@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Pim.Patriot.CadCli
 {
-    partial class AboutBoxSobre : Form
+    public partial class AboutBoxSobre : Form
     {
         public AboutBoxSobre()
         {
@@ -101,5 +101,10 @@ namespace Pim.Patriot.CadCli
             }
         }
         #endregion
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -195,6 +195,10 @@
     <None Include="Resources\dinheiro80x91semTXT.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Pim.Patriot.CadCli\Pim.Patriot.CadCli.csproj">
+      <Project>{ffd70fab-fffc-46c4-9d65-717ea955c77c}</Project>
+      <Name>Pim.Patriot.CadCli</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Pim.Patriot.CadVecDesk\Pim.Patriot.CadVecDesk.csproj">
       <Project>{7ed4f1ba-bbcc-4242-bea6-02f4d98c23e0}</Project>
       <Name>Pim.Patriot.CadVecDesk</Name>

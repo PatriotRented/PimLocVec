@@ -1,6 +1,7 @@
 ﻿using Pim.Patriot.CadAce;
 using Pim.Patriot.CadVecDesk;
 using Pim.Patriot.LocRev;
+using Pim.Patriot.CadCli;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +59,26 @@ namespace Pim.Patriot.MDI
             a.MdiParent = this;
             a.Show();
         }
+        
+        private void menuItemCadClien_Click(object sender, EventArgs e)
+        {
+            CadastroCli a = new CadastroCli();
+            a.MdiParent = this;
+            mstripHorizontal.Hide();
+            a.Show();
+        }
+
+        private void menuItemCadFun_Click(object sender, EventArgs e)
+        {
+            frmCadFuncionariocs a = new frmCadFuncionariocs();
+            a.MdiParent = this;
+            mstripHorizontal.Hide();
+            a.Show();
+        }
+
+        #endregion
+
+        #region Consultas
 
         private void menuItemConsVec_Click(object sender, EventArgs e)
         {
@@ -73,6 +94,21 @@ namespace Pim.Patriot.MDI
             //form de pconsulta de acessorios
         }
 
+        private void menuItemConsCli_Click(object sender, EventArgs e)
+        {
+            frmConsultaCli a = new frmConsultaCli();
+            a.MdiParent = this;
+            mstripHorizontal.Hide();
+            a.Show();
+        }
+
+        private void menuItemConsFun_Click(object sender, EventArgs e)
+        {
+            FrmConsultaFun a = new FrmConsultaFun();
+            a.MdiParent = this;
+            mstripHorizontal.Hide();
+            a.Show();
+        }
 
         #endregion
 
@@ -151,6 +187,11 @@ namespace Pim.Patriot.MDI
             login.Show();
         }
 
-       
+        private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AboutBoxSobre a = new AboutBoxSobre();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }

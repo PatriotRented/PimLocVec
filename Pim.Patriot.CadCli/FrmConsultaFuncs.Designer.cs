@@ -234,6 +234,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmConsultaFun";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Funcionario";
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionario)).EndInit();
             this.tabConsultaFun.ResumeLayout(false);
