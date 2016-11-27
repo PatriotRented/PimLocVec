@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pim.Patriot.CadCli;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Pim.Patriot.CadCli
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConsultaCli());
+            Application.Run(new CadastroCli());
         }
     }
 }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Acessorio.cs" />
     <Compile Include="ClassesDAO\ClienteDAO.cs" />
+    <Compile Include="ClassesDAO\FuncionarioDAO.cs" />
     <Compile Include="ClassesDAO\VeiculoDAO.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Endereco.cs" />

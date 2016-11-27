@@ -16,6 +16,8 @@ public abstract class Pessoa
 
     protected string telefone;
 
+ 
+
     public abstract bool cadastrar();
 
 }
