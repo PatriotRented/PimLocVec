@@ -151,6 +151,7 @@
             this.menuItemLoca.Name = "menuItemLoca";
             this.menuItemLoca.Size = new System.Drawing.Size(145, 89);
             this.menuItemLoca.Text = "Locação";
+            this.menuItemLoca.Click += new System.EventHandler(this.menuItemLoca_Click);
             // 
             // menuItemReserva
             // 

@@ -1,12 +1,22 @@
+using System;
 public abstract class Pessoa
 {
-    #region Atributos
-    protected string nome;
+
+	protected string nome;
 
 	protected string email;
 
 	protected Endereco end;
-    #endregion
+
+    protected string dt_nasc;
+
+    protected string rg;
+
+    protected string cpf_cnpj;
+
+    protected string telefone;
+
+ 
 
     public abstract bool cadastrar();
 

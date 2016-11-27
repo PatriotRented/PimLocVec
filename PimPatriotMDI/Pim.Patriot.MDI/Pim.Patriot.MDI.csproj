@@ -211,6 +211,10 @@
       <Project>{18E02B64-9475-41C2-840F-0737F804E19A}</Project>
       <Name>Pim.Patriot.CadAce</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Pim.Patriot.LocRev\Pim.Patriot.LocRev.csproj">
+      <Project>{5403B5E4-9B52-40BC-B4D7-2615228E7D66}</Project>
+      <Name>Pim.Patriot.LocRev</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo128x128.ico" />

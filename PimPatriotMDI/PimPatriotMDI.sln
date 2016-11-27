@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.CadVecDesk", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.CadAce", "Pim.Patriot.CadAce\Pim.Patriot.CadAce.csproj", "{18E02B64-9475-41C2-840F-0737F804E19A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.LocRev", "Pim.Patriot.LocRev\Pim.Patriot.LocRev.csproj", "{5403B5E4-9B52-40BC-B4D7-2615228E7D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pim.Patriot.CadCli", "..\Pim.Patriot.CadCli\Pim.Patriot.CadCli.csproj", "{FFD70FAB-FFFC-46C4-9D65-717EA955C77C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{18E02B64-9475-41C2-840F-0737F804E19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E02B64-9475-41C2-840F-0737F804E19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E02B64-9475-41C2-840F-0737F804E19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5403B5E4-9B52-40BC-B4D7-2615228E7D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5403B5E4-9B52-40BC-B4D7-2615228E7D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5403B5E4-9B52-40BC-B4D7-2615228E7D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5403B5E4-9B52-40BC-B4D7-2615228E7D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD70FAB-FFFC-46C4-9D65-717EA955C77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD70FAB-FFFC-46C4-9D65-717EA955C77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD70FAB-FFFC-46C4-9D65-717EA955C77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD70FAB-FFFC-46C4-9D65-717EA955C77C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

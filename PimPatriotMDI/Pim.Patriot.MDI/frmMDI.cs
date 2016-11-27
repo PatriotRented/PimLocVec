@@ -1,5 +1,6 @@
 ﻿using Pim.Patriot.CadAce;
 using Pim.Patriot.CadVecDesk;
+using Pim.Patriot.LocRev;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,6 +116,17 @@ namespace Pim.Patriot.MDI
 
         #endregion
 
+        #region Locacao
+        private void menuItemLoca_Click(object sender, EventArgs e)
+        {
+            frmLocacao loca = new frmLocacao();
+            loca.MdiParent = this;
+            mstripHorizontal.Hide();
+            loca.Show();
+
+        }
+        #endregion
+
         #endregion
 
         #region Metodos da tela
@@ -139,7 +151,6 @@ namespace Pim.Patriot.MDI
             login.Show();
         }
 
-       
        
     }
 }

@@ -45,10 +45,10 @@
     <Compile Include="Categoria.cs" />
     <Compile Include="ClassesDAO\AcessorioDAO.cs" />
     <Compile Include="ClassesDAO\CategoriaDAO.cs" />
+    <Compile Include="ClassesDAO\ClienteDAO.cs" />
+    <Compile Include="ClassesDAO\FuncionarioDAO.cs" />
     <Compile Include="ClassesDAO\VeiculoDAO.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="ClientePF.cs" />
-    <Compile Include="ClientePJ.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Locacao.cs" />

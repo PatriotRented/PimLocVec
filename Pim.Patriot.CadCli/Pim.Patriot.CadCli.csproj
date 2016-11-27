@@ -46,16 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AboutBoxSobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AboutBoxSobre.Designer.cs">
+      <DependentUpon>AboutBoxSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroClimCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroClimCa.Designer.cs">
+      <DependentUpon>frmCadastroClimCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCli.Designer.cs">
+      <DependentUpon>frmConsultaCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadFuncionario.Designer.cs">
+      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaFuncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaFuncs.Designer.cs">
+      <DependentUpon>FrmConsultaFuncs.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AboutBoxSobre.resx">
+      <DependentUpon>AboutBoxSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroClimCa.resx">
+      <DependentUpon>frmCadastroClimCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCli.resx">
+      <DependentUpon>frmConsultaCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadFuncionario.resx">
+      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaFuncs.resx">
+      <DependentUpon>FrmConsultaFuncs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -77,7 +114,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPretoBranco1920x1086.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disquete.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disquete50x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faxineira40x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross49x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pim.Patriot.ClassLibrary\Pim.Patriot.ClassLibrary.csproj">
+      <Project>{3e1a76a6-7e84-433e-aa11-24044ab2503a}</Project>
+      <Name>Pim.Patriot.ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pim.Patriot.DataAccess\Pim.Patriot.DataAccess.csproj">
+      <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
+      <Name>Pim.Patriot.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa20x21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faxineira17x21.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
