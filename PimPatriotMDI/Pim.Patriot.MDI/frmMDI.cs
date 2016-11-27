@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Pim.Patriot.MDI
 {
-       
+
     public partial class frmMDI : Form
     {
         
@@ -21,7 +21,8 @@ namespace Pim.Patriot.MDI
             InitializeComponent();
          
         }
-
+        
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -77,7 +78,7 @@ namespace Pim.Patriot.MDI
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLogin a = new frmLogin();
+            frmLogin a = new frmLogin(this);
             a.MdiParent = this;
             mstripHorizontal.Enabled = false;
             mstripVertical.Enabled = false;
@@ -87,7 +88,7 @@ namespace Pim.Patriot.MDI
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         #endregion
@@ -129,6 +130,16 @@ namespace Pim.Patriot.MDI
                 mstripHorizontal.Enabled = false;
             }
         }
+
         #endregion
+        private void frmMDI_Load(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin(this);
+            login.MdiParent = this;
+            login.Show();
+        }
+
+       
+       
     }
 }

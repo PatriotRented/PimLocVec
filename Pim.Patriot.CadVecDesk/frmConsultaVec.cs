@@ -141,5 +141,10 @@ namespace Pim.Patriot.CadVecDesk
         {
             e.Handled = true;
         }
+
+        private void btnLimparG_Click(object sender, EventArgs e)
+        {
+            grvVec.ClearSelection();
+        }
     }
 }

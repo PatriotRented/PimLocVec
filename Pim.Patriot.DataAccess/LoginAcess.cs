@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Pim.Patriot.DataAccess
 {
     public class LoginAcess
@@ -29,19 +30,23 @@ namespace Pim.Patriot.DataAccess
 
             string validaSenha, validaUsu;
 
-            conexao.Open();
-            validaSenha = Convert.ToString(cmdSelPass.ExecuteScalar());
-            validaUsu = Convert.ToString(cmdSelUsu.ExecuteScalar());
-            conexao.Close();
             if (_usu == "Batman")
             {
                 return true;
             }
+
+            conexao.Open();
+            validaSenha = Convert.ToString(cmdSelPass.ExecuteScalar());
+            validaUsu = Convert.ToString(cmdSelUsu.ExecuteScalar());
+            conexao.Close();
+            
 
             if (validaUsu == _usu && validaSenha == _senha)
                 return true;
             else
                 return false;
         }
+
+       
     }
 }

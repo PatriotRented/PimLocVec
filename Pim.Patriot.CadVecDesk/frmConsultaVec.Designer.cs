@@ -121,6 +121,7 @@
             this.btnLimparG.Text = "Limpar";
             this.btnLimparG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimparG.UseVisualStyleBackColor = false;
+            this.btnLimparG.Click += new System.EventHandler(this.btnLimparG_Click);
             // 
             // btnPesquisarG
             // 

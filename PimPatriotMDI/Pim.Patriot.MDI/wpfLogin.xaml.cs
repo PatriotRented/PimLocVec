@@ -23,10 +23,14 @@ namespace Pim.Patriot.MDI
     /// </summary>
     public partial class wpfLogin : System.Windows.Controls.UserControl
     {
-        
-        public wpfLogin()
+        //private bool valor;
+        frmLogin logHandle;
+
+        public wpfLogin(frmLogin HWND)
         {
             InitializeComponent();
+            logHandle = HWND;
+            
             
         }
 
@@ -41,7 +45,7 @@ namespace Pim.Patriot.MDI
                 e.Handled = true;
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        public void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             LoginAcess lg = new LoginAcess();
             Criptografia crip = new Criptografia(CryptProvider.RC2);
@@ -52,20 +56,8 @@ namespace Pim.Patriot.MDI
 
             if (valida == true)
             {
-                frmMDI a ; 
-                if (System.Windows.Forms.Application.OpenForms.OfType<frmMDI>().Count() > 0)
-                {
-                    a = new frmMDI();
-                    a.bloqueiaEdesbloqueia(true);
-                }
-                else
-                {
-                    a = new frmMDI();
-                    a.Show();
-                    a.bloqueiaEdesbloqueia(true);
-                    Window.GetWindow(frmMDI);
-                }
-                    
+                logHandle.entralogin();             
+
             }
             else
             {
@@ -76,14 +68,36 @@ namespace Pim.Patriot.MDI
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            frmMDI a = new frmMDI();
-            a.Close();
+            System.Windows.Forms.Application.Exit();
             
         }
 
         private void txtUser_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
             txtUser.Text = "";
+        }
+
+        
+
+        private void btnLogin_DragEnter(object sender, System.Windows.DragEventArgs e)
+        {
+            LoginAcess lg = new LoginAcess();
+            Criptografia crip = new Criptografia(CryptProvider.RC2);
+            crip.Key = txtUser.Text;
+            string senhaCript = crip.Encrypt(pboxSenha.Password);
+
+            bool valida = lg.validaLogin(txtUser.Text, senhaCript);
+
+            if (valida == true)
+            {
+                logHandle.entralogin();
+
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Usuário ou senha inválidos!!", "erro", MessageBoxButton.OK);
+              
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Pim.Patriot.MDI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin(0));
+            Application.Run(new frmMDI());
             
             
         }
