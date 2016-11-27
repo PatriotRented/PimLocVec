@@ -234,7 +234,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmConsultaFun";
-            this.Text = "FrmConsultaFuncs";
+            this.Text = "Consulta Funcionario";
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionario)).EndInit();
             this.tabConsultaFun.ResumeLayout(false);
             this.tbpGeral.ResumeLayout(false);
