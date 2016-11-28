@@ -52,6 +52,44 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
 
         }
 
-       
+        public string pegaCat(string _placa)
+        {
+            try
+            {
+                string ret;
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText =
+                    @"select nomeCat from Categoria cat 
+                        inner join Veiculo vec on (cat.codCat = vec.codCat) 
+                        and placa = @placa";
+
+                cmd.Parameters.AddWithValue("@placa",_placa);
+                conexao.Open();
+
+                ret = Convert.ToString(cmd.ExecuteScalar());
+
+                conexao.Close();
+                return ret;
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    String erroMessages;
+                    erroMessages = ("Index #" + i + "\n" +
+                    "Message: " + ex.Errors[i].Message + "\n" +
+                    "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                    "Source: " + ex.Errors[i].Source + "\n" +
+                    "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    MessageBox.Show(erroMessages);
+                }
+                throw ex;
+            }
+
+
+        }
     }
 }

@@ -143,7 +143,7 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
                 {
                     if (_ctrl2 == 0 && _ctrl3 > 0)
                     {
-                        con2 = "and";
+                        con2 = "";
                     }
                     else
                     {
@@ -190,6 +190,61 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
                 dt.Load(dr);
                 conexao.Close();
                 return dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
+
+        public int pegaCodVec(string _placa)
+        {
+            ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = @"select codVec from Veiculo where placa = @placa";
+
+            cmd.Parameters.AddWithValue("@placa", _placa);
+
+            int retorno;
+            conexao.Open();
+
+            retorno = Convert.ToInt32(cmd.ExecuteScalar());
+
+            conexao.Close();
+
+            return retorno;
+        }
+
+        public double pegaValorTotal(string _placa, int _tipoPlan)
+        {
+            try
+            {
+                double valor;
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+                SqlCommand cmd = conexao.CreateCommand();
+
+                cmd.CommandText = @"SELECT precoBase from selAllVec
+                    where Placa = @placa";
+                cmd.Parameters.AddWithValue("@placa", _placa);
+
+                conexao.Open();
+                valor = Convert.ToDouble(cmd.ExecuteScalar());
+                conexao.Close();
+
+                if (_tipoPlan == 1)
+                {
+                    return valor = valor * 0.3;
+
+                }
+                else
+                {
+                    return valor = valor * 0.15;
+                }
+                
             }
             catch (SqlException ex)
             {

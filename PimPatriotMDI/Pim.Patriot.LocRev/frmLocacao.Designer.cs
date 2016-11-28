@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocacao));
             this.tabctrlLoc = new System.Windows.Forms.TabControl();
             this.tabpagLoca = new System.Windows.Forms.TabPage();
+            this.grp = new System.Windows.Forms.GroupBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCon = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -48,9 +50,9 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.lblPlaca = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbFun = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.richtxtObserv = new System.Windows.Forms.RichTextBox();
-            this.txtAtendente = new System.Windows.Forms.TextBox();
             this.lblAten = new System.Windows.Forms.Label();
             this.txtCli = new System.Windows.Forms.TextBox();
             this.lblCli = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@
             this.tabpagPesq = new System.Windows.Forms.TabPage();
             this.tabctrlLoc.SuspendLayout();
             this.tabpagLoca.SuspendLayout();
+            this.grp.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.grboxLoc.SuspendLayout();
             this.grbLoc2.SuspendLayout();
@@ -78,6 +81,7 @@
             // 
             // tabpagLoca
             // 
+            this.tabpagLoca.Controls.Add(this.grp);
             this.tabpagLoca.Controls.Add(this.btnCancel);
             this.tabpagLoca.Controls.Add(this.btnCon);
             this.tabpagLoca.Controls.Add(this.groupBox4);
@@ -92,27 +96,45 @@
             this.tabpagLoca.Text = "Locação";
             this.tabpagLoca.UseVisualStyleBackColor = true;
             // 
+            // grp
+            // 
+            this.grp.Controls.Add(this.txtValor);
+            this.grp.Location = new System.Drawing.Point(609, 294);
+            this.grp.Name = "grp";
+            this.grp.Size = new System.Drawing.Size(250, 76);
+            this.grp.TabIndex = 5;
+            this.grp.TabStop = false;
+            this.grp.Text = "Valor Estimado";
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(32, 33);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(186, 23);
+            this.txtValor.TabIndex = 0;
+            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = global::Pim.Patriot.LocRev.Properties.Resources.cross49x51;
-            this.btnCancel.Location = new System.Drawing.Point(652, 412);
+            this.btnCancel.Location = new System.Drawing.Point(753, 406);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(180, 101);
+            this.btnCancel.Size = new System.Drawing.Size(120, 87);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCon
             // 
             this.btnCon.BackColor = System.Drawing.Color.White;
             this.btnCon.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCon.Image = global::Pim.Patriot.LocRev.Properties.Resources.Carro60x59;
-            this.btnCon.Location = new System.Drawing.Point(652, 303);
+            this.btnCon.Location = new System.Drawing.Point(609, 406);
             this.btnCon.Name = "btnCon";
-            this.btnCon.Size = new System.Drawing.Size(180, 101);
+            this.btnCon.Size = new System.Drawing.Size(120, 87);
             this.btnCon.TabIndex = 3;
             this.btnCon.Text = "Concluir";
             this.btnCon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -155,12 +177,14 @@
             this.calendarRetorno.Location = new System.Drawing.Point(293, 49);
             this.calendarRetorno.Name = "calendarRetorno";
             this.calendarRetorno.TabIndex = 1;
+            this.calendarRetorno.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendarRetorno_DateSelected);
             // 
             // calendarRetirada
             // 
             this.calendarRetirada.Location = new System.Drawing.Point(24, 49);
             this.calendarRetirada.Name = "calendarRetirada";
             this.calendarRetirada.TabIndex = 0;
+            this.calendarRetirada.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendarRetirada_DateSelected);
             // 
             // grboxLoc
             // 
@@ -197,6 +221,7 @@
             this.rbtnKm_ctrl.TabStop = true;
             this.rbtnKm_ctrl.Text = "Km controlado";
             this.rbtnKm_ctrl.UseVisualStyleBackColor = true;
+            this.rbtnKm_ctrl.CheckedChanged += new System.EventHandler(this.rbtnKm_ctrl_CheckedChanged);
             // 
             // rbtnKm_livre
             // 
@@ -208,6 +233,7 @@
             this.rbtnKm_livre.TabStop = true;
             this.rbtnKm_livre.Text = "Km livre";
             this.rbtnKm_livre.UseVisualStyleBackColor = true;
+            this.rbtnKm_livre.CheckedChanged += new System.EventHandler(this.rbtnKm_livre_CheckedChanged);
             // 
             // lblTipLoc
             // 
@@ -242,6 +268,7 @@
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(219, 23);
             this.txtPlaca.TabIndex = 6;
+            this.txtPlaca.TextChanged += new System.EventHandler(this.txtPlaca_TextChanged);
             // 
             // lblPlaca
             // 
@@ -254,9 +281,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbFun);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.richtxtObserv);
-            this.groupBox1.Controls.Add(this.txtAtendente);
             this.groupBox1.Controls.Add(this.lblAten);
             this.groupBox1.Controls.Add(this.txtCli);
             this.groupBox1.Controls.Add(this.lblCli);
@@ -268,6 +295,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Cliente";
+            // 
+            // cmbFun
+            // 
+            this.cmbFun.FormattingEnabled = true;
+            this.cmbFun.Location = new System.Drawing.Point(152, 103);
+            this.cmbFun.Name = "cmbFun";
+            this.cmbFun.Size = new System.Drawing.Size(219, 24);
+            this.cmbFun.TabIndex = 8;
             // 
             // label3
             // 
@@ -287,14 +322,6 @@
             this.richtxtObserv.TabIndex = 6;
             this.richtxtObserv.Text = "";
             // 
-            // txtAtendente
-            // 
-            this.txtAtendente.Location = new System.Drawing.Point(152, 104);
-            this.txtAtendente.MaxLength = 30;
-            this.txtAtendente.Name = "txtAtendente";
-            this.txtAtendente.Size = new System.Drawing.Size(219, 23);
-            this.txtAtendente.TabIndex = 5;
-            // 
             // lblAten
             // 
             this.lblAten.AutoSize = true;
@@ -306,6 +333,7 @@
             // 
             // txtCli
             // 
+            this.txtCli.AllowDrop = true;
             this.txtCli.Location = new System.Drawing.Point(152, 70);
             this.txtCli.MaxLength = 50;
             this.txtCli.Name = "txtCli";
@@ -328,6 +356,7 @@
             this.txtCpf_Cnpj.Name = "txtCpf_Cnpj";
             this.txtCpf_Cnpj.Size = new System.Drawing.Size(219, 23);
             this.txtCpf_Cnpj.TabIndex = 1;
+            this.txtCpf_Cnpj.TextChanged += new System.EventHandler(this.txtCpf_Cnpj_TextChanged);
             this.txtCpf_Cnpj.Leave += new System.EventHandler(this.txtCpf_Cnpj_Leave);
             // 
             // lblCPF_CNPJ
@@ -362,8 +391,11 @@
             this.Name = "frmLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locação de Veículos";
+            this.Load += new System.EventHandler(this.frmLocacao_Load);
             this.tabctrlLoc.ResumeLayout(false);
             this.tabpagLoca.ResumeLayout(false);
+            this.grp.ResumeLayout(false);
+            this.grp.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.grboxLoc.ResumeLayout(false);
@@ -388,7 +420,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richtxtObserv;
-        private System.Windows.Forms.TextBox txtAtendente;
         private System.Windows.Forms.Label lblAten;
         private System.Windows.Forms.TextBox txtCli;
         private System.Windows.Forms.Label lblCli;
@@ -406,5 +437,8 @@
         private System.Windows.Forms.RadioButton rbtnKm_livre;
         private System.Windows.Forms.Label lblTipLoc;
         private System.Windows.Forms.TextBox txtCat;
+        private System.Windows.Forms.GroupBox grp;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.ComboBox cmbFun;
     }
 }

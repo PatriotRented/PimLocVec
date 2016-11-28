@@ -73,6 +73,68 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
 
         }
 
+        public string selCliPorCpfCnpj(string _cpfCnpj)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText =
+
+                    @"select nomeCli from Cliente
+                        where
+                     cnpj_cpf like @cpfCnpj + '%';";
+
+               cmd.Parameters.AddWithValue("@cpfCnpj", _cpfCnpj);
+
+
+                string ret;
+
+                conexao.Open();
+
+                ret = Convert.ToString(cmd.ExecuteScalar());
+                
+                conexao.Close();
+
+                return ret;
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    String erroMessages;
+                    erroMessages = ("Index #" + i + "\n" +
+                    "Message: " + ex.Errors[i].Message + "\n" +
+                    "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                    "Source: " + ex.Errors[i].Source + "\n" +
+                    "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    MessageBox.Show(erroMessages);
+                }
+                throw ex;
+            }
+
+        }
+
+        public int pegaCodCli(string _cpfCnpj)
+        {
+            ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = @"select codCli from Cliente where cnpj_cpf = @cnpj_cpf";
+
+            cmd.Parameters.AddWithValue("@cnpj_cpf", _cpfCnpj);
+
+            int retorno;
+            conexao.Open();
+
+            retorno = Convert.ToInt32(cmd.ExecuteScalar());
+
+            conexao.Close();
+
+            return retorno;
+        }
     }
 }
