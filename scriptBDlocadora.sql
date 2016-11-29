@@ -212,7 +212,20 @@ create view selectVecCat as
 	 from Veiculo vec 
 	 join Categoria cat 
 		on (vec.codCat = cat.codCat) ; 
+		
+create view selAllLoc as
 
+select
+	loc.codLoc,loc.codCli,cli.cnpj_cpf,cli.nomeCli, loc.codVec, vec.placa,
+	 vec.modelo,vec.marca,vec.categoria,loc.codFun,fun.nomeFun,loc.tipoPlan,loc.desco,loc.total,vec.status
+from 
+	Locacao loc
+inner join 
+	selAllVec vec on (vec.codVec = loc.codVec)
+inner join
+	Cliente cli on (cli.codCli = loc.codCli)
+inner join 
+	Funcionario fun on(fun.codFun = loc.codFun);
 --fim das views
 
 --PROCEDURES

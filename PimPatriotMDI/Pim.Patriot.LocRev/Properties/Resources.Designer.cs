@@ -83,9 +83,69 @@ namespace Pim.Patriot.LocRev.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carroComRelogioEmCima {
+            get {
+                object obj = ResourceManager.GetObject("carroComRelogioEmCima", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carroComRelogioEmCima30x30 {
+            get {
+                object obj = ResourceManager.GetObject("carroComRelogioEmCima30x30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cross49x51 {
             get {
                 object obj = ResourceManager.GetObject("cross49x51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cross49x511 {
+            get {
+                object obj = ResourceManager.GetObject("cross49x511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap faxineira20x26 {
+            get {
+                object obj = ResourceManager.GetObject("faxineira20x26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupa20x21 {
+            get {
+                object obj = ResourceManager.GetObject("lupa20x21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupa30x31 {
+            get {
+                object obj = ResourceManager.GetObject("lupa30x31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

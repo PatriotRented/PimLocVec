@@ -30,7 +30,7 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
                 SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
                 SqlCommand cmd = conexao.CreateCommand();
 
-                cmd.CommandText = @"update Veiculo set statusVec = L where placa = @placa";
+                cmd.CommandText = @"update Veiculo set statusVec = 'L' where placa = @placa";
                 cmd.Parameters.AddWithValue("@placa", _placa);
 
                 conexao.Open();

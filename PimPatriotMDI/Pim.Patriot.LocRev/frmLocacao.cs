@@ -17,7 +17,7 @@ namespace Pim.Patriot.LocRev
     {
         int controle; // = 1 km livre  = 2 km contolado
         double valorTot;
-        string data_ret, data_dev;
+        string data_ret, data_dev, de, ate;
         
         public frmLocacao()
         {
@@ -74,7 +74,7 @@ namespace Pim.Patriot.LocRev
         {
             data_dev = calendarRetorno.SelectionStart.ToString("d");
             data_ret = calendarRetirada.SelectionStart.ToString("d");
-            richtxtObserv.Text = data_ret + "\n";
+            
         }
 
         private void calendarRetorno_DateSelected(object sender, DateRangeEventArgs e)
@@ -92,6 +92,37 @@ namespace Pim.Patriot.LocRev
             txtValorDia.Text = "R$:" + Convert.ToString(val);
             txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
         }
+
+        private void calendarDE_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            de = calendarRetorno.SelectionStart.ToString("d");
+            ate = calendarRetirada.SelectionStart.ToString("d");
+        }
+
+        private void calendarATE_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            de = calendarRetorno.SelectionStart.ToString("d");
+            ate = calendarRetirada.SelectionStart.ToString("d");
+        }
+        #endregion
+
+        #region pesquisa
+        private void btnPes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         #endregion
 
         #region botoes
@@ -158,6 +189,8 @@ namespace Pim.Patriot.LocRev
             }
 
         }
+
+
         #endregion
 
         #region restricoes
