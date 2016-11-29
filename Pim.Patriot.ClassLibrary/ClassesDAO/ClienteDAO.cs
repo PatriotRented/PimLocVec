@@ -119,22 +119,30 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
 
         public int pegaCodCli(string _cpfCnpj)
         {
-            ConnectionFactory conn = new ConnectionFactory();
-            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"select codCli from Cliente where cnpj_cpf = @cnpj_cpf";
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText = @"select codCli from Cliente where cnpj_cpf = @cnpj_cpf";
 
-            cmd.Parameters.AddWithValue("@cnpj_cpf", _cpfCnpj);
+                cmd.Parameters.AddWithValue("@cnpj_cpf", _cpfCnpj);
 
-            int retorno;
-            conexao.Open();
+                int retorno;
+                conexao.Open();
 
-            retorno = Convert.ToInt32(cmd.ExecuteScalar());
+                retorno = Convert.ToInt32(cmd.ExecuteScalar());
 
-            conexao.Close();
+                conexao.Close();
 
-            return retorno;
+                return retorno;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
         }
     }
 }

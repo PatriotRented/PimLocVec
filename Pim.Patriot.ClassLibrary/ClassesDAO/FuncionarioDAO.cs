@@ -74,20 +74,29 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
 
         public DataTable selNomeFunComCod()
         {
-            ConnectionFactory conn = new ConnectionFactory();
-            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+            try
+            {
 
-            SqlCommand cmd = conexao.CreateCommand();
-            cmd.CommandText = @"select CONCAT(codFun, ' | ', nomeFun) as 'atendente'
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText = @"select CONCAT(codFun, ' | ', nomeFun) as 'atendente'
                 from Funcionario";
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            conexao.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            dt.Load(dr);
+                conexao.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
 
-            return dt;
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
         }
 
 

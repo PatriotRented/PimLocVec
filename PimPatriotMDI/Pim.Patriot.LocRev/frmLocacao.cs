@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +16,9 @@ namespace Pim.Patriot.LocRev
     public partial class frmLocacao : Form
     {
         int controle; // = 1 km livre  = 2 km contolado
+        double valorTot;
         string data_ret, data_dev;
+        
         public frmLocacao()
         {
             InitializeComponent();
@@ -69,12 +72,25 @@ namespace Pim.Patriot.LocRev
         #region Calendarios
         private void calendarRetirada_DateSelected(object sender, DateRangeEventArgs e)
         {
-            data_ret = calendarRetirada.SelectionStart.ToString();
+            data_dev = calendarRetorno.SelectionStart.ToString("d");
+            data_ret = calendarRetirada.SelectionStart.ToString("d");
+            richtxtObserv.Text = data_ret + "\n";
         }
 
         private void calendarRetorno_DateSelected(object sender, DateRangeEventArgs e)
         {
-            data_dev = calendarRetorno.SelectionStart.ToString();
+            data_dev = calendarRetorno.SelectionStart.ToString("d");
+            data_ret = calendarRetirada.SelectionStart.ToString("d");
+
+            TimeSpan dias = Convert.ToDateTime(data_dev).Subtract(calendarRetirada.SelectionStart);
+
+            VeiculoDAO vecDAO = new VeiculoDAO();
+            double val = vecDAO.pegaValorTotal(txtPlaca.Text,controle);
+            int i = dias.Days;
+
+            valorTot = val * i;
+            txtValorDia.Text = "R$:" + Convert.ToString(val);
+            txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
         }
         #endregion
 
@@ -91,7 +107,7 @@ namespace Pim.Patriot.LocRev
         {
 
             if (txtPlaca.Text != "" && txtCli.Text != "" &&
-            txtValor.Text != "" && cmbFun.Text != "")
+            txtValorDia.Text != "" && cmbFun.Text != "")
             {
                 DialogResult result = MessageBox.Show
                     ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
@@ -100,11 +116,16 @@ namespace Pim.Patriot.LocRev
                     ClienteDAO cliDAO = new ClienteDAO();
                     VeiculoDAO vecDAO = new VeiculoDAO();
                     Locacao loc = new Locacao();
+                    int codFun = Convert.ToInt32(string.Join(null, Regex.Split(cmbFun.Text, "[^\\d]")));
+                    int codLoc;
 
-                    int codLoc = loc.registraLocacao
-                      (cliDAO.pegaCodCli(txtCpf_Cnpj.Text), vecDAO.pegaCodVec(txtPlaca.Text),
-                       Convert.ToInt32(cmbFun.Text), controle, Double.Parse(txtValor.Text),
-                       data_ret,data_dev);
+                     codLoc = loc.registraLocacao
+                      (cliDAO.pegaCodCli(txtCpf_Cnpj.Text),codFun ,
+                      vecDAO.pegaCodVec(txtPlaca.Text), controle, valorTot,
+                       Convert.ToString(data_ret),Convert.ToString(data_dev));
+
+                    if (codLoc > 0)
+                        vecDAO.updateStVeiculo(txtPlaca.Text);
 
                     MessageBox.Show
                         ("Código da locação", "^^ O código da locação é:" + Convert.ToString(codLoc));

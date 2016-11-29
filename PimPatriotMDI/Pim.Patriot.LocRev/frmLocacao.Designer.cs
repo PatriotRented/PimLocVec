@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocacao));
             this.tabctrlLoc = new System.Windows.Forms.TabControl();
             this.tabpagLoca = new System.Windows.Forms.TabPage();
-            this.grp = new System.Windows.Forms.GroupBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
+            this.grpValor = new System.Windows.Forms.GroupBox();
+            this.txtValorDia = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCon = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblRetorno = new System.Windows.Forms.Label();
+            this.lblRetirada = new System.Windows.Forms.Label();
             this.calendarRetorno = new System.Windows.Forms.MonthCalendar();
             this.calendarRetirada = new System.Windows.Forms.MonthCalendar();
             this.grboxLoc = new System.Windows.Forms.GroupBox();
@@ -51,7 +51,7 @@
             this.lblPlaca = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbFun = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblObs = new System.Windows.Forms.Label();
             this.richtxtObserv = new System.Windows.Forms.RichTextBox();
             this.lblAten = new System.Windows.Forms.Label();
             this.txtCli = new System.Windows.Forms.TextBox();
@@ -59,9 +59,10 @@
             this.txtCpf_Cnpj = new System.Windows.Forms.TextBox();
             this.lblCPF_CNPJ = new System.Windows.Forms.Label();
             this.tabpagPesq = new System.Windows.Forms.TabPage();
+            this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.tabctrlLoc.SuspendLayout();
             this.tabpagLoca.SuspendLayout();
-            this.grp.SuspendLayout();
+            this.grpValor.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.grboxLoc.SuspendLayout();
             this.grbLoc2.SuspendLayout();
@@ -81,7 +82,7 @@
             // 
             // tabpagLoca
             // 
-            this.tabpagLoca.Controls.Add(this.grp);
+            this.tabpagLoca.Controls.Add(this.grpValor);
             this.tabpagLoca.Controls.Add(this.btnCancel);
             this.tabpagLoca.Controls.Add(this.btnCon);
             this.tabpagLoca.Controls.Add(this.groupBox4);
@@ -96,22 +97,25 @@
             this.tabpagLoca.Text = "Locação";
             this.tabpagLoca.UseVisualStyleBackColor = true;
             // 
-            // grp
+            // grpValor
             // 
-            this.grp.Controls.Add(this.txtValor);
-            this.grp.Location = new System.Drawing.Point(609, 294);
-            this.grp.Name = "grp";
-            this.grp.Size = new System.Drawing.Size(250, 76);
-            this.grp.TabIndex = 5;
-            this.grp.TabStop = false;
-            this.grp.Text = "Valor Estimado";
+            this.grpValor.Controls.Add(this.txtValorTotal);
+            this.grpValor.Controls.Add(this.txtValorDia);
+            this.grpValor.Location = new System.Drawing.Point(609, 294);
+            this.grpValor.Name = "grpValor";
+            this.grpValor.Size = new System.Drawing.Size(250, 76);
+            this.grpValor.TabIndex = 5;
+            this.grpValor.TabStop = false;
+            this.grpValor.Text = "Valor Estimado";
             // 
-            // txtValor
+            // txtValorDia
             // 
-            this.txtValor.Location = new System.Drawing.Point(32, 33);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(186, 23);
-            this.txtValor.TabIndex = 0;
+            this.txtValorDia.Enabled = false;
+            this.txtValorDia.Location = new System.Drawing.Point(25, 33);
+            this.txtValorDia.Name = "txtValorDia";
+            this.txtValorDia.Size = new System.Drawing.Size(88, 23);
+            this.txtValorDia.TabIndex = 0;
+            this.txtValorDia.Text = "Diária";
             // 
             // btnCancel
             // 
@@ -143,8 +147,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.lblRetorno);
+            this.groupBox4.Controls.Add(this.lblRetirada);
             this.groupBox4.Controls.Add(this.calendarRetorno);
             this.groupBox4.Controls.Add(this.calendarRetirada);
             this.groupBox4.Location = new System.Drawing.Point(19, 294);
@@ -154,23 +158,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Data";
             // 
-            // label8
+            // lblRetorno
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(366, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Retorno";
+            this.lblRetorno.AutoSize = true;
+            this.lblRetorno.Location = new System.Drawing.Point(366, 24);
+            this.lblRetorno.Name = "lblRetorno";
+            this.lblRetorno.Size = new System.Drawing.Size(78, 16);
+            this.lblRetorno.TabIndex = 3;
+            this.lblRetorno.Text = "Retorno";
             // 
-            // label7
+            // lblRetirada
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(95, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Retirada";
+            this.lblRetirada.AutoSize = true;
+            this.lblRetirada.Location = new System.Drawing.Point(95, 24);
+            this.lblRetirada.Name = "lblRetirada";
+            this.lblRetirada.Size = new System.Drawing.Size(88, 16);
+            this.lblRetirada.TabIndex = 2;
+            this.lblRetirada.Text = "Retirada";
             // 
             // calendarRetorno
             // 
@@ -282,7 +286,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmbFun);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblObs);
             this.groupBox1.Controls.Add(this.richtxtObserv);
             this.groupBox1.Controls.Add(this.lblAten);
             this.groupBox1.Controls.Add(this.txtCli);
@@ -304,14 +308,14 @@
             this.cmbFun.Size = new System.Drawing.Size(219, 24);
             this.cmbFun.TabIndex = 8;
             // 
-            // label3
+            // lblObs
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Observação:";
+            this.lblObs.AutoSize = true;
+            this.lblObs.Location = new System.Drawing.Point(426, 73);
+            this.lblObs.Name = "lblObs";
+            this.lblObs.Size = new System.Drawing.Size(118, 16);
+            this.lblObs.TabIndex = 7;
+            this.lblObs.Text = "Observação:";
             // 
             // richtxtObserv
             // 
@@ -379,6 +383,15 @@
             this.tabpagPesq.Text = "Pesquisa locação";
             this.tabpagPesq.UseVisualStyleBackColor = true;
             // 
+            // txtValorTotal
+            // 
+            this.txtValorTotal.Enabled = false;
+            this.txtValorTotal.Location = new System.Drawing.Point(135, 33);
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Size = new System.Drawing.Size(88, 23);
+            this.txtValorTotal.TabIndex = 1;
+            this.txtValorTotal.Text = "Total";
+            // 
             // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,8 +407,8 @@
             this.Load += new System.EventHandler(this.frmLocacao_Load);
             this.tabctrlLoc.ResumeLayout(false);
             this.tabpagLoca.ResumeLayout(false);
-            this.grp.ResumeLayout(false);
-            this.grp.PerformLayout();
+            this.grpValor.ResumeLayout(false);
+            this.grpValor.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.grboxLoc.ResumeLayout(false);
@@ -418,7 +431,7 @@
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label lblPlaca;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblObs;
         private System.Windows.Forms.RichTextBox richtxtObserv;
         private System.Windows.Forms.Label lblAten;
         private System.Windows.Forms.TextBox txtCli;
@@ -428,8 +441,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCon;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblRetorno;
+        private System.Windows.Forms.Label lblRetirada;
         private System.Windows.Forms.MonthCalendar calendarRetorno;
         private System.Windows.Forms.MonthCalendar calendarRetirada;
         private System.Windows.Forms.GroupBox grbLoc2;
@@ -437,8 +450,9 @@
         private System.Windows.Forms.RadioButton rbtnKm_livre;
         private System.Windows.Forms.Label lblTipLoc;
         private System.Windows.Forms.TextBox txtCat;
-        private System.Windows.Forms.GroupBox grp;
-        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.GroupBox grpValor;
+        private System.Windows.Forms.TextBox txtValorDia;
         private System.Windows.Forms.ComboBox cmbFun;
+        private System.Windows.Forms.TextBox txtValorTotal;
     }
 }

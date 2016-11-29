@@ -22,9 +22,30 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
         /// Faz o update de um registro no banco de dados a partir do seu id
         /// </summary>
         /// <returns></returns>
-        public object updateVeiculo(long id) //Esse método só será implementado na tela de consulta de veículos (for now...)
+        public object updateStVeiculo(string _placa) 
         {
-            throw new NotImplementedException();
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+                SqlCommand cmd = conexao.CreateCommand();
+
+                cmd.CommandText = @"update Veiculo set statusVec = L where placa = @placa";
+                cmd.Parameters.AddWithValue("@placa", _placa);
+
+                conexao.Open();
+
+                cmd.ExecuteNonQuery();
+
+                conexao.Close();
+
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
         }
         
         /// <summary>
@@ -203,7 +224,7 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
             ConnectionFactory conn = new ConnectionFactory();
             SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
-            SqlCommand cmd = new SqlCommand();
+            SqlCommand cmd = conexao.CreateCommand();
             cmd.CommandText = @"select codVec from Veiculo where placa = @placa";
 
             cmd.Parameters.AddWithValue("@placa", _placa);
