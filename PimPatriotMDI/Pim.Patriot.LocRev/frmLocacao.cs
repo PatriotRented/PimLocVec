@@ -159,5 +159,22 @@ namespace Pim.Patriot.LocRev
 
         }
         #endregion
+
+        #region restricoes
+        private void txtPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //filtro fe caracteres idesejados
+            if (char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            //converte para maiusculo
+            if (char.IsLower(e.KeyChar) && char.IsLetter(e.KeyChar))
+            {
+                e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
+
+            }
+        }
+        #endregion
     }
 }
