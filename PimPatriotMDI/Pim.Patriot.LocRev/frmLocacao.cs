@@ -109,17 +109,21 @@ namespace Pim.Patriot.LocRev
         #region pesquisa
         private void btnPes_Click(object sender, EventArgs e)
         {
+            LocacaoDAO locDAO = new LocacaoDAO();
+            DataTable dt = new DataTable();
+            dt = locDAO.selAllLoca(txtCodCLi.Text,txtCodLoc.Text, txtCodVec.Text);
+            grvLoc.DataSource = dt;
 
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
+            grvLoc.ClearSelection();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
 

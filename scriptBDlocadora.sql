@@ -216,8 +216,11 @@ create view selectVecCat as
 create view selAllLoc as
 
 select
-	loc.codLoc,loc.codCli,cli.cnpj_cpf,cli.nomeCli, loc.codVec, vec.placa,
-	 vec.modelo,vec.marca,vec.categoria,loc.codFun,fun.nomeFun,loc.tipoPlan,loc.desco,loc.total,vec.status
+	loc.codLoc as 'codLoc',loc.codCli as 'codCli',cli.cnpj_cpf as 'cnpj_cpf' ,
+	cli.nomeCli as 'nomeCli', loc.codVec as 'codVec', vec.placa as 'placa',
+	vec.modelo as 'modelo',vec.marca 'marca',vec.categoria as 'categoria',
+	loc.codFun as 'codFun',fun.nomeFun as 'nomeFun',loc.tipoPlan as 'tipoPlan',
+	loc.desco as 'desco',loc.total as 'total',vec.status as 'status'
 from 
 	Locacao loc
 inner join 
