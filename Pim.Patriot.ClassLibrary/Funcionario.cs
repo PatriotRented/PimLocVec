@@ -12,17 +12,6 @@ public class Funcionario : Pessoa
 
 	private string dt_admissao;
 
-	public bool validaFuncio()
-	{
-        throw new NotImplementedException();
-    }
-
-	
-    public override bool cadastrar()
-    {
-        throw new NotImplementedException();
-    }
-
     public void cadFun(string _nome, string _email, string _cargo, string _tel, int _codEnd, string _cpf, string _dt_nasc, string _dt_admissao)
     {
         try
@@ -73,6 +62,18 @@ public class Funcionario : Pessoa
             throw ex;
         }
 
+    }
+
+
+    public bool validaFuncio()
+    {
+        throw new NotImplementedException();
+    }
+
+
+    public override bool cadastrar()
+    {
+        throw new NotImplementedException();
     }
 
 }

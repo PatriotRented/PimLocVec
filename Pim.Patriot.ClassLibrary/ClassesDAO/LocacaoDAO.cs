@@ -46,5 +46,68 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 throw ex;
             }
         }
+
+        public string selCliLoc
+            ( int _codLoc = 0, int _codfun = 0)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmdCli = conexao.CreateCommand();
+                cmdCli.CommandText = @"select nomeCli from selAllLoc where or codLoc = @loc 
+                and codFun = @fun";
+                cmdCli.Parameters.AddWithValue("@loc", _codLoc);
+                cmdCli.Parameters.AddWithValue("@fun", _codfun);
+
+                string cliente;
+                conexao.Open();
+
+                cliente = Convert.ToString(cmdCli.ExecuteScalar());
+
+                conexao.Close();
+                return cliente;
+
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
+
+        public string selPlacaLoc
+           (int _codLoc = 0, int _codfun = 0)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmdPlaca = conexao.CreateCommand();
+                cmdPlaca.CommandText = @"select placa from selAllLoc where or codLoc = @loc 
+                and codFun = @fun";
+                cmdPlaca.Parameters.AddWithValue("@loc", _codLoc);
+                cmdPlaca.Parameters.AddWithValue("@fun", _codfun);
+
+                string placa;
+                conexao.Open();
+
+                placa = Convert.ToString(cmdPlaca.ExecuteScalar());
+
+                conexao.Close();
+
+                return placa;
+
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
     }
 }

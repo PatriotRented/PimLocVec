@@ -11,3 +11,5 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.LocRev\
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.LocRev\bin\Debug\Pim.Patriot.DataAccess.pdb
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.LocRev\obj\Debug\Pim.Patriot.LocRev.exe
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.LocRev\obj\Debug\Pim.Patriot.LocRev.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.LocRev\obj\Debug\Pim.Patriot.CadCli.frmPagamento.resources
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.LocRev\obj\Debug\Pim.Patriot.LocRev.frmReserva.resources

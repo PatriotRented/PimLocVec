@@ -112,6 +112,14 @@ namespace Pim.Patriot.MDI
 
         #endregion
 
+        #region Ajuda
+        private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AboutBoxSobre a = new AboutBoxSobre();
+            a.MdiParent = this;
+            a.Show();
+        }
+        #endregion
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -163,6 +171,27 @@ namespace Pim.Patriot.MDI
         }
         #endregion
 
+        #region Reserva
+        private void menuItemReserva_Click(object sender, EventArgs e)
+        {
+            frmReserva loca = new frmReserva();
+            loca.MdiParent = this;
+            mstripHorizontal.Hide();
+            loca.Show();
+
+        }
+        #endregion
+
+        #region Pagamento
+        private void menuItemPagHoriz_Click(object sender, EventArgs e)
+        {
+            frmPagamento a = new frmPagamento();
+            a.MdiParent = this;
+            mstripHorizontal.Hide();
+            a.Show();
+        }
+        #endregion
+
         #endregion
 
         #region Metodos da tela
@@ -180,6 +209,7 @@ namespace Pim.Patriot.MDI
         }
 
         #endregion
+
         private void frmMDI_Load(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin(this);
@@ -187,11 +217,6 @@ namespace Pim.Patriot.MDI
             login.Show();
         }
 
-        private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            AboutBoxSobre a = new AboutBoxSobre();
-            a.MdiParent = this;
-            a.Show();
-        }
+
     }
 }

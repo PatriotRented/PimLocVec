@@ -103,6 +103,16 @@ namespace Pim.Patriot.LocRev.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carroComRelogioEmCima50x50 {
+            get {
+                object obj = ResourceManager.GetObject("carroComRelogioEmCima50x50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cross49x51 {
             get {
                 object obj = ResourceManager.GetObject("cross49x51", resourceCulture);
@@ -123,9 +133,29 @@ namespace Pim.Patriot.LocRev.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap disquete50x51 {
+            get {
+                object obj = ResourceManager.GetObject("disquete50x51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap faxineira20x26 {
             get {
                 object obj = ResourceManager.GetObject("faxineira20x26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap faxineira40x51 {
+            get {
+                object obj = ResourceManager.GetObject("faxineira40x51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

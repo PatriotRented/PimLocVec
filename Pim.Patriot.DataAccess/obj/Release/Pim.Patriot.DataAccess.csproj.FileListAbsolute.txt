@@ -1,0 +1,4 @@
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\bin\Release\Pim.Patriot.DataAccess.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\bin\Release\Pim.Patriot.DataAccess.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\obj\Release\Pim.Patriot.DataAccess.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\obj\Release\Pim.Patriot.DataAccess.pdb

@@ -1,0 +1,7 @@
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\bin\Release\Pim.Patriot.ClassLibrary.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\bin\Release\Pim.Patriot.ClassLibrary.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\bin\Release\Pim.Patriot.DataAccess.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\bin\Release\Pim.Patriot.DataAccess.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\obj\Release\Pim.Patriot.ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\obj\Release\Pim.Patriot.ClassLibrary.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\obj\Release\Pim.Patriot.ClassLibrary.pdb

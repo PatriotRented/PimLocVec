@@ -161,6 +161,7 @@
             this.menuItemReserva.Name = "menuItemReserva";
             this.menuItemReserva.Size = new System.Drawing.Size(145, 89);
             this.menuItemReserva.Text = "Reserva";
+            this.menuItemReserva.Click += new System.EventHandler(this.menuItemReserva_Click);
             // 
             // menuItemPagHoriz
             // 
@@ -170,6 +171,7 @@
             this.menuItemPagHoriz.Name = "menuItemPagHoriz";
             this.menuItemPagHoriz.Size = new System.Drawing.Size(145, 89);
             this.menuItemPagHoriz.Text = "Pagamentos";
+            this.menuItemPagHoriz.Click += new System.EventHandler(this.menuItemPagHoriz_Click);
             // 
             // mstripHorizontal
             // 

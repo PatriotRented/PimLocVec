@@ -52,15 +52,7 @@ public class Acessorio
 
     }
 
-    public void excluirAce()
-    {
-        throw new NotImplementedException();
-    }
 
-    public void atualizaAce()
-    {
-        throw new NotImplementedException();
-    }
 
     /// <summary>
     /// Associa um ou mais acessorios a um carro, insere na table do bd VecXace que lista 

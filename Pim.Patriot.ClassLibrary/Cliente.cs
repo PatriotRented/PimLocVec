@@ -5,26 +5,8 @@ using System.Windows.Forms;
 
 public class Cliente : Pessoa
 {
-
-
-
     private int codCli;
-
     private string cnh;
-
-
-
-    public override bool cadastrar()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void alugarVec()
-    {
-        throw new NotImplementedException();
-    }
-
-
 
     public void cadCli(string _nome, string _email, string _cnh, string _tel, int _codEnd, string _cpf_cnpj, string _dt_nasc, string _rg)
 
@@ -86,4 +68,17 @@ public class Cliente : Pessoa
         }
 
     }
+
+    public override bool cadastrar()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void alugarVec()
+    {
+        throw new NotImplementedException();
+    }
+
+
+
 }

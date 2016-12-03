@@ -9,21 +9,6 @@ public class Locacao : Pedido
 
 	private MetodoPagamento forma_pag;
 
-	public override void registraPedido()
-	{
-        throw new NotImplementedException();
-    }
-
-	public double calAcrescimo(double  op)
-	{
-        throw new NotImplementedException();
-    }
-
-    public override void cancelaPedido()
-    {
-        throw new NotImplementedException();
-    }
-
     public int registraLocacao(int _codCli, int _codFun, int _codVec, int _tipoPlan,
         double _total, string _dt_ret, string _dt_dev)
     {
@@ -64,6 +49,21 @@ public class Locacao : Pedido
             MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
             throw ex;
         }
+    }
+
+    public override void registraPedido()
+    {
+        throw new NotImplementedException();
+    }
+
+    public double calAcrescimo(double op)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void cancelaPedido()
+    {
+        throw new NotImplementedException();
     }
 }
 
