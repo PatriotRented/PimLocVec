@@ -34,11 +34,22 @@
             this.grpValor = new System.Windows.Forms.GroupBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.txtValorDia = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnCon = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblRetorno = new System.Windows.Forms.Label();
             this.lblRetirada = new System.Windows.Forms.Label();
             this.calendarRetorno = new System.Windows.Forms.MonthCalendar();
             this.calendarRetirada = new System.Windows.Forms.MonthCalendar();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCat = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbFun = new System.Windows.Forms.ComboBox();
             this.lblAten = new System.Windows.Forms.Label();
@@ -64,6 +75,9 @@
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpPesquisa = new System.Windows.Forms.GroupBox();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnPes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodVec = new System.Windows.Forms.TextBox();
             this.txtCodLoc = new System.Windows.Forms.TextBox();
@@ -75,31 +89,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.calendarATE = new System.Windows.Forms.MonthCalendar();
             this.calendarDE = new System.Windows.Forms.MonthCalendar();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnCon = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnPes = new System.Windows.Forms.Button();
             this.tabctrlLoc.SuspendLayout();
             this.tabpagLoca.SuspendLayout();
             this.grpValor.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabpagPesq.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvLoc)).BeginInit();
             this.grpPesquisa.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabctrlLoc
@@ -159,6 +159,33 @@
             this.txtValorDia.TabIndex = 0;
             this.txtValorDia.Text = "Diária";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Image = global::Pim.Patriot.LocRev.Properties.Resources.cross49x51;
+            this.btnCancel.Location = new System.Drawing.Point(753, 345);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(120, 87);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnCon
+            // 
+            this.btnCon.BackColor = System.Drawing.Color.White;
+            this.btnCon.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCon.Image = global::Pim.Patriot.LocRev.Properties.Resources.carroComRelogioEmCima50x50;
+            this.btnCon.Location = new System.Drawing.Point(602, 345);
+            this.btnCon.Name = "btnCon";
+            this.btnCon.Size = new System.Drawing.Size(120, 87);
+            this.btnCon.TabIndex = 3;
+            this.btnCon.Text = "Reservar";
+            this.btnCon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCon.UseVisualStyleBackColor = false;
+            this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lblRetorno);
@@ -201,6 +228,97 @@
             this.calendarRetirada.Location = new System.Drawing.Point(24, 49);
             this.calendarRetirada.Name = "calendarRetirada";
             this.calendarRetirada.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.groupBox5);
+            this.groupBox3.Controls.Add(this.txtCat);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.txtPlaca);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(463, 22);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(410, 146);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dados do Veículo";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton1);
+            this.groupBox5.Controls.Add(this.radioButton2);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Location = new System.Drawing.Point(425, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(444, 114);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(234, 69);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(156, 20);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Km controlado";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(66, 69);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(106, 20);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Km livre";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(134, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tipos de Locação";
+            // 
+            // txtCat
+            // 
+            this.txtCat.Enabled = false;
+            this.txtCat.Location = new System.Drawing.Point(149, 85);
+            this.txtCat.Name = "txtCat";
+            this.txtCat.Size = new System.Drawing.Size(219, 23);
+            this.txtCat.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(34, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 16);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Categoria:";
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Location = new System.Drawing.Point(149, 46);
+            this.txtPlaca.MaxLength = 9;
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(219, 23);
+            this.txtPlaca.TabIndex = 6;
+            this.txtPlaca.TextChanged += new System.EventHandler(this.txtPlaca_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(34, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Placa:";
             // 
             // groupBox1
             // 
@@ -259,6 +377,7 @@
             this.txtCpf_Cnpj.Name = "txtCpf_Cnpj";
             this.txtCpf_Cnpj.Size = new System.Drawing.Size(219, 23);
             this.txtCpf_Cnpj.TabIndex = 1;
+            this.txtCpf_Cnpj.TextChanged += new System.EventHandler(this.txtCpf_Cnpj_TextChanged);
             // 
             // lblCPF_CNPJ
             // 
@@ -415,6 +534,38 @@
             this.grpPesquisa.TabStop = false;
             this.grpPesquisa.Text = "Pesquisar";
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSair.Image = global::Pim.Patriot.LocRev.Properties.Resources.carroComRelogioEmCima30x30;
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSair.Location = new System.Drawing.Point(240, 141);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 42);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.White;
+            this.btnLimpar.Image = global::Pim.Patriot.LocRev.Properties.Resources.faxineira20x26;
+            this.btnLimpar.Location = new System.Drawing.Point(137, 141);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 42);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
+            // btnPes
+            // 
+            this.btnPes.BackColor = System.Drawing.Color.White;
+            this.btnPes.Image = global::Pim.Patriot.LocRev.Properties.Resources.lupa30x31;
+            this.btnPes.Location = new System.Drawing.Point(31, 141);
+            this.btnPes.Name = "btnPes";
+            this.btnPes.Size = new System.Drawing.Size(75, 42);
+            this.btnPes.TabIndex = 9;
+            this.btnPes.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -507,155 +658,6 @@
             this.calendarDE.ShowToday = false;
             this.calendarDE.TabIndex = 4;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.groupBox5);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(463, 22);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 146);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Dados do Veículo";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.radioButton1);
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Location = new System.Drawing.Point(425, 0);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(444, 114);
-            this.groupBox5.TabIndex = 9;
-            this.groupBox5.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(234, 69);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(156, 20);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Km controlado";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(66, 69);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(106, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Km livre";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(134, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tipos de Locação";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(149, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 23);
-            this.textBox1.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 16);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Categoria:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(149, 46);
-            this.textBox2.MaxLength = 9;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 23);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Placa:";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Image = global::Pim.Patriot.LocRev.Properties.Resources.cross49x51;
-            this.btnCancel.Location = new System.Drawing.Point(753, 345);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(120, 87);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnCon
-            // 
-            this.btnCon.BackColor = System.Drawing.Color.White;
-            this.btnCon.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCon.Image = global::Pim.Patriot.LocRev.Properties.Resources.carroComRelogioEmCima50x50;
-            this.btnCon.Location = new System.Drawing.Point(602, 345);
-            this.btnCon.Name = "btnCon";
-            this.btnCon.Size = new System.Drawing.Size(120, 87);
-            this.btnCon.TabIndex = 3;
-            this.btnCon.Text = "Reservar";
-            this.btnCon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCon.UseVisualStyleBackColor = false;
-            this.btnCon.Click += new System.EventHandler(this.btnCon_Click_1);
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.White;
-            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSair.Image = global::Pim.Patriot.LocRev.Properties.Resources.carroComRelogioEmCima30x30;
-            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSair.Location = new System.Drawing.Point(240, 141);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 42);
-            this.btnSair.TabIndex = 11;
-            this.btnSair.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.White;
-            this.btnLimpar.Image = global::Pim.Patriot.LocRev.Properties.Resources.faxineira20x26;
-            this.btnLimpar.Location = new System.Drawing.Point(137, 141);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 42);
-            this.btnLimpar.TabIndex = 10;
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            // 
-            // btnPes
-            // 
-            this.btnPes.BackColor = System.Drawing.Color.White;
-            this.btnPes.Image = global::Pim.Patriot.LocRev.Properties.Resources.lupa30x31;
-            this.btnPes.Location = new System.Drawing.Point(31, 141);
-            this.btnPes.Name = "btnPes";
-            this.btnPes.Size = new System.Drawing.Size(75, 42);
-            this.btnPes.TabIndex = 9;
-            this.btnPes.UseVisualStyleBackColor = false;
-            // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,6 +675,10 @@
             this.grpValor.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabpagPesq.ResumeLayout(false);
@@ -681,10 +687,6 @@
             this.grpPesquisa.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -708,9 +710,9 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCat;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbFun;

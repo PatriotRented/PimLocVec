@@ -137,7 +137,7 @@ codPlan INT NOT NULL,
 FOREIGN KEY (codPlan) REFERENCES Plano(codPlan),
 
 total MONEY NOT NULL,
-desco FLOAT DEFAULT 'SEM DESCONTO',
+desco FLOAT DEFAULT '00',
 dt_ret DATETIME NOT NULL,
 dt_dev DATETIME NOT NULL
 
@@ -145,15 +145,13 @@ dt_dev DATETIME NOT NULL
 
 CREATE TABLE Vistoria (
 
-codCli INT NOT NULL,
-FOREIGN KEY (codCli) REFERENCES Cliente(codCli),
-codFun INT NOT NULL,
-FOREIGN KEY (codFun) REFERENCES Funcionario(codFun),
-codVec INT NOT NULL,
-FOREIGN KEY (codVec) REFERENCES Veiculo(codVec), 
-statusVis CHAR NOT NULL,
+codVis int identity(1,1),
+codLoc int not null,
+statusVis int NOT NULL,
 
-)
+constraint pk_vist primary key (codVis),
+constraint fk_vist_loc foreign key (codLoc) references Locacao(codLoc)
+);
 
 CREATE TABLE Manutencao (
 
@@ -229,6 +227,19 @@ inner join
 	Cliente cli on (cli.codCli = loc.codCli)
 inner join 
 	Funcionario fun on(fun.codFun = loc.codFun);
+
+Create view selForDev as
+select
+	loc.codLoc as 'codLoc',cli.cnh as 'cnh',
+	vec.placa as 'placa', vec.marca 'marca',
+	vec.anoVec as 'ano', loc.dt_ret as 'dt_ret',loc.dt_dev as 'dt_dev'
+from 
+	Locacao loc
+inner join 
+	Veiculo vec on (vec.codVec = loc.codVec)
+inner join
+	Cliente cli on (cli.codCli = loc.codCli)
+	
 --fim das views
 
 --PROCEDURES
