@@ -35,3 +35,5 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\WebLocadora_Interface\bin\Pim.Pat
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\WebLocadora_Interface\bin\Pim.Patriot.ClassLibrary.pdb
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\WebLocadora_Interface\bin\Pim.Patriot.DataAccess.pdb
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\WebLocadora_Interface\obj\Debug\WebLocadora_Interface.csprojResolveAssemblyReference.cache
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\WebLocadora_Interface\bin\Pim.Patriot.Control.dll
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\WebLocadora_Interface\bin\Pim.Patriot.Control.pdb

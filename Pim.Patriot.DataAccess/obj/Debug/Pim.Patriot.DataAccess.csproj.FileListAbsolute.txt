@@ -2,4 +2,5 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\bin\Debug\
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\bin\Debug\Pim.Patriot.DataAccess.pdb
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\obj\Debug\Pim.Patriot.DataAccess.dll
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\obj\Debug\Pim.Patriot.DataAccess.pdb
+C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\bin\Debug\Pim.Patriot.DataAccess.dll.config
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.DataAccess\obj\Debug\Pim.Patriot.DataAccess.csprojResolveAssemblyReference.cache

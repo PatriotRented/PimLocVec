@@ -29,15 +29,15 @@
                <h1>Patriot Retend</h1>
             <br/><br/>
 
-                <asp:Button ID="Vis" runat="server" Text="Nova Vistoria"  Width="189px" style="background-color: #EE7621; text-align: center; color: #FFFFFF; font-weight: 700;" Height="35px" OnClientClick="window.open('AbrirVistoria.aspx');"/>
-                <asp:Button ID="Dev" runat="server" Text="Nova Devolução" Width="189px" style="background-color: #EE7621; color: #FFFFFF; font-weight: 700;" Height="34px" OnClientClick="window.open('Devolucao.aspx');"/>
-                <asp:Button ID="Sair" runat="server" Text="Sair" Width="189px" style="background-color: #EE7621; margin-top: 0px; color: #FFFFFF; font-weight: 700;" Height="34px"/>
+                <asp:Button ID="Vis" runat="server" Text="Nova Vistoria"  Width="189px" style="background-color: #EE7621; text-align: center; color: #FFFFFF; font-weight: 700;" Height="35px" OnClick="Vis_Click"/>
+                <asp:Button ID="Dev" runat="server" Text="Nova Devolução" Width="189px" style="background-color: #EE7621; color: #FFFFFF; font-weight: 700;" Height="34px" OnClick="Dev_Click" /> <!-- OnClientClick="Response.Redirect('Devolucao.aspx');"-->
+                <asp:Button ID="Sair" runat="server" Text="Sair" Width="189px" style="background-color: #EE7621; margin-top: 0px; color: #FFFFFF; font-weight: 700;" Height="34px" OnClick="Sair_Click"/>
 			<br/><br/><br/><br/>
 
       </div>
 
     <!-- Form Module-->
-    <div class="module form-module">
+   <div class="module form-module">
         <div class="toggle">
             </div>
 
@@ -50,7 +50,8 @@
                 <fieldset>
 
                         <asp:TextBox ID="codFun" runat="server">Código de Funcionario</asp:TextBox>
-                        <asp:TextBox ID="codLoc" runat="server">Código de Locação</asp:TextBox><strong><asp:Button ID="Button3" runat="server" Text="Buscar" CssClass="auto-style1" />
+                        <asp:TextBox ID="codLoc" runat="server">Código de Locação</asp:TextBox><strong>
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="auto-style1" OnClick="btnBuscar_Click" />
 
                         </strong>
 
@@ -114,7 +115,7 @@
                 
                     <strong>
 				
-                        <asp:Button ID="ok" runat="server" Text="OK" Width="382px" CssClass="auto-style2" /><asp:Button ID="naoOK" runat="server" Text="Não OK" Width="381px" CssClass="auto-style1" />
+                        <asp:Button ID="ok" runat="server" Text="OK" Width="382px" CssClass="auto-style2" OnClick="ok_Click" /><asp:Button ID="naoOK" runat="server" Text="Não OK" Width="381px" CssClass="auto-style1" OnClick="naoOK_Click" />
 
                    </strong>
 

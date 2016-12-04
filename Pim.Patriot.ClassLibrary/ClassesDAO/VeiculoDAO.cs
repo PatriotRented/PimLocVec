@@ -274,6 +274,31 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
             }
         }
 
+        public void updateStDis(string _placa)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+                SqlCommand cmd = conexao.CreateCommand();
+
+                cmd.CommandText = @"update Veiculo set statusVec = 'D' where placa = @placa";
+                cmd.Parameters.AddWithValue("@placa", _placa);
+
+                conexao.Open();
+
+                cmd.ExecuteNonQuery();
+
+                conexao.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
+
         #endregion
     }
 }

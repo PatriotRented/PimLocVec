@@ -38,14 +38,14 @@
                <h1>Patriot Retend</h1>
 
             <a href="Vistoria.aspx">
-                <asp:Button ID="Vis" runat="server" Text="Nova Vistoria" Width="189px" style="background-color: #EE7621" Height="35px" />
+                <asp:Button ID="Vis" runat="server" Text="Nova Vistoria" Width="189px" style="background-color: #EE7621" Height="35px" OnClick="Vis_Click" />
             </a>
            
             <a href="Devolucao.aspx">
-                <asp:Button ID="Dev" runat="server" Text="Nova Devolução" Width="189px" style="background-color: #EE7621" Height="34px" />
+                <asp:Button ID="Dev" runat="server" Text="Nova Devolução" Width="189px" style="background-color: #EE7621" Height="34px" OnClick="Dev_Click" />
             </a>
 
-            <asp:Button ID="Sair" runat="server" Text="Sair" Width="189px" style="background-color: #EE7621; margin-top: 0px;" Height="34px" />
+            <asp:Button ID="Sair" runat="server" Text="Sair" Width="189px" style="background-color: #EE7621; margin-top: 0px;" Height="34px" OnClick="Sair_Click" />
 			
         </div>
 
@@ -64,9 +64,9 @@
                 <!--DADOS INICIAIS-->
                 <fieldset>
 
-                        <asp:TextBox ID="codFun" runat="server"  OnClick="Buscar_Click">Código de Funcionario</asp:TextBox>
-                        <asp:TextBox ID="codLoc" runat="server"  OnClick="Buscar_Click">Código de Locação</asp:TextBox>
-                        <asp:Button ID="Buscar" runat="server" Text="Buscar" style="background-color: #EE7621" Height="22px" Width="92px"  /> <!--OnClick="Buscar_Click"-->
+                        <asp:TextBox ID="codFun" runat="server"  >Código de Funcionario</asp:TextBox>
+                        <asp:TextBox ID="codLoc" runat="server"  >Código de Locação</asp:TextBox>
+                        <asp:Button ID="Buscar" runat="server" Text="Buscar" style="background-color: #EE7621" Height="22px" Width="92px" OnClick="Buscar_Click" /> <!--OnClick="Buscar_Click"-->
 
                 </fieldset>
 
@@ -74,7 +74,7 @@
                 <fieldset>
                     
                     Dados Cliente:<br/>
-                        <asp:TextBox ID="nomeResp" runat="server" MaxLength="80">Nome do Responsável que Acompanhou a Vistoria</asp:TextBox>
+                        <asp:TextBox ID="nomeResp" runat="server" MaxLength="80" Width="155px">Nome do Responsável</asp:TextBox>
                         <br/>
 
                 </fieldset>
@@ -85,7 +85,7 @@
 
                     Dados do Veículo:<br/>
 
-                        <asp:TextBox ID="placa" runat="server">Placa</asp:TextBox>
+                        <asp:TextBox ID="placa" runat="server" >Placa</asp:TextBox>
                         <br/>
                         <asp:TextBox ID="quilo" runat="server">Quilometragem</asp:TextBox>
                     
@@ -98,16 +98,16 @@
                 <fieldset>
                     <legend>Lista de verificação:</legend>
                         
-                        <asp:CheckBox ID="limpadores" runat="server" text="Limpadores de parabrisa funcionando"/><br/>
-                        <asp:CheckBox ID="acessorios" runat="server" text="Acessorios funcionando*"/><br/>
-                        <asp:CheckBox ID="pneus" runat="server" text="Pneus"/><br/>
-                        <asp:CheckBox ID="luz" runat="server" text="Lanternas, luz de freio, pisca-alerta e seta devem estar funcionando"/><br/>
-                        <asp:CheckBox ID="freio" runat="server" text="Freios"/><br/>
-                        <asp:CheckBox ID="comb" runat="server" text="Combustível**"/><br/>
-                        <asp:CheckBox ID="lataria" runat="server" text="Lataria"/><br/>
-                        <asp:CheckBox ID="motor" runat="server" text="Motor"/><br/>
-                        <asp:CheckBox ID="apVaza" runat="server" text="Apresenta vazamentos"/><br/>
-                        <asp:CheckBox ID="apRui" runat="server" text="Apresenta ruidos estranho"/><br/>
+                        <asp:CheckBox ID="limpadores" runat="server"  OnCheckedChanged="limpadores_CheckedChanged" text="Limpadores de parabrisa funcionando"/><br/>
+                        <asp:CheckBox ID="acessorios" runat="server" text="Acessorios funcionando*" OnCheckedChanged="acessorio_CheckedChanged" /><br/><!--OnCheckedChanged="acessorio_CheckedChanged"-->
+                        <asp:CheckBox ID="pneus" runat="server" text="Pneus" OnCheckedChanged="pneus_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="luz" runat="server" text="Lanternas, luz de freio, pisca-alerta e seta devem estar funcionando" OnCheckedChanged="luz_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="freio" runat="server" text="Freios" OnCheckedChanged="freio_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="comb" runat="server" text="Combustível**" OnCheckedChanged="comb_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="lataria" runat="server" text="Lataria" OnCheckedChanged="lataria_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="motor" runat="server" text="Motor" OnCheckedChanged="motor_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="apVaza" runat="server" text="Apresenta vazamentos" OnCheckedChanged="apVaza_CheckedChanged"/><br/>
+                        <asp:CheckBox ID="apRui" runat="server" text="Apresenta ruidos estranho" OnCheckedChanged="apRui_CheckedChanged"/><br/>
 
                         <br/><br/>
                         
@@ -120,8 +120,8 @@
 
                 <!--AVALIAÇÂO FINAL-->
 				
-                <asp:Button ID="ok" runat="server" Text="OK" Width="152px" style="background-color: #EE7621"  /> <!--OnClick="ok_Click"-->
-                <asp:Button ID="naoOK" runat="server" Text="Não OK" Width="130px" style="background-color: #EE7621" /><!-- OnClick="naoOK_Click"-->
+                <asp:Button ID="ok" runat="server" Text="OK" Width="152px" style="background-color: #EE7621" OnClick="ok_Click1"  /> <!--OnClick="ok_Click"-->
+                <asp:Button ID="naoOK" runat="server" Text="Não OK" Width="130px" style="background-color: #EE7621" OnClick="naoOK_Click" /><!-- OnClick="naoOK_Click"-->
             </div>
         </div>
     </div>

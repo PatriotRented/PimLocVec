@@ -56,7 +56,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
                 SqlCommand cmdCli = conexao.CreateCommand();
-                cmdCli.CommandText = @"select nomeCli from selAllLoc where or codLoc = @loc 
+                cmdCli.CommandText = @"select nomeCli from selAllLoc where  codLoc = @loc 
                 and codFun = @fun";
                 cmdCli.Parameters.AddWithValue("@loc", _codLoc);
                 cmdCli.Parameters.AddWithValue("@fun", _codfun);
@@ -87,7 +87,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
                 SqlCommand cmdPlaca = conexao.CreateCommand();
-                cmdPlaca.CommandText = @"select placa from selAllLoc where or codLoc = @loc 
+                cmdPlaca.CommandText = @"select placa from selAllLoc where codLoc = @loc 
                 and codFun = @fun";
                 cmdPlaca.Parameters.AddWithValue("@loc", _codLoc);
                 cmdPlaca.Parameters.AddWithValue("@fun", _codfun);
@@ -108,6 +108,47 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
                 throw ex;
             }
+        }
+
+        public List<string> selLocaParaDev(int _codLoc)
+        {
+            List<string> retorno = new List<string>();
+            ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+            SqlCommand cmdCnh = conexao.CreateCommand();
+            SqlCommand cmdMarca = conexao.CreateCommand();
+            SqlCommand cmdPlaca = conexao.CreateCommand();
+            SqlCommand cmdAno = conexao.CreateCommand();
+            SqlCommand cmdDt_ret = conexao.CreateCommand();
+            SqlCommand cmdDt_dev = conexao.CreateCommand();
+
+            cmdCnh.CommandText = "select cnh from selForDev where codLoc = @codLoc;";
+            cmdMarca.CommandText = "select marca from selForDev where codLoc = @codLoc;";
+            cmdPlaca.CommandText = "select placa from selForDev where codLoc = @codLoc;";
+            cmdAno.CommandText = "select ano from selForDev where codLoc = @codLoc;";
+            cmdDt_ret.CommandText = "select dt_ret from selForDev where codLoc = @codLoc;";
+            cmdDt_dev.CommandText = "select dt_dev from selForDev where codLoc = @codLoc;";
+
+            cmdCnh.Parameters.AddWithValue("@codLoc", _codLoc);
+            cmdPlaca.Parameters.AddWithValue("@codLoc", _codLoc);
+            cmdMarca.Parameters.AddWithValue("@codLoc", _codLoc);
+            cmdAno.Parameters.AddWithValue("@codLoc", _codLoc);
+            cmdDt_ret.Parameters.AddWithValue("@codLoc", _codLoc);
+            cmdDt_dev.Parameters.AddWithValue("@codLoc", _codLoc);
+
+            conexao.Open();
+
+            retorno.Add(Convert.ToString(cmdCnh.ExecuteScalar()));
+            retorno.Add(Convert.ToString(cmdMarca.ExecuteScalar()));
+            retorno.Add(Convert.ToString(cmdPlaca.ExecuteScalar()));
+            retorno.Add(Convert.ToString(cmdAno.ExecuteScalar()));
+            retorno.Add(Convert.ToString(cmdDt_ret.ExecuteScalar()));
+            retorno.Add(Convert.ToString(cmdDt_dev.ExecuteScalar()));
+
+            conexao.Close();
+
+            return retorno;
         }
     }
 }

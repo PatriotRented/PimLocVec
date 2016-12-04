@@ -76,6 +76,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -132,6 +134,17 @@
     <Content Include="Fonts\scss\_spinning.scss" />
     <Content Include="Fonts\scss\_stacked.scss" />
     <Content Include="Fonts\scss\_variables.scss" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\ServiceReferences\LocacaoService.wsdl" />
+    <None Include="Service References\ServiceReferences\LocacaoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferences\LocacaoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferences\LocacaoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -192,6 +205,13 @@
     <Content Include="Js\wow.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Reservar.aspx" />
+    <None Include="Service References\ServiceReferences\LocacaoService.disco" />
+    <None Include="Service References\ServiceReferences\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferences\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferences\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="VecEsportivos.html" />
     <Content Include="VecExecutivos.html" />
     <Content Include="VecPopulares.html" />
@@ -214,7 +234,9 @@
     <Content Include="VeiculoSUVs\HyundaiTucson.html" />
     <Content Include="VeiculoSUVs\JeepRenegade.html" />
     <Content Include="Vistoria.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbrirVistoria.aspx.cs">
@@ -256,6 +278,11 @@
     <Compile Include="Reservar.aspx.designer.cs">
       <DependentUpon>Reservar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReferences\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Vistoria.aspx.cs">
       <DependentUpon>Vistoria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,6 +304,16 @@
       <Project>{0fb2651a-8aa9-4d6a-b79b-c78abb62c549}</Project>
       <Name>Pim.Patriot.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PimPatriotMDI\Pim.Patriot.Control\Pim.Patriot.Control.csproj">
+      <Project>{364B6976-8C0C-4DA3-B3D9-783C5DE698B2}</Project>
+      <Name>Pim.Patriot.Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReferences\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Pim.Patriot.Control.LocacaoService" CodeBehind="LocacaoService.svc.cs" %>
