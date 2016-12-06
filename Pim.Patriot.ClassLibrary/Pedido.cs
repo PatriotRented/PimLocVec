@@ -4,7 +4,7 @@ public abstract class Pedido
 {
     #region  Atributos
 
-    protected Plano plano;
+   
 
 	protected DateTime dt_ret;
 
