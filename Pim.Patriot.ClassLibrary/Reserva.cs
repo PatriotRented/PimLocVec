@@ -48,7 +48,7 @@ public class Reserva : Pedido
 
             SqlCommand cmdSt = conexao.CreateCommand();
 
-            cmdSt.CommandText = @"update Veiculo set statusVec = 'L' where codVec = @codVec;";
+            cmdSt.CommandText = @"update Veiculo set statusVec = 'R' where codVec = @codVec;";
             cmdSt.Parameters.AddWithValue("@codVec", _codVec);
             conexao.Open();
 
@@ -68,6 +68,30 @@ public class Reserva : Pedido
 
     }
 
+    public void cancelReserva(int _codRes)
+    {
+        try
+        {
+
+            ConnectionFactory conn = new ConnectionFactory();
+            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+            SqlCommand cmd = conexao.CreateCommand();
+            SqlCommand cmdPlaca = conexao.CreateCommand();
+
+            cmd.CommandText = @"delete from Reserva where codRes = @codRes";
+            cmdPlaca.CommandText =
+                @"select vec.placa from Veiculo vec 
+                   inner join Reserva res on(vec.codVec = res.codVec) and res.codRes = @codRes";
+            cmd.Parameters.AddWithValue("@codRes", _codRes);
+            cmdPlaca.Parameters.AddWithValue("@codRes", _codRes);
+        }
+        catch (SqlException ex)
+        {
+            MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+            throw ex;
+        }
+    }
    
 }
+
 

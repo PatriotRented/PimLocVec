@@ -122,6 +122,8 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
             SqlCommand cmdAno = conexao.CreateCommand();
             SqlCommand cmdDt_ret = conexao.CreateCommand();
             SqlCommand cmdDt_dev = conexao.CreateCommand();
+            SqlCommand cmdNomeCli = conexao.CreateCommand();
+
 
             cmdCnh.CommandText = "select cnh from selForDev where codLoc = @codLoc;";
             cmdMarca.CommandText = "select marca from selForDev where codLoc = @codLoc;";
@@ -129,6 +131,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
             cmdAno.CommandText = "select ano from selForDev where codLoc = @codLoc;";
             cmdDt_ret.CommandText = "select dt_ret from selForDev where codLoc = @codLoc;";
             cmdDt_dev.CommandText = "select dt_dev from selForDev where codLoc = @codLoc;";
+            cmdNomeCli.CommandText = "select nomeCli from selForDev where codLoc = @codLoc;";
 
             cmdCnh.Parameters.AddWithValue("@codLoc", _codLoc);
             cmdPlaca.Parameters.AddWithValue("@codLoc", _codLoc);
@@ -136,6 +139,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
             cmdAno.Parameters.AddWithValue("@codLoc", _codLoc);
             cmdDt_ret.Parameters.AddWithValue("@codLoc", _codLoc);
             cmdDt_dev.Parameters.AddWithValue("@codLoc", _codLoc);
+            cmdNomeCli.Parameters.AddWithValue("@codLoc", _codLoc);
 
             conexao.Open();
 
@@ -145,6 +149,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
             retorno.Add(Convert.ToString(cmdAno.ExecuteScalar()));
             retorno.Add(Convert.ToString(cmdDt_ret.ExecuteScalar()));
             retorno.Add(Convert.ToString(cmdDt_dev.ExecuteScalar()));
+            retorno.Add(Convert.ToString(cmdNomeCli.ExecuteScalar()));
 
             conexao.Close();
 

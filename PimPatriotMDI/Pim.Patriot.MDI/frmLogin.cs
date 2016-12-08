@@ -14,7 +14,7 @@ namespace Pim.Patriot.MDI
 {
     public partial class frmLogin : Form
     {
-        private bool valor;
+    //    private bool valor;
         frmMDI HWND;
 
         public frmLogin(frmMDI mdiHWND)
@@ -26,7 +26,10 @@ namespace Pim.Patriot.MDI
 
         private void btnCadUsu_Click(object sender, EventArgs e)
         {
-            
+            frmCadLogin cadLogin = new frmCadLogin();
+            cadLogin.MdiParent = HWND;
+            cadLogin.Show();
+            cadLogin.BringToFront(); 
         }
 
         public void entralogin()

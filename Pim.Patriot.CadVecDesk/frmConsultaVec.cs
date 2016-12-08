@@ -114,6 +114,15 @@ namespace Pim.Patriot.CadVecDesk
             txtAte.Text = "";
             
             grvVec.ClearSelection();
+
+            if (this.grvVec.DataSource != null)
+            {
+                this.grvVec.DataSource = null;
+            }
+            else
+            {
+                this.grvVec.Rows.Clear();
+            }
         }
 
         #endregion
@@ -144,7 +153,16 @@ namespace Pim.Patriot.CadVecDesk
 
         private void btnLimparG_Click(object sender, EventArgs e)
         {
-            grvVec.ClearSelection();
+            // grvVec.ClearSelection();
+
+            if (this.grvVec.DataSource != null)
+            {
+                this.grvVec.DataSource = null;
+            }
+            else
+            {
+                this.grvVec.Rows.Clear();
+            }
         }
     }
 }

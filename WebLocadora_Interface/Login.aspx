@@ -38,11 +38,11 @@
     <div class="form">
         <h2>Login</h2>
             
-      
-        <input type="text" placeholder="Id"/>
-        <input type="password" placeholder="Senha"/>
+      <!--<asp:Button runat="server" Text="Button"></asp:Button><asp:TextBox runat="server"></asp:TextBox>-->
+        <asp:TextBox runat="server" placeholder="Id" ID="txtUsu" />
+        <asp:TextBox runat="server" type="password" placeholder="Senha" ID="txtSenha" MaxLength="8"/>
 
-       <button style="background-color:  #EE7621">Entrar</button>
+       <asp:Button runat="server" style="background-color:  #EE7621" ID="btnLogin" Text="Entrar" OnClick="btnLogin_Click"></asp:Button>
 	  
     </div>
     </div> 

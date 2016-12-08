@@ -221,22 +221,30 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
 
         public int pegaCodVec(string _placa)
         {
-            ConnectionFactory conn = new ConnectionFactory();
-            SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
-            SqlCommand cmd = conexao.CreateCommand();
-            cmd.CommandText = @"select codVec from Veiculo where placa = @placa";
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText = @"select codVec from Veiculo where placa = @placa";
 
-            cmd.Parameters.AddWithValue("@placa", _placa);
+                cmd.Parameters.AddWithValue("@placa", _placa);
 
-            int retorno;
-            conexao.Open();
+                int retorno;
+                conexao.Open();
 
-            retorno = Convert.ToInt32(cmd.ExecuteScalar());
+                retorno = Convert.ToInt32(cmd.ExecuteScalar());
 
-            conexao.Close();
+                conexao.Close();
 
-            return retorno;
+                return retorno;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
         }
 
         public double pegaValorTotal(string _placa, int _tipoPlan)
@@ -251,6 +259,18 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
                 cmd.CommandText = @"SELECT precoBase from selAllVec
                     where Placa = @placa";
                 cmd.Parameters.AddWithValue("@placa", _placa);
+
+                if (_tipoPlan == 3)
+                {
+                    SqlCommand cmdTipo = conexao.CreateCommand();
+                    int cod = this.pegaCodVec(_placa);
+                    cmdTipo.CommandText = "select tipoPlan from Locacao where codVec = @cod";
+                    cmdTipo.Parameters.AddWithValue("@cod",cod);
+
+                    conexao.Open();
+                    _tipoPlan = Convert.ToInt32(cmdTipo.ExecuteScalar());
+                    conexao.Close();
+                }
 
                 conexao.Open();
                 valor = Convert.ToDouble(cmd.ExecuteScalar());
@@ -291,6 +311,35 @@ namespace Pim.Patriot.DataAccess.ClassesDAO
 
                 conexao.Close();
 
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
+
+        public string SelVecForModelo(string _Modelo)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText =
+                    @"select placa from Veiculo where modelo = @modelo and statusVec = 'D'";
+
+                cmd.Parameters.AddWithValue("@modelo", _Modelo);
+
+                string retorno;
+                conexao.Open();
+
+                retorno = Convert.ToString(cmd.ExecuteScalar());
+
+                conexao.Close();
+
+                return retorno;
             }
             catch (SqlException ex)
             {

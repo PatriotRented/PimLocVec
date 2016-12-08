@@ -51,7 +51,7 @@ namespace Pim.Patriot.LocRev
             txtValorDia.Text != "" && cmbFun.Text != "")
             {
                 DialogResult result = MessageBox.Show
-                    ("Confirmar", "Por favor confirme a Inclusão.", MessageBoxButtons.OKCancel);
+                    ("Confirmar", "Por favor confirme a Reserva.", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
                     ClienteDAO cliDAO = new ClienteDAO();
@@ -73,7 +73,7 @@ namespace Pim.Patriot.LocRev
 
 
                     DialogResult resultCon = MessageBox.Show
-                   ("Deseja continuar Rservando outros veículos?",
+                   ("Deseja continuar Reservando outros veículos?",
                    "Locação realizada com sucesso!", MessageBoxButtons.YesNo);
 
 
@@ -123,6 +123,54 @@ namespace Pim.Patriot.LocRev
             valorTot = val * i;
             txtValorDia.Text = "R$:" + Convert.ToString(val);
             txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
+        }
+
+        private void frmReserva_Load(object sender, EventArgs e)
+        {
+            FuncionarioDAO funDAO = new FuncionarioDAO();
+            DataTable dt = new DataTable();
+            dt = funDAO.selNomeFunComCod();
+            cmbFun.DisplayMember = "atendente";
+            cmbFun.DataSource = dt;
+        }
+
+        private void rbtnLivre_CheckedChanged(object sender, EventArgs e)
+        {
+            controle = 1;
+            data_dev = calendarRetorno.SelectionStart.ToString("d");
+            data_ret = calendarRetirada.SelectionStart.ToString("d");
+
+            TimeSpan dias = Convert.ToDateTime(data_dev).Subtract(calendarRetirada.SelectionStart);
+
+            VeiculoDAO vecDAO = new VeiculoDAO();
+            double val = vecDAO.pegaValorTotal(txtPlaca.Text, controle);
+            int i = dias.Days;
+
+            valorTot = val * i;
+            txtValorDia.Text = "R$:" + Convert.ToString(val);
+            txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
+        }
+
+        private void rbtnCtrl_CheckedChanged(object sender, EventArgs e)
+        {
+            controle = 2;
+            data_dev = calendarRetorno.SelectionStart.ToString("d");
+            data_ret = calendarRetirada.SelectionStart.ToString("d");
+
+            TimeSpan dias = Convert.ToDateTime(data_dev).Subtract(calendarRetirada.SelectionStart);
+
+            VeiculoDAO vecDAO = new VeiculoDAO();
+            double val = vecDAO.pegaValorTotal(txtPlaca.Text, controle);
+            int i = dias.Days;
+
+            valorTot = val * i;
+            txtValorDia.Text = "R$:" + Convert.ToString(val);
+            txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
+        }
+
+        private void btnPes_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void calendarDE_DateSelected(object sender, DateRangeEventArgs e)

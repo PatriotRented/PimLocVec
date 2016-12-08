@@ -32,6 +32,8 @@
             this.tabctrlLoc = new System.Windows.Forms.TabControl();
             this.tabpagLoca = new System.Windows.Forms.TabPage();
             this.grpValor = new System.Windows.Forms.GroupBox();
+            this.rbtnCtrl = new System.Windows.Forms.RadioButton();
+            this.rbtnLivre = new System.Windows.Forms.RadioButton();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.txtValorDia = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -132,14 +134,40 @@
             // 
             // grpValor
             // 
+            this.grpValor.Controls.Add(this.rbtnCtrl);
+            this.grpValor.Controls.Add(this.rbtnLivre);
             this.grpValor.Controls.Add(this.txtValorTotal);
             this.grpValor.Controls.Add(this.txtValorDia);
             this.grpValor.Location = new System.Drawing.Point(609, 209);
             this.grpValor.Name = "grpValor";
-            this.grpValor.Size = new System.Drawing.Size(250, 76);
+            this.grpValor.Size = new System.Drawing.Size(250, 110);
             this.grpValor.TabIndex = 5;
             this.grpValor.TabStop = false;
             this.grpValor.Text = "Valor Estimado";
+            // 
+            // rbtnCtrl
+            // 
+            this.rbtnCtrl.AutoSize = true;
+            this.rbtnCtrl.Location = new System.Drawing.Point(120, 80);
+            this.rbtnCtrl.Name = "rbtnCtrl";
+            this.rbtnCtrl.Size = new System.Drawing.Size(126, 20);
+            this.rbtnCtrl.TabIndex = 3;
+            this.rbtnCtrl.TabStop = true;
+            this.rbtnCtrl.Text = "Km Control";
+            this.rbtnCtrl.UseVisualStyleBackColor = true;
+            this.rbtnCtrl.CheckedChanged += new System.EventHandler(this.rbtnCtrl_CheckedChanged);
+            // 
+            // rbtnLivre
+            // 
+            this.rbtnLivre.AutoSize = true;
+            this.rbtnLivre.Location = new System.Drawing.Point(5, 80);
+            this.rbtnLivre.Name = "rbtnLivre";
+            this.rbtnLivre.Size = new System.Drawing.Size(106, 20);
+            this.rbtnLivre.TabIndex = 2;
+            this.rbtnLivre.TabStop = true;
+            this.rbtnLivre.Text = "Km livre";
+            this.rbtnLivre.UseVisualStyleBackColor = true;
+            this.rbtnLivre.CheckedChanged += new System.EventHandler(this.rbtnLivre_CheckedChanged);
             // 
             // txtValorTotal
             // 
@@ -222,12 +250,14 @@
             this.calendarRetorno.Location = new System.Drawing.Point(293, 49);
             this.calendarRetorno.Name = "calendarRetorno";
             this.calendarRetorno.TabIndex = 1;
+            this.calendarRetorno.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendarRetorno_DateSelected);
             // 
             // calendarRetirada
             // 
             this.calendarRetirada.Location = new System.Drawing.Point(24, 49);
             this.calendarRetirada.Name = "calendarRetirada";
             this.calendarRetirada.TabIndex = 0;
+            this.calendarRetirada.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendarRetirada_DateSelected);
             // 
             // groupBox3
             // 
@@ -305,7 +335,7 @@
             // txtPlaca
             // 
             this.txtPlaca.Location = new System.Drawing.Point(149, 46);
-            this.txtPlaca.MaxLength = 9;
+            this.txtPlaca.MaxLength = 7;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(219, 23);
             this.txtPlaca.TabIndex = 6;
@@ -565,6 +595,7 @@
             this.btnPes.Size = new System.Drawing.Size(75, 42);
             this.btnPes.TabIndex = 9;
             this.btnPes.UseVisualStyleBackColor = false;
+            this.btnPes.Click += new System.EventHandler(this.btnPes_Click);
             // 
             // label1
             // 
@@ -584,7 +615,7 @@
             // 
             // txtCodLoc
             // 
-            this.txtCodLoc.Location = new System.Drawing.Point(188, 61);
+            this.txtCodLoc.Location = new System.Drawing.Point(188, 64);
             this.txtCodLoc.Name = "txtCodLoc";
             this.txtCodLoc.Size = new System.Drawing.Size(123, 23);
             this.txtCodLoc.TabIndex = 3;
@@ -599,11 +630,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 64);
+            this.label2.Location = new System.Drawing.Point(14, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Cód. da Locação:";
+            this.label2.Text = "Cód. da Reserva:";
             // 
             // lblPcli
             // 
@@ -669,6 +700,7 @@
             this.Name = "frmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReserva";
+            this.Load += new System.EventHandler(this.frmReserva_Load);
             this.tabctrlLoc.ResumeLayout(false);
             this.tabpagLoca.ResumeLayout(false);
             this.grpValor.ResumeLayout(false);
@@ -753,5 +785,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MonthCalendar calendarATE;
         private System.Windows.Forms.MonthCalendar calendarDE;
+        private System.Windows.Forms.RadioButton rbtnCtrl;
+        private System.Windows.Forms.RadioButton rbtnLivre;
     }
 }

@@ -59,7 +59,7 @@ namespace Pim.Patriot.CadCli
                         cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCnpj.Text, mdtxtDtnsc.Text, mdtxtRG.Text);
 
                     DialogResult resul = MessageBox.Show
-                        ("Deseja continuar Incluindo outros acessórios?", "Confirmação!", MessageBoxButtons.YesNo);
+                        ("Deseja continuar Incluindo outros Clientes?", "Confirmação!", MessageBoxButtons.YesNo);
                 }
 
             }

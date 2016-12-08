@@ -5,3 +5,10 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\bin\Debu
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\obj\Debug\Pim.Patriot.ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\obj\Debug\Pim.Patriot.ClassLibrary.dll
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\Pim.Patriot.ClassLibrary\obj\Debug\Pim.Patriot.ClassLibrary.pdb
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\bin\Debug\Pim.Patriot.ClassLibrary.dll
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\bin\Debug\Pim.Patriot.ClassLibrary.pdb
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\bin\Debug\Pim.Patriot.DataAccess.dll
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\bin\Debug\Pim.Patriot.DataAccess.pdb
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\obj\Debug\Pim.Patriot.ClassLibrary.csprojResolveAssemblyReference.cache
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\obj\Debug\Pim.Patriot.ClassLibrary.dll
+D:\sources\repos\master\PimLocVec-master\Pim.Patriot.ClassLibrary\obj\Debug\Pim.Patriot.ClassLibrary.pdb

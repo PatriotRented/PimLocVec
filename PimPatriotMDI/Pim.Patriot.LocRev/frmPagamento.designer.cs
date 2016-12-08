@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPagamento));
             this.gbxClienteVeiculo = new System.Windows.Forms.GroupBox();
-            this.txtReal = new System.Windows.Forms.TextBox();
-            this.txtPre = new System.Windows.Forms.TextBox();
+            this.txtCodLoc = new System.Windows.Forms.TextBox();
+            this.lblCodLoc = new System.Windows.Forms.Label();
+            this.mdtxtPre = new System.Windows.Forms.MaskedTextBox();
+            this.mdtxtDevReal = new System.Windows.Forms.MaskedTextBox();
             this.lblReal = new System.Windows.Forms.Label();
             this.lblPre = new System.Windows.Forms.Label();
             this.txtVeiculo = new System.Windows.Forms.TextBox();
@@ -39,14 +41,14 @@
             this.lblVeiculo = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.gbxVistoria = new System.Windows.Forms.GroupBox();
+            this.browse = new System.Windows.Forms.WebBrowser();
             this.gbxPagamento = new System.Windows.Forms.GroupBox();
-            this.txtPagamento3 = new System.Windows.Forms.TextBox();
-            this.txtPagamento2 = new System.Windows.Forms.TextBox();
-            this.txtPagamento1 = new System.Windows.Forms.TextBox();
+            this.txtValorTotal = new System.Windows.Forms.TextBox();
+            this.txtPagNum = new System.Windows.Forms.TextBox();
+            this.txtPagBan = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.browse = new System.Windows.Forms.WebBrowser();
             this.gbxClienteVeiculo.SuspendLayout();
             this.gbxVistoria.SuspendLayout();
             this.gbxPagamento.SuspendLayout();
@@ -54,8 +56,10 @@
             // 
             // gbxClienteVeiculo
             // 
-            this.gbxClienteVeiculo.Controls.Add(this.txtReal);
-            this.gbxClienteVeiculo.Controls.Add(this.txtPre);
+            this.gbxClienteVeiculo.Controls.Add(this.txtCodLoc);
+            this.gbxClienteVeiculo.Controls.Add(this.lblCodLoc);
+            this.gbxClienteVeiculo.Controls.Add(this.mdtxtPre);
+            this.gbxClienteVeiculo.Controls.Add(this.mdtxtDevReal);
             this.gbxClienteVeiculo.Controls.Add(this.lblReal);
             this.gbxClienteVeiculo.Controls.Add(this.lblPre);
             this.gbxClienteVeiculo.Controls.Add(this.txtVeiculo);
@@ -68,27 +72,53 @@
             this.gbxClienteVeiculo.Size = new System.Drawing.Size(797, 178);
             this.gbxClienteVeiculo.TabIndex = 0;
             this.gbxClienteVeiculo.TabStop = false;
-            this.gbxClienteVeiculo.Text = "Dados de Cliente/Veiculo";
+            this.gbxClienteVeiculo.Text = "Dados da locação ";
             // 
-            // txtReal
+            // txtCodLoc
             // 
-            this.txtReal.Location = new System.Drawing.Point(538, 100);
-            this.txtReal.Name = "txtReal";
-            this.txtReal.Size = new System.Drawing.Size(197, 26);
-            this.txtReal.TabIndex = 7;
+            this.txtCodLoc.Location = new System.Drawing.Point(36, 111);
+            this.txtCodLoc.Name = "txtCodLoc";
+            this.txtCodLoc.Size = new System.Drawing.Size(100, 26);
+            this.txtCodLoc.TabIndex = 19;
+            this.txtCodLoc.TextChanged += new System.EventHandler(this.txtCodLoc_TextChanged);
+            this.txtCodLoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodLoc_KeyPress);
             // 
-            // txtPre
+            // lblCodLoc
             // 
-            this.txtPre.Location = new System.Drawing.Point(538, 46);
-            this.txtPre.Name = "txtPre";
-            this.txtPre.Size = new System.Drawing.Size(197, 26);
-            this.txtPre.TabIndex = 6;
+            this.lblCodLoc.AutoSize = true;
+            this.lblCodLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodLoc.Location = new System.Drawing.Point(48, 41);
+            this.lblCodLoc.Name = "lblCodLoc";
+            this.lblCodLoc.Size = new System.Drawing.Size(77, 60);
+            this.lblCodLoc.TabIndex = 18;
+            this.lblCodLoc.Text = "Código \r\nda \r\nLocação";
+            this.lblCodLoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mdtxtPre
+            // 
+            this.mdtxtPre.Enabled = false;
+            this.mdtxtPre.Location = new System.Drawing.Point(643, 48);
+            this.mdtxtPre.Mask = "00/00/0000";
+            this.mdtxtPre.Name = "mdtxtPre";
+            this.mdtxtPre.Size = new System.Drawing.Size(100, 26);
+            this.mdtxtPre.TabIndex = 17;
+            this.mdtxtPre.ValidatingType = typeof(System.DateTime);
+            // 
+            // mdtxtDevReal
+            // 
+            this.mdtxtDevReal.Location = new System.Drawing.Point(643, 106);
+            this.mdtxtDevReal.Mask = "00/00/0000";
+            this.mdtxtDevReal.Name = "mdtxtDevReal";
+            this.mdtxtDevReal.Size = new System.Drawing.Size(100, 26);
+            this.mdtxtDevReal.TabIndex = 16;
+            this.mdtxtDevReal.ValidatingType = typeof(System.DateTime);
+            this.mdtxtDevReal.TextChanged += new System.EventHandler(this.mdtxtDevReal_TextChanged);
             // 
             // lblReal
             // 
             this.lblReal.AutoSize = true;
             this.lblReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReal.Location = new System.Drawing.Point(392, 106);
+            this.lblReal.Location = new System.Drawing.Point(497, 109);
             this.lblReal.Name = "lblReal";
             this.lblReal.Size = new System.Drawing.Size(131, 20);
             this.lblReal.TabIndex = 5;
@@ -98,7 +128,7 @@
             // 
             this.lblPre.AutoSize = true;
             this.lblPre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPre.Location = new System.Drawing.Point(392, 52);
+            this.lblPre.Location = new System.Drawing.Point(497, 48);
             this.lblPre.Name = "lblPre";
             this.lblPre.Size = new System.Drawing.Size(121, 20);
             this.lblPre.TabIndex = 4;
@@ -106,14 +136,16 @@
             // 
             // txtVeiculo
             // 
-            this.txtVeiculo.Location = new System.Drawing.Point(97, 100);
+            this.txtVeiculo.Enabled = false;
+            this.txtVeiculo.Location = new System.Drawing.Point(278, 106);
             this.txtVeiculo.Name = "txtVeiculo";
             this.txtVeiculo.Size = new System.Drawing.Size(197, 26);
             this.txtVeiculo.TabIndex = 3;
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(97, 41);
+            this.txtCliente.Enabled = false;
+            this.txtCliente.Location = new System.Drawing.Point(278, 48);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(197, 26);
             this.txtCliente.TabIndex = 2;
@@ -122,7 +154,7 @@
             // 
             this.lblVeiculo.AutoSize = true;
             this.lblVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVeiculo.Location = new System.Drawing.Point(21, 106);
+            this.lblVeiculo.Location = new System.Drawing.Point(202, 109);
             this.lblVeiculo.Name = "lblVeiculo";
             this.lblVeiculo.Size = new System.Drawing.Size(73, 20);
             this.lblVeiculo.TabIndex = 1;
@@ -132,7 +164,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(21, 47);
+            this.lblCliente.Location = new System.Drawing.Point(202, 48);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(70, 20);
             this.lblCliente.TabIndex = 0;
@@ -147,13 +179,23 @@
             this.gbxVistoria.Size = new System.Drawing.Size(478, 313);
             this.gbxVistoria.TabIndex = 8;
             this.gbxVistoria.TabStop = false;
-            this.gbxVistoria.Text = "Dados da Vistoria";
+            this.gbxVistoria.Text = "Termo de Devolução";
+            // 
+            // browse
+            // 
+            this.browse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browse.Location = new System.Drawing.Point(3, 22);
+            this.browse.MinimumSize = new System.Drawing.Size(20, 20);
+            this.browse.Name = "browse";
+            this.browse.Size = new System.Drawing.Size(472, 288);
+            this.browse.TabIndex = 0;
+            this.browse.Url = new System.Uri("http://localhost:49902/Devolucao.aspx", System.UriKind.Absolute);
             // 
             // gbxPagamento
             // 
-            this.gbxPagamento.Controls.Add(this.txtPagamento3);
-            this.gbxPagamento.Controls.Add(this.txtPagamento2);
-            this.gbxPagamento.Controls.Add(this.txtPagamento1);
+            this.gbxPagamento.Controls.Add(this.txtValorTotal);
+            this.gbxPagamento.Controls.Add(this.txtPagNum);
+            this.gbxPagamento.Controls.Add(this.txtPagBan);
             this.gbxPagamento.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxPagamento.Location = new System.Drawing.Point(608, 257);
             this.gbxPagamento.Name = "gbxPagamento";
@@ -162,26 +204,33 @@
             this.gbxPagamento.TabStop = false;
             this.gbxPagamento.Text = "Método de Pagamento";
             // 
-            // txtPagamento3
+            // txtValorTotal
             // 
-            this.txtPagamento3.Location = new System.Drawing.Point(57, 124);
-            this.txtPagamento3.Name = "txtPagamento3";
-            this.txtPagamento3.Size = new System.Drawing.Size(197, 26);
-            this.txtPagamento3.TabIndex = 8;
+            this.txtValorTotal.Enabled = false;
+            this.txtValorTotal.Location = new System.Drawing.Point(57, 124);
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Size = new System.Drawing.Size(197, 26);
+            this.txtValorTotal.TabIndex = 8;
+            this.txtValorTotal.Text = "Valor Total";
             // 
-            // txtPagamento2
+            // txtPagNum
             // 
-            this.txtPagamento2.Location = new System.Drawing.Point(57, 82);
-            this.txtPagamento2.Name = "txtPagamento2";
-            this.txtPagamento2.Size = new System.Drawing.Size(197, 26);
-            this.txtPagamento2.TabIndex = 8;
+            this.txtPagNum.Location = new System.Drawing.Point(57, 82);
+            this.txtPagNum.Name = "txtPagNum";
+            this.txtPagNum.Size = new System.Drawing.Size(197, 26);
+            this.txtPagNum.TabIndex = 8;
+            this.txtPagNum.Text = "Número";
+            this.txtPagNum.Click += new System.EventHandler(this.txtPagNum_Click);
+            this.txtPagNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPagNum_KeyPress);
             // 
-            // txtPagamento1
+            // txtPagBan
             // 
-            this.txtPagamento1.Location = new System.Drawing.Point(57, 36);
-            this.txtPagamento1.Name = "txtPagamento1";
-            this.txtPagamento1.Size = new System.Drawing.Size(197, 26);
-            this.txtPagamento1.TabIndex = 8;
+            this.txtPagBan.Location = new System.Drawing.Point(57, 36);
+            this.txtPagBan.Name = "txtPagBan";
+            this.txtPagBan.Size = new System.Drawing.Size(197, 26);
+            this.txtPagBan.TabIndex = 8;
+            this.txtPagBan.Text = "Bandeira";
+            this.txtPagBan.Click += new System.EventHandler(this.txtPagBan_Click);
             // 
             // btnLimpar
             // 
@@ -234,16 +283,7 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // browse
-            // 
-            this.browse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browse.Location = new System.Drawing.Point(3, 22);
-            this.browse.MinimumSize = new System.Drawing.Size(20, 20);
-            this.browse.Name = "browse";
-            this.browse.Size = new System.Drawing.Size(472, 288);
-            this.browse.TabIndex = 0;
-            this.browse.Url = new System.Uri("http://localhost:49902/Vistoria.aspx", System.UriKind.Absolute);
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmPagamento
             // 
@@ -278,20 +318,22 @@
         private System.Windows.Forms.GroupBox gbxClienteVeiculo;
         private System.Windows.Forms.Label lblVeiculo;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtReal;
-        private System.Windows.Forms.TextBox txtPre;
         private System.Windows.Forms.Label lblReal;
         private System.Windows.Forms.Label lblPre;
         private System.Windows.Forms.TextBox txtVeiculo;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.GroupBox gbxVistoria;
         private System.Windows.Forms.GroupBox gbxPagamento;
-        private System.Windows.Forms.TextBox txtPagamento3;
-        private System.Windows.Forms.TextBox txtPagamento2;
-        private System.Windows.Forms.TextBox txtPagamento1;
+        private System.Windows.Forms.TextBox txtValorTotal;
+        private System.Windows.Forms.TextBox txtPagNum;
+        private System.Windows.Forms.TextBox txtPagBan;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.WebBrowser browse;
+        private System.Windows.Forms.TextBox txtCodLoc;
+        private System.Windows.Forms.Label lblCodLoc;
+        private System.Windows.Forms.MaskedTextBox mdtxtPre;
+        private System.Windows.Forms.MaskedTextBox mdtxtDevReal;
     }
 }

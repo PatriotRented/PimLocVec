@@ -22,201 +22,228 @@ namespace SiteLocadora_Interface {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// AbrirReser control.
+        /// btnAbrirRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AbrirReser;
+        protected global::System.Web.UI.WebControls.Button btnAbrirRes;
         
         /// <summary>
-        /// Cancelar control.
+        /// btnCancelRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Cancelar;
+        protected global::System.Web.UI.WebControls.Button btnCancelRes;
         
         /// <summary>
-        /// Panel1 control.
+        /// btnConsulRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Button btnConsulRes;
         
         /// <summary>
-        /// Calendar3 control.
+        /// panelAbrirRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar3;
+        protected global::System.Web.UI.WebControls.Panel panelAbrirRes;
         
         /// <summary>
-        /// Calendar2 control.
+        /// txtCpfCnpj control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar2;
+        protected global::System.Web.UI.WebControls.TextBox txtCpfCnpj;
         
         /// <summary>
-        /// livre control.
+        /// txtModelo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox livre;
+        protected global::System.Web.UI.WebControls.TextBox txtModelo;
         
         /// <summary>
-        /// controlado control.
+        /// txtCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox controlado;
+        protected global::System.Web.UI.WebControls.TextBox txtCliente;
         
         /// <summary>
-        /// CheckBox1 control.
+        /// txtPlaca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtPlaca;
         
         /// <summary>
-        /// CheckBox2 control.
+        /// calendarRet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.Calendar calendarRet;
         
         /// <summary>
-        /// CheckBox3 control.
+        /// calendarDev control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.WebControls.Calendar calendarDev;
         
         /// <summary>
-        /// CheckBox4 control.
+        /// rbtnKmLivre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox4;
+        protected global::System.Web.UI.WebControls.RadioButton rbtnKmLivre;
         
         /// <summary>
-        /// CheckBox5 control.
+        /// rbtnKmCrtl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox5;
+        protected global::System.Web.UI.WebControls.RadioButton rbtnKmCrtl;
         
         /// <summary>
-        /// CheckBox6 control.
+        /// txtDiaria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox6;
+        protected global::System.Web.UI.WebControls.TextBox txtDiaria;
         
         /// <summary>
-        /// Button1 control.
+        /// txtValorTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox txtValorTotal;
         
         /// <summary>
-        /// Panel2 control.
+        /// btnReservar0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
+        protected global::System.Web.UI.WebControls.Button btnReservar0;
         
         /// <summary>
-        /// codRes control.
+        /// panelCancelarRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox codRes;
+        protected global::System.Web.UI.WebControls.Panel panelCancelarRes;
         
         /// <summary>
-        /// cpf_cnpj control.
+        /// txtCodRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cpf_cnpj;
+        protected global::System.Web.UI.WebControls.TextBox txtCodRes;
         
         /// <summary>
-        /// CancRes control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancRes;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// Consultar control.
+        /// panelConsulRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Consultar;
+        protected global::System.Web.UI.WebControls.Panel panelConsulRes;
         
         /// <summary>
-        /// Panel3 control.
+        /// txtCodCli control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel3;
+        protected global::System.Web.UI.WebControls.TextBox txtCodCli;
         
         /// <summary>
-        /// codResCodLoc control.
+        /// txtRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox codResCodLoc;
+        protected global::System.Web.UI.WebControls.TextBox txtRes;
         
         /// <summary>
-        /// ConsultarLocRes control.
+        /// txtDatRet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ConsultarLocRes;
+        protected global::System.Web.UI.WebControls.TextBox txtDatRet;
+        
+        /// <summary>
+        /// txtDtDev control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDtDev;
+        
+        /// <summary>
+        /// Buscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Buscar;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

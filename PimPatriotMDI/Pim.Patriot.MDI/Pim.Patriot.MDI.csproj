@@ -77,6 +77,12 @@
     <Compile Include="frmCadCat.Designer.cs">
       <DependentUpon>frmCadCat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadLogin.Designer.cs">
+      <DependentUpon>frmCadLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="frmCadCat.resx">
       <DependentUpon>frmCadCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadLogin.resx">
+      <DependentUpon>frmCadLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

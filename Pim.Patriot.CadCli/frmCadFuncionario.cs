@@ -44,7 +44,7 @@ namespace Pim.Patriot.CadCli
                         fun.cadFun(txtNomeFun.Text, txtEmail.Text, txtCargo.Text, mdtxtTelefone.Text, codEnd, mdtxtCpf.Text, mdtxtDtnsc.Text, mdtxtDtad.Text);
 
                     DialogResult resul = MessageBox.Show
-                        ("Deseja continuar Incluindo outros acessórios?", "Confirmação!", MessageBoxButtons.YesNo);
+                        ("Deseja continuar Incluindo outros Funcionários?", "Confirmação!", MessageBoxButtons.YesNo);
                 }
             }
             else

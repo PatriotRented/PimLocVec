@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnCadUsu = new System.Windows.Forms.Button();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.wpfLogin2 = new Pim.Patriot.MDI.wpfLogin(this);
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.wpfLogin1 = new Pim.Patriot.MDI.wpfLogin(this);
             this.SuspendLayout();
             // 
             // btnCadUsu
@@ -40,22 +40,22 @@
             this.btnCadUsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadUsu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCadUsu.Location = new System.Drawing.Point(442, 2);
+            this.btnCadUsu.Location = new System.Drawing.Point(442, 4);
             this.btnCadUsu.Name = "btnCadUsu";
             this.btnCadUsu.Size = new System.Drawing.Size(35, 35);
             this.btnCadUsu.TabIndex = 1;
             this.btnCadUsu.UseVisualStyleBackColor = true;
             this.btnCadUsu.Click += new System.EventHandler(this.btnCadUsu_Click);
             // 
-            // elementHost2
+            // elementHost1
             // 
-            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost2.Location = new System.Drawing.Point(0, 0);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(477, 321);
-            this.elementHost2.TabIndex = 3;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.wpfLogin2;
+            this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost1.Location = new System.Drawing.Point(0, 0);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(477, 321);
+            this.elementHost1.TabIndex = 2;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = this.wpfLogin1;
             // 
             // frmLogin
             // 
@@ -63,7 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 321);
             this.Controls.Add(this.btnCadUsu);
-            this.Controls.Add(this.elementHost2);
+            this.Controls.Add(this.elementHost1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -73,11 +73,9 @@
         }
 
         #endregion
-        //private wpfLogin wpfLogin1;
+        
         private System.Windows.Forms.Button btnCadUsu;
-        private System.Windows.Forms.Integration.ElementHost elementHost2;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
         private wpfLogin wpfLogin1;
-        private wpfLogin wpfLogin2;
-        //private wpfLogin wpfLogin2;
     }
 }

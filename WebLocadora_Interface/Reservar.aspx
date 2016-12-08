@@ -9,7 +9,7 @@
 
     <title>PATRIOT RETEND</title>
 
-
+       
     <!--Css -->
 
     <link href="Css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -86,160 +86,155 @@
 
     <section class="home-section text-center">
 
-        <div class="container">
 
-            <div class="row">
-                <div class="section-heading">
-                    </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.2s">
-
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <div class="avatar">
-                                    <asp:Button ID="AbrirReser" runat="server" Text="Abrir Reserva" OnClick="AbrirReser_Click" style="background-color: #1E3760; font-weight: 700;" Height="52px" Width="186px"/>
-                                            <br/><br/>
-                                    <asp:Panel ID="Panel1" runat="server">
-                                 
-                                        <br/>
-                                            Dados de Retirada:
-                                    <asp:Calendar ID="Calendar3" runat="server"></asp:Calendar>
-                                                        <select id="HRetirada" name="D1">
-                                                                    <option value="00">00:00</option>
-                                                                    <option value="07">07:00</option>
-                                                                    <option value="08">08:00</option>
-                                                                    <option value="09">09:00</option>
-                                                                    <option value="10">10:00</option>
-                                                                    <option value="11">11:00</option>
-                                                                    <option value="12">12:00</option>
-                                                                    <option value="13">13:00</option>
-                                                                    <option value="14">14:00</option>
-                                                                    <option value="15">15:00</option>
-                                                                    <option value="16">16:00</option>
-                                                                    <option value="17">17:00</option>
-                                                                    <option value="18">18:00</option>
-                                                                    <option value="19">19:00</option>
-                                                                    <option value="20">20:00</option>
-                                                                    <option value="21">21:00</option>
-                                                                    <option value="22">22:00</option>
-                                                                    <option value="23">23:00</option>
-                                                                </select>                                       
-                                                                                <br />
-                                                      <br />
-                                                      Dados de Devolução: 
-
-                                                    <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
-                                            
-                                                    <select id="HDevolucao">
-                                                        <option value="00">00:00</option>
-                                                        <option value="07">07:00</option>
-                                                        <option value="08">08:00</option>
-                                                        <option value="09">09:00</option>
-                                                        <option value="10">10:00</option>
-                                                        <option value="11">11:00</option>
-                                                        <option value="12">12:00</option>
-                                                        <option value="13">13:00</option>
-                                                        <option value="14">14:00</option>
-                                                        <option value="15">15:00</option>
-                                                        <option value="16">16:00</option>
-                                                        <option value="17">17:00</option>
-                                                        <option value="18">18:00</option>
-                                                        <option value="19">19:00</option>
-                                                        <option value="20">20:00</option>
-                                                        <option value="21">21:00</option>
-                                                        <option value="22">22:00</option>
-                                                        <option value="23">23:00</option>
-
-                                                    </select>
-                                            <br />
-
-
-                                            <!--PLANO DE LOCAÇÂO-->       
-                                           
-                                      <br />
-                                      Plano de Locação:<br />
-                                        &nbsp;<asp:CheckBox ID="livre" runat="server" text="KM LIVRE"/>
-                                            <br />
-                                            <asp:CheckBox ID="controlado" runat="server" Text="KM Controlado"/> 
-
-                                            <br />
-
-                                            <!--SERVIÇOS ESPECIAIS-->    
-                                              <br />
-                                              Serviços Especiais:<br />
-
-                                            <asp:CheckBox ID="CheckBox1" runat="server" text="Caderinha"/>
-                                            <asp:CheckBox ID="CheckBox2" runat="server" Text="GPS"/>
-                                            <asp:CheckBox ID="CheckBox3" runat="server" Text="Ar Codicionado"/>
-  
-                                      <br />
-                                      <br />
-                                      Escolha as Proteções:
-                                                
-                                                <br />
-                                                <asp:CheckBox ID="CheckBox4" runat="server" text="Basico*"/>
-                                                <asp:CheckBox ID="CheckBox5" runat="server" text="Completo***"/>
-                                                <asp:CheckBox ID="CheckBox6" runat="server" text="Terceiros***"/>
-                                                <br />
-                                      <br />
-                                      <br />
-                                              *Proteção básica para pequenos danos e avarias<br/>
-                                              **Cobertura básica para avarias, roubo e perda total<br/>
-                                              ***Cobertura para danos materiais a terceiros
-                                            <br />
-
-                                            <br/>
-                                                   
-                                       <a href="CadastrarCli.aspx"><asp:Button ID="Button1" runat="server" Text="Reservar" Height="26px" Width="1417px"/></a>
-                                    </asp:Panel>
-
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.5s">
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <div class="avatar">
-                                    <asp:Button ID="Cancelar" runat="server" Text="Cancelar Reserva" OnClick="Cancelar_Click" style="background-color: #1E3760; font-weight: 700;" Height="59px" Width="199px"/>
-                                            <br/><br/>
-                                    <asp:Panel ID="Panel2" runat="server" Visible="False">
-                                    <asp:TextBox ID="codRes" runat="server" Height="18px" Width="306px" >Codigo de Reserva</asp:TextBox>
-                                    <asp:TextBox ID="cpf_cnpj" runat="server" Height="21px" Width="306px" >CPF/CNPJ</asp:TextBox>
-                                            <br/><br/>
-                                    <asp:Button ID="CancRes" runat="server" Text="Cancelar Reserva" Width="161px" style="background-color: #1E3760; font-weight: 700;" Height="29px"/>
-                                </asp:Panel>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.8s">
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <div class="avatar">     
-                                 <asp:Button ID="Consultar" runat="server" Text="Consultar Reserva ou Locação" OnClick="Consultar_Click" style="background-color: #1E3760; font-weight: 700;" Height="60px" Width="262px"/>
-                                                <br/><br/>            
-                                <asp:Panel ID="Panel3" runat="server" Visible="False">
-                                <asp:TextBox ID="codResCodLoc" runat="server" Height="24px" Width="304px">Codigo de Reserva ou Codigo de Locação</asp:TextBox>
-                                               <br/><br/>
-                                <asp:Button ID="ConsultarLocRes" runat="server" Text="Consultar" Width="117px" style="background-color: #1E3760; font-weight: 700;" Height="27px"/>
-                                </asp:Panel>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
+    <div>
+        <br/><br/><br/>
+        <asp:Button ID="btnAbrirRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Abrir Reserva" Width="215px" OnClick="btnAbrirRes_Click" />
+        <asp:Button ID="btnCancelRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Cancelar Reserva" Width="215px" OnClick="btnCancelRes_Click" />
+        <asp:Button ID="btnConsulRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Consultar Reservas" Width="215px" OnClick="btnConsulRes_Click" />
+        <br/>
+        
+        <asp:Panel ID="panelAbrirRes" runat="server">
+            <br />
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DADOS DO CLIENTE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dados do veículo</h5>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;CPF/CNPJ:&nbsp;
+            <asp:TextBox ID="txtCpfCnpj" runat="server" Width="210px" MaxLength="14"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MODELO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtModelo" runat="server" MaxLength="7"></asp:TextBox>
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CLIENTE:&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtCliente" runat="server" Width="210px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PLACA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtPlaca" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <br />
+            <hr />
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DATA DE RETIRADA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DATA DE DEVOLUÇÃO  </h5><br />
+            <table>
+                <tr>
+                    <td >
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+                    <td>
+                        <asp:Calendar ID="calendarRet" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" OnSelectionChanged="calendarRet_SelectionChanged">
+                            <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                            <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                            <OtherMonthDayStyle ForeColor="#999999" />
+                            <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                            <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                            <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                            <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                            <WeekendDayStyle BackColor="#CCCCFF" />
+                        </asp:Calendar>
+                    </td>
+                    <td >
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td></td>
+                    <td >
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <asp:Calendar ID="calendarDev" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" OnSelectionChanged="calendarDev_SelectionChanged">
+                            <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                            <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                            <OtherMonthDayStyle ForeColor="#999999" />
+                            <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                            <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                            <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                            <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                            <WeekendDayStyle BackColor="#CCCCFF" />
+                        </asp:Calendar>
+                    </td>
+                </tr>
+            </table>
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                     <td>  
+                         <asp:RadioButton ID="rbtnKmLivre" runat="server" BackColor="#003399" ForeColor="White" OnCheckedChanged="rbtnKmLivre_CheckedChanged" Text="KM LIVRE" />
+                    </td>
+                    <td >
+                         &nbsp;&nbsp;<asp:RadioButton ID="rbtnKmCrtl" runat="server" BackColor="#003399" ForeColor="White" OnCheckedChanged="rbtnKmCrtl_CheckedChanged" Text="KM CONTROLADO" />
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td>
+                        &nbsp;<asp:TextBox ID="txtDiaria" runat="server"></asp:TextBox>
+&nbsp;
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtValorTotal" runat="server"></asp:TextBox>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+                    <td>
+
+                        &nbsp;&nbsp;</td>
+                </tr>
+
+            </table>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnReservar0" runat="server" CssClass="btn-primary disabled focus" Font-Bold="True" Height="44px" Text="Reservar" Width="202px" OnClick="btnReservar0_Click" />
+            
+            <br />
+            <br />
+        </asp:Panel>
+        <asp:Panel ID="panelCancelarRes" runat="server" Visible="False">
+            <br />
+            <br />
+            PARA CANCELAR A RESERVA DIGITE O CÓDIGO DA RESERVA AQUI:
+            <asp:TextBox ID="txtCodRes" runat="server"></asp:TextBox>
+            &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnCancel" runat="server" CssClass="btn-primary disabled focus" Height="58px" OnClick="btnCancel_Click" Text="Cancelar Reserva" Width="252px" Font-Bold="True" />
+            <br />
+            <br />
+            <br />
+        </asp:Panel>
+        <asp:Panel ID="panelConsulRes" runat="server" Visible="False">
+        </asp:Panel>
+        <table>
+            <tr>
+                <td>
+        <br/>CÓDIGO CLIENTE:&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtCodCli" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CÓDIGO RESERVA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtRes" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        DATA DE RETIRADA: <asp:TextBox ID="txtDatRet" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DATA DE DEVOLUÇÃO:
+        <asp:TextBox ID="txtDtDev" runat="server"></asp:TextBox>
+                        <br />
+                        </td>
+                <td>
+
+                    <asp:Button ID="Buscar" runat="server" Height="92px" Text="Buscar" Width="133px" CssClass="btn-primary disabled focus" Font-Bold="True" />
+
+                </td>
+            </tr>
+            </table>
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <br />
+        <br />
+        <br/><br/><br/>
+    </div>
         					
         <section id="Contato" class="home-section text-center">
         <div class="heading-Contato">
@@ -249,13 +244,13 @@
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                             <div class="section-heading">
                                 <br /><br /><br /><br /><br /><br /><br /><br />
-                                <h2>Contato</h2><br /><br /><br /><br />
+                                <h2>Contato/h2><br /><br /><br /><br />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -348,7 +343,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> 
     </section>
 
     <footer>

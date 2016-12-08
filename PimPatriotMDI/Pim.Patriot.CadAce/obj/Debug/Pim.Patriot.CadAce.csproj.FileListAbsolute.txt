@@ -11,3 +11,16 @@ C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.DataAccess.pdb
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.exe
 C:\Users\pptra_000\Source\Repos\Main\PimLocVec\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.pdb
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.CadAce.exe.config
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.CadAce.exe
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.CadAce.pdb
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.ClassLibrary.dll
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.DataAccess.dll
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.ClassLibrary.pdb
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\bin\Debug\Pim.Patriot.DataAccess.pdb
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.csprojResolveAssemblyReference.cache
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.frmCadAce.resources
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.Properties.Resources.resources
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.csproj.GenerateResource.Cache
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.exe
+D:\sources\repos\master\PimLocVec-master\PimPatriotMDI\Pim.Patriot.CadAce\obj\Debug\Pim.Patriot.CadAce.pdb

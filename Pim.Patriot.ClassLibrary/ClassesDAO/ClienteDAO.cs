@@ -87,7 +87,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                         where
                      cnpj_cpf like @cpfCnpj + '%';";
 
-               cmd.Parameters.AddWithValue("@cpfCnpj", _cpfCnpj);
+                cmd.Parameters.AddWithValue("@cpfCnpj", _cpfCnpj);
 
 
                 string ret;
@@ -95,7 +95,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 conexao.Open();
 
                 ret = Convert.ToString(cmd.ExecuteScalar());
-                
+
                 conexao.Close();
 
                 return ret;
@@ -137,6 +137,75 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 conexao.Close();
 
                 return retorno;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
+
+        public int pegaCodCliPorCNH(string _cnh)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmd = conexao.CreateCommand();
+                cmd.CommandText = @"select codCli from Cliente where cnh = @cnh";
+
+                cmd.Parameters.AddWithValue("@cnh", _cnh);
+
+                int retorno;
+                conexao.Open();
+
+                retorno = Convert.ToInt32(cmd.ExecuteScalar());
+
+                conexao.Close();
+
+                return retorno;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erros se vire \n" + Convert.ToString(ex));
+                throw ex;
+            }
+        }
+
+        public string selCliPorCod(int _cod, int ctrl = 1)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmd = conexao.CreateCommand();
+                switch (ctrl)
+                {
+                    case 1:
+                        cmd.CommandText =    @"select nomeCli from Cliente where
+                     codCli = @cod;";
+                        break;
+                    case 2:
+                        cmd.CommandText = @"select cnpj_cpf from Cliente
+                        where codCli = @cod;";
+
+                        break;
+                }
+
+                cmd.Parameters.AddWithValue("@cod", _cod);
+
+
+                string ret;
+
+                conexao.Open();
+
+                ret = Convert.ToString(cmd.ExecuteScalar());
+
+                conexao.Close();
+
+                return ret;
             }
             catch (SqlException ex)
             {

@@ -119,6 +119,15 @@ namespace Pim.Patriot.LocRev
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             grvLoc.ClearSelection();
+
+            if (this.grvLoc.DataSource != null)
+            {
+                this.grvLoc.DataSource = null;
+            }
+            else
+            {
+                this.grvLoc.Rows.Clear();
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -163,7 +172,7 @@ namespace Pim.Patriot.LocRev
                         vecDAO.updateStVeiculo(txtPlaca.Text);
 
                     MessageBox.Show
-                        ("Código da locação", "^^ O código da locação é:" + Convert.ToString(codLoc));
+                        ( "^^ O código da locação é:" + Convert.ToString(codLoc), "Código da locação");
 
 
                          DialogResult resultCon = MessageBox.Show

@@ -26,6 +26,12 @@ namespace Pim.Patriot.MDI
         //private bool valor;
         frmLogin logHandle;
 
+        public wpfLogin()
+        {
+            InitializeComponent();
+
+        }
+
         public wpfLogin(frmLogin HWND)
         {
             InitializeComponent();

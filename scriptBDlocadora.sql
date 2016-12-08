@@ -133,8 +133,8 @@ codFun INT NOT NULL,
 FOREIGN KEY (codFun) REFERENCES Funcionario(codFun),
 codVec INT NOT NULL ,
 FOREIGN KEY (codVec) REFERENCES Veiculo(codVec),
-codPlan INT NOT NULL,
-FOREIGN KEY (codPlan) REFERENCES Plano(codPlan),
+tipoPlan INT NOT NULL,
+
 
 total MONEY NOT NULL,
 desco FLOAT DEFAULT '00',
@@ -169,8 +169,8 @@ codCli INT NOT NULL,
 FOREIGN KEY (codCli) REFERENCES Cliente(codCli),
  
 codMetPag INT NOT NULL PRIMARY KEY IDENTITY (1,1),
-bandeira VARCHAR NOT NULL UNIQUE,
-numero INT NOT NULL UNIQUE
+bandeira VARCHAR(20) NOT NULL UNIQUE,
+numero VARCHAR(15) NOT NULL UNIQUE
 
 );
 
@@ -232,7 +232,8 @@ Create view selForDev as
 select
 	loc.codLoc as 'codLoc',cli.cnh as 'cnh',
 	vec.placa as 'placa', vec.marca 'marca',
-	vec.anoVec as 'ano', loc.dt_ret as 'dt_ret',loc.dt_dev as 'dt_dev'
+	vec.anoVec as 'ano', loc.dt_ret as 'dt_ret',loc.dt_dev as 'dt_dev',
+	cli.nomeCli as 'nomeCli'
 from 
 	Locacao loc
 inner join 
