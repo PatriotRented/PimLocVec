@@ -12,7 +12,7 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
 {
     public class ReservaDAO
     {
-        public DataTable selAllLoca(string _cli, string _res)
+        public DataTable selAllres(string _cli, string _res, string dt_ret , string dt_dev )
         {
             try
             {
@@ -21,8 +21,19 @@ namespace Pim.Patriot.ClassLibrary.ClassesDAO
                 SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
                 SqlCommand cmd = conexao.CreateCommand();
-                cmd.CommandText = @"select * from selAllRes where codCli = @cli or codLoc = @loc 
+
+                if(dt_ret != "/" && dt_dev != "/")
+                {
+                    cmd.CommandText = @"select * from selAllRes where codCli = @cli or codLoc = @loc 
+                or codVec = @vec or ret between @de and @ate or dev between @de and @ate ";
+                    cmd.Parameters.AddWithValue("@de", dt_ret);
+                    cmd.Parameters.AddWithValue("@ate", dt_dev);
+                }
+                else
+                {
+                    cmd.CommandText = @"select * from selAllRes where codCli = @cli or codLoc = @loc 
                 or codVec = @vec";
+                }
 
                 int.TryParse(_cli, out cli);
                 int.TryParse(_res, out loc);

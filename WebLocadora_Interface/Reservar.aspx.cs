@@ -2,6 +2,7 @@
 using Pim.Patriot.DataAccess.ClassesDAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -13,7 +14,8 @@ namespace SiteLocadora_Interface
 {
     public partial class Reservar : System.Web.UI.Page
     {
-        string data_dev, data_ret;
+        public string data_dev = "/";
+        public string data_ret = "/";
         double valorTot;
         int controle;
         
@@ -109,6 +111,17 @@ namespace SiteLocadora_Interface
             DialogResult resultCon = MessageBox.Show
            ("Deseja continuar Reservando outros veículos?",
            "Locação realizada com sucesso!", MessageBoxButtons.YesNo);
+        }
+
+        protected void Buscar_Click(object sender, EventArgs e)
+        {
+            ReservaDAO resDAO = new ReservaDAO();
+            DataTable dt = new DataTable();
+
+            dt = resDAO.selAllres(txtCliente.Text, txtCodRes.Text, data_dev, data_dev);
+
+            grvRes.DataSourceID = "";
+            grvRes.DataSource = dt;
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

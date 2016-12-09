@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reservar.aspx.cs" Inherits="SiteLocadora_Interface.Reservar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reservar.aspx.cs" Inherits="SiteLocadora_Interface.Reservar" EnableEventValidation="False" %>
 
 <!DOCTYPE html>
 
@@ -90,12 +90,12 @@
     </section>
     <div>
         <br/><br/><br/>
-        <asp:Button ID="btnAbrirRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Abrir Reserva" Width="215px" OnClick="btnAbrirRes_Click" />
-        <asp:Button ID="btnCancelRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Cancelar Reserva" Width="215px" OnClick="btnCancelRes_Click" />
-        <asp:Button ID="btnConsulRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Consultar Reservas" Width="215px" OnClick="btnConsulRes_Click" />
+        <asp:Button ID="btnAbrirRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Abrir Reserva" Width="215px" OnClick="btnAbrirRes_Click" ValidateRequestMode="Enabled" />
+        <asp:Button ID="btnCancelRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Cancelar Reserva" Width="215px" OnClick="btnCancelRes_Click" ValidateRequestMode="Enabled" />
+        <asp:Button ID="btnConsulRes" runat="server" CssClass="btn-primary disabled" Height="45px" Text="Consultar Reservas" Width="215px" OnClick="btnConsulRes_Click" ValidateRequestMode="Enabled" />
         <br/>
         
-        <asp:Panel ID="panelAbrirRes" runat="server">
+        <asp:Panel ID="panelAbrirRes" runat="server" BorderStyle="Outset">
             <br />
             <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DADOS DO CLIENTE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dados do veículo</h5>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;CPF/CNPJ:&nbsp;
             <asp:TextBox ID="txtCpfCnpj" runat="server" Width="210px" MaxLength="14"></asp:TextBox>
@@ -190,7 +190,7 @@
             <br />
             <br />
         </asp:Panel>
-        <asp:Panel ID="panelCancelarRes" runat="server" Visible="False">
+        <asp:Panel ID="panelCancelarRes" runat="server" Visible="False" BorderStyle="Outset">
             <br />
             <br />
             PARA CANCELAR A RESERVA DIGITE O CÓDIGO DA RESERVA AQUI:
@@ -205,13 +205,12 @@
             <br />
             <br />
         </asp:Panel>
-        <asp:Panel ID="panelConsulRes" runat="server" Visible="False">
-        </asp:Panel>
-        <table>
+        <asp:Panel ID="panelConsulRes" runat="server" Visible="False" BorderStyle="Outset">
+            <table>
             <tr>
                 <td>
         <br/>CÓDIGO CLIENTE:&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtCodCli" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="txtCodCli" runat="server" ></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CÓDIGO RESERVA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtRes" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -224,16 +223,18 @@
                         </td>
                 <td>
 
-                    <asp:Button ID="Buscar" runat="server" Height="92px" Text="Buscar" Width="133px" CssClass="btn-primary disabled focus" Font-Bold="True" />
+                    <asp:Button ID="Buscar" runat="server" Height="92px" Text="Buscar" Width="133px" CssClass="btn-primary disabled focus" Font-Bold="True" OnClick="Buscar_Click" />
 
                 </td>
             </tr>
             </table>
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:GridView ID="grvRes" runat="server">
         </asp:GridView>
         <br />
         <br />
         <br/><br/><br/>
+        </asp:Panel>
+        
     </div>
         					
         <section id="Contato" class="home-section text-center">
@@ -244,7 +245,7 @@
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                             <div class="section-heading">
                                 <br /><br /><br /><br /><br /><br /><br /><br />
-                                <h2>Contato/h2><br /><br /><br /><br />
+                                <h2>Contato</h2><br /><br /><br /><br />
                             </div>
                         </div>
                     </div>

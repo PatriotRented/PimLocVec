@@ -95,11 +95,21 @@ constraint fk_vec_cat FOREIGN KEY (codCat) REFERENCES Categoria(codCat)
 
 --Tabelas de seguraca
 create table LoginTbl(
+	cod_log int identity(1,1),
+	usu varchar(25),
+	password varchar(100),
+	constraint pk_login primary key(usu)
+);
+
+create table LoginTblSite(
 	cod_log int identity(1,1)
 	usu varchar(25),
 	password varchar(100),
 	tipoUsu int,
-	constraint pk_login primary key(usu)
+	codCli int not null,
+	
+	constraint pk_login_site primary key(usu),
+	constraint fk_login_site foreign key(codCli) references Cliente(codCli)
 );
 --fim das tabelas 
 
@@ -261,7 +271,22 @@ INSERT INTO
 Values
 	(@cnpj_cpf,@rg,@nomeCli, @emailCli,convert(datetime,@dt_nasc_string),@cnh,@tel,@codEnd);
 
-
+Create view selAllRes as
+select
+	res.codRes as 'codLoc',res.codCli as 'codCli',cli.cnpj_cpf as 'cnpj_cpf' ,
+	cli.nomeCli as 'nomeCli', res.codVec as 'codVec', vec.placa as 'placa',
+	vec.modelo as 'modelo',vec.marca 'marca',vec.categoria as 'categoria',
+	res.codFun as 'codFun',fun.nomeFun as 'nomeFun',res.tipoPlan as 'tipoPlan',
+	res.desco as 'desco',res.total as 'total',vec.status as 'status', 
+	res.dt_ret as 'ret', res.dt_dev as 'dev'
+from 
+	Reserva res
+inner join 
+	selAllVec vec on (vec.codVec = res.codVec)
+inner join
+	Cliente cli on (cli.codCli = res.codCli)
+inner join 
+	Funcionario fun on(fun.codFun = res.codFun);
 -- FIM
 
 

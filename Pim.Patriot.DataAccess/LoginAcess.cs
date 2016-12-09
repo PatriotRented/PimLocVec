@@ -118,7 +118,7 @@ namespace Pim.Patriot.DataAccess
             SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
 
             SqlCommand cmdSelUsu = conexao.CreateCommand();
-            SqlCommand cmdSelPass = conexao.CreateCommand();
+          
 
             cmdSelUsu.CommandText =
                 @"select codCli from loginTblSite where usu = @txtUsu";
@@ -127,7 +127,7 @@ namespace Pim.Patriot.DataAccess
 
 
             conexao.Open();
-            retorno = Convert.ToInt32(cmdSelPass.ExecuteScalar());
+            retorno = Convert.ToInt32(cmdSelUsu.ExecuteScalar());
 
             conexao.Close();
 

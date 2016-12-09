@@ -11,9 +11,10 @@ namespace SiteLocadora_Interface
 {
     public partial class Login : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Session["vec"] = Request.QueryString["modelo"];
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -26,8 +27,9 @@ namespace SiteLocadora_Interface
 
             if (val == true)
             {
+                Session["model"] = Request.QueryString["modelo"];
+                string mod = Convert.ToString(Session["model"]);
                 Session["codCli"] = lg.pegaCodCliLogWeb(txtUsu.Text);
-                Session["modelo"] = Request.QueryString["btnRes"];
                 Response.Redirect("Reservar.aspx");
             }
             else
