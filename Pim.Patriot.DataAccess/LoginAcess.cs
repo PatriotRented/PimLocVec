@@ -133,7 +133,34 @@ namespace Pim.Patriot.DataAccess
 
             return retorno;
         }
-    
+
+        public void CriaLoginWeb(string _usu, string _senha, int _codCli)
+        {
+            try
+            {
+                ConnectionFactory conn = new ConnectionFactory();
+                SqlConnection conexao = new SqlConnection(conn.pegaConexao("connSQL"));
+
+                SqlCommand cmd = conexao.CreateCommand();
+                SqlCommand cmdSelPass = conexao.CreateCommand();
+
+                cmd.CommandText =
+                    @"insert into loginTblSite (usu,password,codCli) 
+                values (@txtUsu,@senha,@cod)";
+                cmd.Parameters.AddWithValue("@txtUsu", _usu);
+                cmd.Parameters.AddWithValue("@senha", _senha);
+                cmd.Parameters.AddWithValue("@cod", _codCli);
+
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(Convert.ToString(ex));
+                throw ex;
+            }
+        }
 
     }
 }

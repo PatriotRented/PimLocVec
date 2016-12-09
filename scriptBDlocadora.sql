@@ -287,7 +287,37 @@ inner join
 	Cliente cli on (cli.codCli = res.codCli)
 inner join 
 	Funcionario fun on(fun.codFun = res.codFun);
+
+Create view selAllRes as
+select
+	res.codRes as 'codLoc',res.codCli as 'codCli',cli.cnpj_cpf as 'cnpj_cpf' ,
+	cli.nomeCli as 'nomeCli', res.codVec as 'codVec', vec.placa as 'placa',
+	vec.modelo as 'modelo',vec.marca 'marca',vec.categoria as 'categoria',
+	res.codFun as 'codFun',fun.nomeFun as 'nomeFun',res.tipoPlan as 'tipoPlan',
+	res.desco as 'desco',res.total as 'total',vec.status as 'status', 
+	res.dt_ret as 'ret', res.dt_dev as 'dev'
+from 
+	Reserva res
+inner join 
+	selAllVec vec on (vec.codVec = res.codVec)
+inner join
+	Cliente cli on (cli.codCli = res.codCli)
+inner join 
+	Funcionario fun on(fun.codFun = res.codFun);	
 -- FIM
+
+USE [BDlocadora]
+GO
+
+INSERT INTO [dbo].[LoginTblSite]
+           ([usu]
+           ,[password]
+           ,[codCli])
+     VALUES
+           ('Batman',
+           '123456',
+           1)
+GO
 
 
 

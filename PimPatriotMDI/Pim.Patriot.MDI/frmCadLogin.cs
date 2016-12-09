@@ -45,7 +45,7 @@ namespace Pim.Patriot.MDI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtLogin.Text == "" || txtSenha.Text == "")
+            if (txtLogin.Text != "" || txtSenha.Text != "")
             {
                 LoginAcess lg = new LoginAcess();
                 Criptografia crip = new Criptografia(CryptProvider.RC2);

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reservar.aspx.cs" Inherits="SiteLocadora_Interface.Reservar" EnableEventValidation="False" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reservar.aspx.cs" Inherits="SiteLocadora_Interface.Reservar" %>
 
 <!DOCTYPE html>
 
@@ -37,7 +37,7 @@
 
     <form id="form1" runat="server">
 
-    <div>
+    <div class="caption">
     <div id="preloader">
 
         <div id="load">
@@ -256,7 +256,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="boxed-grey">
-                        <form id="contact-form">
+                   <!---     <form id="contact-form">-->
                             <div class="row">
                                 <div class="col-md-12">
 
@@ -299,7 +299,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                   <!--     </form> -->
                     </div>
                 </div>
 

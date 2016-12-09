@@ -16,7 +16,7 @@ namespace Pim.Patriot.LocRev
     public partial class frmReserva : Form
     {
         double valorTot;
-        string data_ret, data_dev, de, ate;
+        string data_ret, data_dev, de = "/", ate = "/";
         int controle; // = 1 km livre  = 2 km contolado
 
         private void txtPlaca_TextChanged(object sender, EventArgs e)
@@ -124,7 +124,9 @@ namespace Pim.Patriot.LocRev
             txtValorDia.Text = "R$:" + Convert.ToString(val);
             txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
         }
+        #endregion
 
+        #region outros
         private void frmReserva_Load(object sender, EventArgs e)
         {
             FuncionarioDAO funDAO = new FuncionarioDAO();
@@ -167,10 +169,17 @@ namespace Pim.Patriot.LocRev
             txtValorDia.Text = "R$:" + Convert.ToString(val);
             txtValorTotal.Text = "R$:" + Convert.ToString(valorTot);
         }
+        #endregion
 
+        #region pesquisa
         private void btnPes_Click(object sender, EventArgs e)
         {
+            ReservaDAO resDAO = new ReservaDAO();
+            DataTable dt = new DataTable();
 
+            dt = resDAO.selAllres(txtCodCLi.Text, txtCodRes.Text, de, ate);
+            
+            grvLoc.DataSource = dt;
         }
 
         private void calendarDE_DateSelected(object sender, DateRangeEventArgs e)

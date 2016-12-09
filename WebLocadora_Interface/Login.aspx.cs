@@ -11,10 +11,10 @@ namespace SiteLocadora_Interface
 {
     public partial class Login : System.Web.UI.Page
     {
-        
+        string mod;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Session["vec"] = Request.QueryString["modelo"];
+            mod = Request.QueryString["modelo"];
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -22,13 +22,15 @@ namespace SiteLocadora_Interface
         //    Response.Redirect("Reservar.aspx");
             
             LoginAcess lg = new LoginAcess();
+            Criptografia crip = new Criptografia(CryptProvider.RC2);
+            crip.Key = txtUsu.Text;
+            string senhaCript = crip.Encrypt(txtSenha.Text);
             bool val =
-            lg.validaLoginWeb(txtUsu.Text, txtSenha.Text);
+            lg.validaLoginWeb(txtUsu.Text, senhaCript);
 
             if (val == true)
             {
-                Session["model"] = Request.QueryString["modelo"];
-                string mod = Convert.ToString(Session["model"]);
+                Session["modelo"] = mod;
                 Session["codCli"] = lg.pegaCodCliLogWeb(txtUsu.Text);
                 Response.Redirect("Reservar.aspx");
             }

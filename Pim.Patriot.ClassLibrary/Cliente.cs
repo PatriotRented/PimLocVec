@@ -8,7 +8,7 @@ public class Cliente : Pessoa
     private int codCli;
     private string cnh;
 
-    public void cadCli(string _nome, string _email, string _cnh, string _tel, int _codEnd, string _cpf_cnpj, string _dt_nasc, string _rg)
+    public int cadCli(string _nome, string _email, string _cnh, string _tel, int _codEnd, string _cpf_cnpj, string _dt_nasc, string _rg)
 
 
     {
@@ -50,13 +50,18 @@ public class Cliente : Pessoa
             cmdInsert.Parameters.AddWithValue("@cnh", _cnh);
             cmdInsert.Parameters.AddWithValue("@tel", _tel);
             cmdInsert.Parameters.AddWithValue("@codEnd", _codEnd);
+
+            SqlCommand cmdSmax = conexao.CreateCommand();
+            cmdSmax.CommandText =
+                @"SELECT MAX(codCli) FROM Cliente";
             
             conexao.Open();
 
             cmdInsert.ExecuteNonQuery();
-            
+            this.codCli = Convert.ToInt32(cmdSmax.ExecuteScalar());
 
             conexao.Close();
+            return this.codCli; 
 
 
         }
@@ -79,6 +84,6 @@ public class Cliente : Pessoa
         throw new NotImplementedException();
     }
 
-
+    public int CodCli { get; }
 
 }

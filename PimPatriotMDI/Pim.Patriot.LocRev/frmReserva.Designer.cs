@@ -61,6 +61,21 @@
             this.lblCPF_CNPJ = new System.Windows.Forms.Label();
             this.tabpagPesq = new System.Windows.Forms.TabPage();
             this.grvLoc = new System.Windows.Forms.DataGridView();
+            this.grpPesquisa = new System.Windows.Forms.GroupBox();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnPes = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCodVec = new System.Windows.Forms.TextBox();
+            this.txtCodRes = new System.Windows.Forms.TextBox();
+            this.txtCodCLi = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPcli = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.calendarATE = new System.Windows.Forms.MonthCalendar();
+            this.calendarDE = new System.Windows.Forms.MonthCalendar();
             this.codLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpj_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,25 +87,12 @@
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codFun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeFun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ret = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnPes = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCodVec = new System.Windows.Forms.TextBox();
-            this.txtCodLoc = new System.Windows.Forms.TextBox();
-            this.txtCodCLi = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblPcli = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.calendarATE = new System.Windows.Forms.MonthCalendar();
-            this.calendarDE = new System.Windows.Forms.MonthCalendar();
             this.tabctrlLoc.SuspendLayout();
             this.tabpagLoca.SuspendLayout();
             this.grpValor.SuspendLayout();
@@ -446,6 +448,8 @@
             this.categoria,
             this.codFun,
             this.nomeFun,
+            this.ret,
+            this.dev,
             this.tipoPlan,
             this.desco,
             this.total,
@@ -455,96 +459,6 @@
             this.grvLoc.Size = new System.Drawing.Size(863, 283);
             this.grvLoc.TabIndex = 1;
             // 
-            // codLoc
-            // 
-            this.codLoc.DataPropertyName = "codLoc";
-            this.codLoc.HeaderText = "Locação";
-            this.codLoc.Name = "codLoc";
-            // 
-            // codCli
-            // 
-            this.codCli.DataPropertyName = "codCli";
-            this.codCli.HeaderText = "Cód. Cliente";
-            this.codCli.Name = "codCli";
-            // 
-            // cnpj_cpf
-            // 
-            this.cnpj_cpf.DataPropertyName = "cnpj_cpf";
-            this.cnpj_cpf.HeaderText = "CPF/CNPJ";
-            this.cnpj_cpf.Name = "cnpj_cpf";
-            // 
-            // nomeCli
-            // 
-            this.nomeCli.DataPropertyName = "nomeCli";
-            this.nomeCli.HeaderText = "Cliente";
-            this.nomeCli.Name = "nomeCli";
-            // 
-            // codVec
-            // 
-            this.codVec.DataPropertyName = "codVec";
-            this.codVec.HeaderText = "Cód. Veículo";
-            this.codVec.Name = "codVec";
-            // 
-            // placa
-            // 
-            this.placa.DataPropertyName = "placa";
-            this.placa.HeaderText = "Placa";
-            this.placa.Name = "placa";
-            // 
-            // modelo
-            // 
-            this.modelo.DataPropertyName = "modelo";
-            this.modelo.HeaderText = "Modelo";
-            this.modelo.Name = "modelo";
-            // 
-            // marca
-            // 
-            this.marca.DataPropertyName = "marca";
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            // 
-            // categoria
-            // 
-            this.categoria.DataPropertyName = "categoria";
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            // 
-            // codFun
-            // 
-            this.codFun.DataPropertyName = "codFun";
-            this.codFun.HeaderText = "Cód Fun.";
-            this.codFun.Name = "codFun";
-            // 
-            // nomeFun
-            // 
-            this.nomeFun.DataPropertyName = "nomeFun";
-            this.nomeFun.HeaderText = "Funcionário";
-            this.nomeFun.Name = "nomeFun";
-            // 
-            // tipoPlan
-            // 
-            this.tipoPlan.DataPropertyName = "tipoPlan";
-            this.tipoPlan.HeaderText = "Tipo do Plano";
-            this.tipoPlan.Name = "tipoPlan";
-            // 
-            // desco
-            // 
-            this.desco.DataPropertyName = "desco";
-            this.desco.HeaderText = "Desconto";
-            this.desco.Name = "desco";
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "total";
-            this.total.HeaderText = "Valor Total";
-            this.total.Name = "total";
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            // 
             // grpPesquisa
             // 
             this.grpPesquisa.Controls.Add(this.btnSair);
@@ -552,7 +466,7 @@
             this.grpPesquisa.Controls.Add(this.btnPes);
             this.grpPesquisa.Controls.Add(this.label1);
             this.grpPesquisa.Controls.Add(this.txtCodVec);
-            this.grpPesquisa.Controls.Add(this.txtCodLoc);
+            this.grpPesquisa.Controls.Add(this.txtCodRes);
             this.grpPesquisa.Controls.Add(this.txtCodCLi);
             this.grpPesquisa.Controls.Add(this.label2);
             this.grpPesquisa.Controls.Add(this.lblPcli);
@@ -613,12 +527,12 @@
             this.txtCodVec.Size = new System.Drawing.Size(123, 23);
             this.txtCodVec.TabIndex = 6;
             // 
-            // txtCodLoc
+            // txtCodRes
             // 
-            this.txtCodLoc.Location = new System.Drawing.Point(188, 64);
-            this.txtCodLoc.Name = "txtCodLoc";
-            this.txtCodLoc.Size = new System.Drawing.Size(123, 23);
-            this.txtCodLoc.TabIndex = 3;
+            this.txtCodRes.Location = new System.Drawing.Point(188, 64);
+            this.txtCodRes.Name = "txtCodRes";
+            this.txtCodRes.Size = new System.Drawing.Size(123, 23);
+            this.txtCodRes.TabIndex = 3;
             // 
             // txtCodCLi
             // 
@@ -689,6 +603,108 @@
             this.calendarDE.ShowToday = false;
             this.calendarDE.TabIndex = 4;
             // 
+            // codLoc
+            // 
+            this.codLoc.DataPropertyName = "codLoc";
+            this.codLoc.HeaderText = "Locação";
+            this.codLoc.Name = "codLoc";
+            // 
+            // codCli
+            // 
+            this.codCli.DataPropertyName = "codCli";
+            this.codCli.HeaderText = "Cód. Cliente";
+            this.codCli.Name = "codCli";
+            // 
+            // cnpj_cpf
+            // 
+            this.cnpj_cpf.DataPropertyName = "cnpj_cpf";
+            this.cnpj_cpf.HeaderText = "CPF/CNPJ";
+            this.cnpj_cpf.Name = "cnpj_cpf";
+            // 
+            // nomeCli
+            // 
+            this.nomeCli.DataPropertyName = "nomeCli";
+            this.nomeCli.HeaderText = "Cliente";
+            this.nomeCli.Name = "nomeCli";
+            // 
+            // codVec
+            // 
+            this.codVec.DataPropertyName = "codVec";
+            this.codVec.HeaderText = "Cód. Veículo";
+            this.codVec.Name = "codVec";
+            // 
+            // placa
+            // 
+            this.placa.DataPropertyName = "placa";
+            this.placa.HeaderText = "Placa";
+            this.placa.Name = "placa";
+            // 
+            // modelo
+            // 
+            this.modelo.DataPropertyName = "modelo";
+            this.modelo.HeaderText = "Modelo";
+            this.modelo.Name = "modelo";
+            // 
+            // marca
+            // 
+            this.marca.DataPropertyName = "marca";
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            // 
+            // categoria
+            // 
+            this.categoria.DataPropertyName = "categoria";
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            // 
+            // codFun
+            // 
+            this.codFun.DataPropertyName = "codFun";
+            this.codFun.HeaderText = "Cód Fun.";
+            this.codFun.Name = "codFun";
+            // 
+            // nomeFun
+            // 
+            this.nomeFun.DataPropertyName = "nomeFun";
+            this.nomeFun.HeaderText = "Funcionário";
+            this.nomeFun.Name = "nomeFun";
+            // 
+            // ret
+            // 
+            this.ret.DataPropertyName = "ret";
+            this.ret.HeaderText = "Retirada";
+            this.ret.Name = "ret";
+            // 
+            // dev
+            // 
+            this.dev.DataPropertyName = "dev";
+            this.dev.HeaderText = "Devolução";
+            this.dev.Name = "dev";
+            // 
+            // tipoPlan
+            // 
+            this.tipoPlan.DataPropertyName = "tipoPlan";
+            this.tipoPlan.HeaderText = "Tipo do Plano";
+            this.tipoPlan.Name = "tipoPlan";
+            // 
+            // desco
+            // 
+            this.desco.DataPropertyName = "desco";
+            this.desco.HeaderText = "Desconto";
+            this.desco.Name = "desco";
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Valor Total";
+            this.total.Name = "total";
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,6 +771,23 @@
         private System.Windows.Forms.Label lblCPF_CNPJ;
         private System.Windows.Forms.TabPage tabpagPesq;
         private System.Windows.Forms.DataGridView grvLoc;
+        private System.Windows.Forms.GroupBox grpPesquisa;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnPes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCodVec;
+        private System.Windows.Forms.TextBox txtCodRes;
+        private System.Windows.Forms.TextBox txtCodCLi;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPcli;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MonthCalendar calendarATE;
+        private System.Windows.Forms.MonthCalendar calendarDE;
+        private System.Windows.Forms.RadioButton rbtnCtrl;
+        private System.Windows.Forms.RadioButton rbtnLivre;
         private System.Windows.Forms.DataGridViewTextBoxColumn codLoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCli;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpj_cpf;
@@ -766,26 +799,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn codFun;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeFun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ret;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dev;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoPlan;
         private System.Windows.Forms.DataGridViewTextBoxColumn desco;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.GroupBox grpPesquisa;
-        private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnPes;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodVec;
-        private System.Windows.Forms.TextBox txtCodLoc;
-        private System.Windows.Forms.TextBox txtCodCLi;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPcli;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MonthCalendar calendarATE;
-        private System.Windows.Forms.MonthCalendar calendarDE;
-        private System.Windows.Forms.RadioButton rbtnCtrl;
-        private System.Windows.Forms.RadioButton rbtnLivre;
     }
 }

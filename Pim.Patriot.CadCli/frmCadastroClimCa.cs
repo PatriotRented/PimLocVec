@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pim.Patriot.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,11 @@ namespace Pim.Patriot.CadCli
         {
             Cliente cli = new Cliente();
             Endereco end = new Endereco();
+            LoginAcess lg = new LoginAcess();
+            Criptografia crip = new Criptografia(CryptProvider.RC2);
+            crip.Key = txtNomeCli.Text;
+            string senhaCript = crip.Encrypt("12345678");
+
 
             if (txtNomeCli.Text != "" && mdtxtRG.Text != "" && mdtxtCnh.Text != ""
                  && txtEmail.Text != "" && mdtxtDtnsc.Text != "" && mdtxtTelefone.Text != ""
@@ -52,11 +58,12 @@ namespace Pim.Patriot.CadCli
                 if (result == DialogResult.OK)
                 {
                     int codEnd = end.salvaEnd(txtRua.Text, txtBairro.Text, txtUf.Text, txtCidade.Text, mdtxtCep.Text, txtComplemento.Text, mdtxtNumero.Text);
-
+                    int cod;
                     if (mdtxtCpf.Text != "")
-                        cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCpf.Text,mdtxtDtnsc.Text, mdtxtRG.Text);
+                        cod = cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCpf.Text,mdtxtDtnsc.Text, mdtxtRG.Text);
                     else
-                        cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCnpj.Text, mdtxtDtnsc.Text, mdtxtRG.Text);
+                       cod = cli.cadCli(txtNomeCli.Text, txtEmail.Text, mdtxtCnh.Text, mdtxtTelefone.Text, codEnd, mdtxtCnpj.Text, mdtxtDtnsc.Text, mdtxtRG.Text);
+                    lg.CriaLoginWeb(txtNomeCli.Text, senhaCript,cod);
 
                     DialogResult resul = MessageBox.Show
                         ("Deseja continuar Incluindo outros Clientes?", "Confirmação!", MessageBoxButtons.YesNo);
